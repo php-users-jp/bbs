@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; php-5.2.6 インストール Mysql Mysqli エラー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php-5.2.6 インストール Mysql Mysqli エラー
+	</p>
+
+	<h3 id="forumname"><a href="topic-79.html">php-5.2.6 インストール Mysql Mysqli エラー</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-113.html">enzhitan</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post198.html#post198" name="post198" rel="nofollow">#1</a> 2008 年 7 月 7 日(月) 16:54</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 7 2008</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">php-5.2.6 のインストールですが、どうしてもうまくいかない。お助けください。<br />環境下以下の通りです。<br /> WindowsXp Pro SP2<br /> Apache 2.2.9<br /> Mysql 5.0.51b<br /><br />PHPをインストールしたが、MySQL MYSQLi がエラー<br />Apacheのerror.log が以下の通りです。<br /><br />　PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/PHP/ext/php_mysql.dll'<br />　PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/PHP/ext/php_mysqli.dll'<br /><br />Pathなどいろいろと変えてみたんですが、だめでした。<br /><br />何か助言をいただければ幸いです。<br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post206.html#post206" name="post206" rel="nofollow">#2</a> 2008 年 7 月 23 日(水) 10:48</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">もしかしたらですが、php.ini中で<br />extension_dir='./ext/'<br />もしくは<br />extension_dir='C:/PHP/ext/'<br />のような設定になっているか確認されているでしょうか。<br />もしそうでなければ試してみて下さい。<br />もし確認済み・解決済みならごめんなさい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-135.html">area88</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post230.html#post230" name="post230" rel="nofollow">#3</a> 2008 年 9 月 24 日(水) 0:39</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">enzhitanさんと同じで、extensionが有効になっていない状態が出ています。<br />phpinfoで調べると、extension_dir=&quot;c:/php5/&quot; と表示されます。<br />php.iniでは、extension_dir=&quot;c:/PHP/ext/&quot; と設定しています。<br />php coreで固定のような状況です。<br />他にも、includes_path = &quot;c:/php/includes&quot; としていますが、phpinfoのcoreでは、./;c:php5.pear と固定の値になっています。<br /><br />どこの設定を変えれば、よいのでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post232.html#post232" name="post232" rel="nofollow">#4</a> 2008 年 9 月 24 日(水) 8:20</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">(1) phpinfoでの&quot;Loaded Configuration File&quot;の値が期待通りのphp.iniへの場所になっているでしょうか？<br />いくつもphp.iniを作ってあると混乱する場合がありますので、&quot;php.ini&quot;はひとつにしておくとよいでしょう。使い分ける場合は名前を変えておくとよいでしょう。<br />またphp.iniが読み込まれていなかった場合はC:\WINDOWSに置くのが一般的のようです。<br /><br />(2) apacheを再起動して設定を反映させてから確認されているでしょうか？<br />phpをモジュール動作させている時にはapacheを再起動させないと設定が反映されません。<br /><br />(3) phpinfoでの&quot;extension_dir&quot;の値が期待通りりにDLLフォルダへの場所になっているでしょうか？<br /><br />試してみて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-135.html">area88</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post235.html#post235" name="post235" rel="nofollow">#5</a> 2008 年 9 月 25 日(木) 2:55</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">どうも、php-5.2.6-win32-installer.msiのモジュールがおかしいようです。<br /><br />試行錯誤し、下記の手順でインストールできました。<br />１）apacheをstopする。<br />２）php-5.2.6-win32-installer.msiにてインストールする。<br />　　このとき、途中のオプション設定にて、extensionを有効にする。<br />３）php.iniファイルを、インストールディレクトリphp5から退避<br />４）インストールディレクトリphp5のファイルをすべて削除<br />５）php-5.2.6-Win32.zipをインストールディレクトリphp5に解凍<br />６）httpd.confを設定確認<br />　　ファイルの最後に、下記が設定されていることを確認<br />AddDefaultCharset Off<br /><br />#BEGIN PHP INSTALLER EDITS - REMOVE ONLY ON UNINSTALL<br />PHPIniDir &quot;C:\Program Files\Apache Software Foundation\PHP5\&quot;<br />LoadModule php5_module &quot;C:\Program Files\Apache Software Foundation\PHP5\php5apache2_2.dll&quot;<br />#END PHP INSTALLER EDITS - REMOVE ONLY ON UNINSTALL<br /><br />７）php.iniの編集、確認<br /><br />output_handler = mb_output_handler<br />default_charset = &quot;Shift_JIS&quot;<br />doc_root = &quot;c:\home\htdocs&quot;<br />extension_dir =&quot;c:\Program Files\Apache Software Foundation\PHP5\ext&quot;<br />mbstring.language = Japanese<br />mbstring.internal_encoding = SJIS<br />mbstring.http_input = auto<br />mbstring.http_output = SJIS<br />mbstring.encoding_translation = On<br />mbstring.detect_order = auto<br />mbstring.substitute_character = none;<br /><br />必要な、ｅｘｔｅｎｓｉｏｎのコメントはずし<br /><br />８）php.iniをphp5インストールディレクトリに移動<br />９）環境変数、pathとphprcを確認<br />１０）apacheをstartし、ＰＣを再起動</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post236.html#post236" name="post236" rel="nofollow">#6</a> 2008 年 9 月 25 日(木) 12:59</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ごめんなさい、MSIでのインストールだとは知らずに、ZIPファイルからインストールのパターンで答えてしまいました。<br />私はMSIでのインストーラを使ったことがないので詳しいことはわからなかったのですが、area88さんの情報からすると、インストーラを使った場合はphp.iniの場所が違うみたいですね。<br />http.conｆの中の、<br />＞ PHPIniDir &quot;C:\Program Files\Apache Software Foundation\PHP5\&quot;<br />ここに指定されているフォルダのphp.iniが有効になっていそうですね。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php-5.2.6 インストール Mysql Mysqli エラー
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

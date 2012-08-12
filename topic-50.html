@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; お知恵を貸してください！</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; お知恵を貸してください！
+	</p>
+
+	<h3 id="forumname"><a href="topic-50.html">お知恵を貸してください！</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-77.html">SAWARA</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post120.html#post120" name="post120" rel="nofollow">#1</a> 2008 年 3 月 15 日(土) 16:12</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">お世話になります。<br />ローカルでは、動くhotelmisというＧＰＬですが、<br />サーバー上では動きません。<br />２ヶのサーバーで、ＰＨＰ、ＭＹＳＱＬともバージョンを５以上のもので<br />動作しませんでした。（ローカルも５以上）<br /><a href="http://kawatan.info/hotelmis/index.php" title="http://kawatan.info/hotelmis/index.php" rel="external">http://kawatan.info/hotelmis/index.php</a><br />メニューは表示されますが、<br />admin<br />admin<br />で入れますが、左ペインのメニューは出ますが、本体が表示されないのです。<br />（ローカルでは表示されます）<br />いろいろ調べては見ましたが、あるホームページでは<br />改行コードをUNIXにすれば動くことがあるということで直しましたが、<br />動きませんでした。<br />御指導、よろしくお願い致します。 <img src="./templates/phpgrjp0.3/smilies/surprised.gif" alt=":o" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post121.html#post121" name="post121" rel="nofollow">#2</a> 2008 年 3 月 16 日(日) 0:12</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">残念ながら原因がわかりません。原因を絞る時の私の方法を書いてみますので、よかったら参考にしてみてください。<br /><br />ローカルで動くということですので、まずはローカルとサーバでのphpinfo()の出力結果を見比べてみて下さい。ちょっとしたMySQLの設定などもありますので、もしかしたら違うところや足りないところがあればそれが原因かもしれません。<br /><br />phpのエラーメッセージを確認してみて下さい。エラーメッセージが表示されなくてもページのソースに書かれているかもしれませんし、ログファイルに出力されているかもしれません。phpの設定ではログファイルにエラーメッセージを保存する設定もあります。最初に呼ばれるスクリプト（この件ではindex.php）の先頭に<br /><pre class="code">ini_set('log_errors',1);<br />ini_set('error_log','/例えばスクリプトと同じフルパス/php.log');</pre><br />を書いておくと、それが実行された時点から独自のログファイルに保存できると思います。<br />ただし、このログファイルの指定は「<strong>誰でも変更できるファイルをフルパスで</strong>記述」ですので注意して下さい。対象のスクリプトの実際のフルパスはphpinfo()で確認できます。<br /><br />サーバによってはMySQLのユーザ設定をやっておく場合もあると思いますが、phpのエラーメッセージが確認できればある程度特定できると思います。<br /><br />改行コードをUNIXにしたということですと、ちょっと険しい道のりになるかもしれませんが頑張ってみて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-77.html">SAWARA</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post122.html#post122" name="post122" rel="nofollow">#3</a> 2008 年 3 月 16 日(日) 12:22</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">お世話になっております。<br />MySQLの設定とエラーメッセージ、やはりこれを検証していかなければならないですね…<br />ただ、方針がはっきりしましたので助かりました。<br />ありがとうございました。 <img src="./templates/phpgrjp0.3/smilies/surprised.gif" alt=":o" /></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; お知恵を貸してください！
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

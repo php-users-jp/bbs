@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; IIS+phpとアパッチ+phpでの違いはありますか。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; IIS+phpとアパッチ+phpでの違いはありますか。
+	</p>
+
+	<h3 id="forumname"><a href="topic-199.html">IIS+phpとアパッチ+phpでの違いはありますか。</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-309.html">macchan</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post558.html#post558" name="post558" rel="nofollow">#1</a> 2010 年 2 月 22 日(月) 16:23</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2010</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">XAMPPでApache+PHPでHPを作成し、レンタルサーバーへ移項したところ動かないのです。レンタルサーバーはマイクロソフトのIIS（アイルサーバーを利用）なのです。<br />①IISとapacheでの違いは出るのでしょうか？<br />②エラー表示になり、何処がどうおかしいのかまったく検討がつきません。実行時エラーを拾える方法はないのでしょうか？（レンタルサーバーでの）PHPプログラム仕込む方法はないのでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post559.html#post559" name="post559" rel="nofollow">#2</a> 2010 年 2 月 22 日(月) 18:18</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんばんは。<br /><br />最初にphpが動作するのか確認してください。<br />phpが動作しない限りphp起因のエラーは表示されません。<br /><br />&lt;?php<br />	phpinfo();<br />?&gt;<br /><br />上記のスクリプトが動作すれば環境などもわかります。<br /><br /><br />&gt; 2.エラー表示になり、何処がどうおかしいのか（略<br />肝心のエラー内容が提示されていないため、私も全然回答できません。<br /><span style="color:#efefef"># 勘ではなく感では「Internal Server Error」といったところでしょうか。</span><br />下記2行をスクリプトの最初に書くと詳しく何か表示されるかもしれません。<br />ini_set('display_errors', 1);<br />error_reporting(E_ALL);<br /><br /><span style="color:#efefef"># safe modeなわけないし、アイルと言われてもコースとか色々あるし環境がいまいちつかめないサーバだったよ。</span></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-309.html">macchan</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post562.html#post562" name="post562" rel="nofollow">#3</a> 2010 年 2 月 23 日(火) 10:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2010</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">たとえば<br />WIndows XP sp3<br />XAMPP for Window 1.7.21<br />PHP 5.3.0<br />&#36;user_info[SESSION_ID] = &quot;000001&quot;;<br />問題なし<br /><br />マイクロソフト　IIS＋PHP（アイルサーバー）<br />では  HTTP500エラー<br />&#36;user_info['SESSION_ID'] = &quot;000001&quot;;<br />シングルコーテーションでくくると問題なし。<br />この違いは？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post563.html#post563" name="post563" rel="nofollow">#4</a> 2010 年 2 月 23 日(火) 13:01</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">Notice: Use of undefined constant～<br />警告が表示されるはずなんですが問題なしと500ですか。<br /><br />&gt; この違いは？<br />文法通り厳密に書いたか書かないか。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; IIS+phpとアパッチ+phpでの違いはありますか。
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; 拡張モジュールを後から動的に組み込む方法について</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; 拡張モジュールを後から動的に組み込む方法について
+	</p>
+
+	<h3 id="forumname"><a href="topic-59.html">拡張モジュールを後から動的に組み込む方法について</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-48.html">emikouji</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post152.html#post152" name="post152" rel="nofollow">#1</a> 2008 年 4 月 7 日(月) 21:51</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは，よろしくお願いします。<br />Zend_Dbというデータベース抽象化レイヤを使いたいと思っています。<br />早速，私が契約しているレンタルサーバで試してみたところ，mysqlドライバがインストールされていないとのメッセージが出ました。調べてみると，Zend_DbはPDO拡張モジュールとPDO　Mysqlドライバが必要だとわかりました。<br />ところが，私のレンタルサーバは，phoinfo()で調べてみると，PDO拡張モジュールはインストールされているのですが，ドライバは，sqliteしかインストールされていないことがわかりました。<br />php.ini（私のレンタルサーバは.htaccessではなくてphp.iniに設定するようになっている。）に<br /><pre class="code">extension = php_pdo_mysql.dll</pre><br />と設定しても，同じメッセージが出ました。<br />つまり，php_pdo_mysql.dllがコンパイル，インストールされていないのだと思います。<br />このようなとき，後から拡張モジュールをインストールする方法があると聞きました。どのようにすればいいのか教えてください。<br />レンタルサーバのOSはUnix系，PHPは5.2.5で，ApacheがWebサーバのようです。当方はWindows　XPです。<br />php.iniに<br /><pre class="code">extension_dir = '.:/***/ext'<br />extension = php_pdo_mysql.dll</pre><br />と設定し，私のコンピュータにある（Windows用の）php_pdo_mysql.dllを '.:/***/ext'　にアップしてやってみましたがうまくいきませんでした。<br />さて，どのようにしてモジュールを入手し，どのように設定すればよいのでしょうか教えてください。お願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post153.html#post153" name="post153" rel="nofollow">#2</a> 2008 年 4 月 9 日(水) 10:24</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">あまり詳しいことはわかりませんが、少し気がついたことがあったので。<br /><br />レンタルサーバのOSがUnix系ということですと、もしかしたら<br /><strong>php_</strong>pdo_mysql.dll　→　pdo_mysql.<strong>so</strong><br />ではないでしょうか。またWindows用のDLLをアップロードしても動作しないと思います。<br /><br />また、同じレンタルサーバを使っている他の人で、似たような経験を持っている方がいるか探してみるのもよいかもしれません。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-48.html">emikouji</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post154.html#post154" name="post154" rel="nofollow">#3</a> 2008 年 4 月 9 日(水) 12:06</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん早速ありがとうございました。<br />やはり、Windowsのものでは、ダメですよね。<br />では、このモジュール（pdo_mysql.so）は、どのようにして入手すればよいのでしょうか？<br />教えてください。よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post155.html#post155" name="post155" rel="nofollow">#4</a> 2008 年 4 月 9 日(水) 18:01</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">私が知っている限りでは、PHP本体と一緒にコンパイルされる、としかわかりません・・・。<pre class="code">extension = pdo_mysql.so</pre>はもう試されたでしょうか？。この時、extension_dirの設定はレンタルサーバの元の設定に戻したほうがいいかもしれません。<br /><br />後は・・・<br />レンタルサーバのサイトでサーバの詳細を確認してみたでしょうか？<br />またはレンタルサーバの管理者に問い合わせてみるのはどうでしょうか？<br /><br />ごめんなさい、今のところ、これ以上はわかりません。 <img src="./templates/phpgrjp0.3/smilies/neutral.gif" alt=":|" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-48.html">emikouji</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post156.html#post156" name="post156" rel="nofollow">#5</a> 2008 年 4 月 10 日(木) 8:48</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">どうも，ありがとうございます。<br />早速やってみましたが，もともとのextension_dirにはpdo_mysql.soというモジュールは存在していないようで，<br /><pre class="code">extension = pdo_mysql.so</pre><br />と入力してもだめでした。<br />あとは，レンタルサーバに問い合わせをしてみたいと考えています。<br />でも，PHPはサポート対象外なので，期待薄です。（涙）<br />本当にありがとうございました。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; 拡張モジュールを後から動的に組み込む方法について
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

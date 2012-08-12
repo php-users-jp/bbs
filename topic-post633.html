@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; 配列を使うメールフォーム</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; 配列を使うメールフォーム
+	</p>
+
+	<h3 id="forumname"><a href="topic-229.html">配列を使うメールフォーム</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-318.html">meo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post629.html#post629" name="post629" rel="nofollow">#1</a> 2010 年 7 月 21 日(水) 12:47</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2010</div>
+				<div class="field">返信数: 6</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">php配列を使ったメールフォームがどうもうまくいきません。。。<br />助けてくださいm(_ _)m<br /><br />以前の人が作成したPHPのメールフォームを変更し、予約フォームを作成しております。<br /><br />下記の図のように商品をチェックボックスで選び、<br />テキストボックスで個数を入力するというフォームを作り、<br />メール送信したいのです。<br /><br />＜図＞<br />↓チェックボックス<br />□商品１　＿＿個←テキストボックス<br />□商品２　＿＿個<br />□商品３　＿＿個<br /><br />PHPにて下記の事がうまくできません。<br />1.for()又はそれ以外にて、商品[]と個数[]の２つの配列を表示の仕方がわかりません。<br /><br />2.メール送信する際に、配列のまま送信すると&quot;Array&quot;となってしまうので、<br />　implode(&quot;＆&quot;, &#36;_POST['shohin']);を使用しました。<br />　しかしこれだとメール送信すると、<br />　商品１＆商品２＆商品３　１個＆２個＆３個となってしまうので、<br />　<br />　商品１ １個＆商品２ ２個　というようにメールで送ることはできますでしょうか？　<br /><br /><br /><br />■HTML■<br />&lt;form method=&quot;post&quot; action=&quot;rsv.php&quot;&gt;<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[]&quot; value=&quot;商品１&quot; /&gt;商品１&lt;input type=&quot;text&quot; name=&quot;kosu[]&quot;&gt;個<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[]&quot; value=&quot;商品２&quot; /&gt;商品２&lt;input type=&quot;text&quot; name=&quot;kosu[]&quot;&gt;個<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[]&quot; value=&quot;商品３&quot; /&gt;商品３&lt;input type=&quot;text&quot; name=&quot;kosu[]&quot;&gt;個<br />&lt;/form&gt;<br /><br /><br />■PHP■<br />&lt;?php<br />&#36;shohin = &#36;_POST[&quot;shohin&quot;];<br />&#36;kosu = &#36;_POST[&quot;kosu&quot;];<br />&#36;mode = &#36;_POST[&quot;mode&quot;];<br />if(&#36;mode == &quot;sends&quot;)&#123;<br />	&#36;title = &quot;ありがとうございました。ご予約を受け付けました。&#125;?&gt;<br /><br /><br />&lt;?php print &#36;title ?&gt;<br />&lt;?php if(&#36;mode != &quot;sends&quot;)&#123; ?&gt;<br /><br />&lt;?php<br />//配列を取り出し表示します。<br />	for( &#36;i = 0; &#36;i &lt; count( &#36;shohin ); &#36;i ++ )&#123;<br />		for( &#36;i = 0; &#36;i &lt; count( &#36;kosu ); &#36;i ++ )&#123;<br />		print &quot;&#123;&#36;shohin[&#36;i]&#125;&#123;&#36;kosu[&#36;i]&#125;&lt;br/&gt;&quot;;&#125; &#125;<br />//配列を文字列に変換。<br />	&#36;shohin = implode(&quot;／&quot;, &#36;_POST['shohin']);<br />	&#36;kosu = implode(&quot;／&quot;, &#36;_POST['kosu']);<br />?&gt;<br /><br /> &lt;?php<br />	if(&#36;error)&#123;<br />		print &quot;&lt;input type=\&quot;button\&quot; value=\&quot;戻る\&quot; onClick=\&quot;history.back()\&quot; /&gt;\n&quot;;<br />    &#125;else&#123;<br />        print &quot;&lt;form action=\&quot;rsv.php\&quot; method=\&quot;post\&quot;&gt;\n&quot;;  <br />	print &quot;&lt;input type=\&quot;hidden\&quot; name=\&quot;shohin\&quot; value=\&quot;&#123;&#36;shohin&#125;\&quot; /&gt;\n&quot;;<br />　　  print &quot;&lt;input type=\&quot;hidden\&quot; name=\&quot;kosu\&quot; value=\&quot;&#123;&#36;kosu&#125;\&quot; /&gt;\n&quot;;<br />	print &quot;&lt;input type=\&quot;button\&quot; value=\&quot;戻る\&quot; onClick=\&quot;history.back()\&quot; /&gt;\n&quot;;<br />	print &quot;&lt;input type=\&quot;submit\&quot; value=\&quot;送信\&quot; /&gt;\n&quot;;<br />        print &quot;&lt;/form&gt;\n&quot;;  &#125;<br />	?&gt;<br /><br />&lt;?php<br />//お知らせのメール<br /> &#125;else&#123;<br />	&#36;to_1 = &quot;***@****&quot;;<br /><br />	&#36;subject = &quot;ご予約です　&quot;;<br />	<br />	&#36;message .= &quot;希望商品 : &#123;&#36;shohin&#125;&#123;&#36;kosu&#125;\n\n&quot;;<br />		<br />	&#36;add_header = &quot;Content-Type:text/plain; charset=ISO-2022-JP\n&quot;;<br />	&#36;add_header .= &quot;From:&lt;***@*****&gt;\n&quot;;<br />	&#36;add_header .= &quot;Content-Transfer-Encoding: 7bit\n&quot;;<br />	<br />	mb_internal_encoding(&quot;UTF-8&quot;);<br />	mb_language(&quot;Japanese&quot;);<br /><br />	mb_send_mail(&#36;to_1,&#36;subject,&#36;message,&#36;add_header);<br />&#125;<br />?&gt;<br />&lt;?php<br />//フォームのすべてのテキストをチェックする<br />function txtCheck(&#36;txt)&#123;<br />	&#36;txt = htmlspecialchars(&#36;txt,ENT_QUOTES);<br />	return &#36;txt;<br />&#125;<br />?&gt;<br /><br /><br />以上です。<br />知識不足な質問でごめんなさい。<br />どなたかよろしくお願い致します。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post630.html#post630" name="post630" rel="nofollow">#2</a> 2010 年 7 月 21 日(水) 16:49</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br />こういうフォームは組んだことがないので<br />ちょっと適当にやってみました。<br />htmlのinput要素のname属性値は明示的な添字が必要みたいですね。<br />参考程度にしてください。<br /><br /><br /><br />#form.html<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;<br />&lt;title&gt;mail form&lt;/title&gt;<br />&lt;body&gt;<br />&lt;form method=&quot;post&quot; action=&quot;rsv.php&quot;&gt;<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[0]&quot; value=&quot;商品１&quot;&gt;商品１&lt;input type=&quot;text&quot; name=&quot;kosu[0]&quot;&gt;個&lt;br&gt;<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[1]&quot; value=&quot;商品２&quot;&gt;商品２&lt;input type=&quot;text&quot; name=&quot;kosu[1]&quot;&gt;個&lt;br&gt;<br />&lt;input type=&quot;checkbox&quot; name=&quot;shohin[2]&quot; value=&quot;商品３&quot;&gt;商品３&lt;input type=&quot;text&quot; name=&quot;kosu[2]&quot;&gt;個&lt;br&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;mode&quot; value=&quot;sends&quot;&gt;<br />&lt;input type=&quot;submit&quot;&gt;<br />&lt;/form&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br /><br /><br />#rsv.php<br />&lt;?php<br /><br />ini_set('display_errors', 'On');<br />error_reporting(E_ALL);<br /><br />function hsc(&#36;string) &#123;<br />	if(is_array(&#36;string)) &#123;<br />		return array_map(&quot;hsc&quot;, &#36;string);<br />	&#125;<br />	else &#123;<br />		return htmlspecialchars(&#36;string, ENT_QUOTES);<br />	&#125;<br />&#125;<br /><br />function CheckInputData(&#36;var) &#123;<br />	if(is_array(&#36;var)) &#123;<br />		return array_map(&quot;CheckInputData&quot;, &#36;var);<br />	&#125;<br />	else &#123;<br />		if(get_magic_quotes_gpc()) &#123;<br />			&#36;var = striplashes(&#36;var);<br />		&#125;<br />		return trim(&#36;var);<br />	&#125;<br />&#125;<br /><br />&#36;_POST  = CheckInputData(&#36;_POST);<br />&#36;mode   = &#36;_POST[&quot;mode&quot;];<br /><br />header(&quot;Content-Type: text/plain; utf-8&quot;);<br />if(&#36;mode === &quot;sends&quot; &amp;&amp; isset(&#36;_POST[&quot;shohin&quot;]))&#123;<br />	print &quot;ありがとうございました。ご予約を受け付けました。\n&quot;;<br />&#125;<br />else &#123;<br />	print &quot;商品を選択してください。&quot;;<br />	exit();<br />&#125;<br /><br />&#36;shohin = hsc(&#36;_POST[&quot;shohin&quot;]);<br />&#36;kosu   = hsc(&#36;_POST[&quot;kosu&quot;]);<br /><br />&#36;message = &quot;希望商品: \n&quot;;<br />while(&#36;shohin_name = current(&#36;shohin)) &#123;<br />	&#36;message .= &#36;shohin_name . &quot; &quot; . &#36;kosu[key(&#36;shohin)] . &quot;個\n&quot;;<br />	next(&#36;shohin);<br />&#125;<br /><br />mb_language(&quot;ja&quot;);<br />mb_internal_encoding(&quot;utf-8&quot;);<br /><br />&#36;to_1 = &quot;***@****&quot;;<br /><br />&#36;subject = &quot;ご予約です&quot;;<br /><br />&#36;add_header  = &quot;From: &lt;***@*****&gt;&quot;;<br /><br />//	mb_send_mail(&#36;to_1, &#36;subject, &#36;message, &#36;add_header);<br /><br /><br /><br />//	print_r(&#36;shohin);<br />//	print_r(&#36;kosu);<br />	print_r(&#36;message);<br /><br />?&gt;<br /><br />追記　忘れてましたが1番の質問の意味がわかりませんでした。<div class="editinfo">&laquo; 最終編集者 <a href="profile-246.html">nulla</a> 日時 2010 年 7 月 21 日(水) 16:53. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-318.html">meo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post631.html#post631" name="post631" rel="nofollow">#3</a> 2010 年 7 月 21 日(水) 17:36</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2010</div>
+				<div class="field">返信数: 6</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">返信本当にありがとうございます！<br /><br />＜追記　忘れてましたが1番の質問の意味がわかりませんでした。<br />説明がわかりづらくて申し訳ありません！<br /><br /><br />作成している予約フォームですが、<br />【入力画面（HTML）】確認ボタン→【 確認画面(rsv.php）】送信ボタン → <br />【”ありがとうございました。予約を受け付けました”（rsv.php）】<br /><br />という流れで、フォームで入力してものを、<br />確認としてrsv.phpで出力した後、送信したいのです。<br /><br />その際に、（あなたが選んだのは）「商品１:１個」「商品２：２個」と表示する為に<br />PHPでどのように記述すればいいのか<br /><br />配列が２つあるので、<br />forでの値の回し方は↓の記述でいいのか、<br /><br />もしくはfor()以外の他の関数を使用して配列を表示する場合は、<br />どういった記述がいいのか<br />そちらをお聞きしたかったのです<br /><br />&lt;?php<br />//配列を取り出し表示します。<br />	for( &#36;i = 0; &#36;i &lt; count( &#36;shohin ); &#36;i ++ )&#123;<br />		for( &#36;i = 0; &#36;i &lt; count( &#36;kosu ); &#36;i ++ )&#123;<br />		print &quot;&#123;&#36;shohin[&#36;i]&#125;&#123;&#36;kosu[&#36;i]&#125;&lt;br/&gt;&quot;;&#125; &#125;<br />//配列を文字列に変換。<br />	&#36;shohin = implode(&quot;／&quot;, &#36;_POST['shohin']);<br />	&#36;kosu = implode(&quot;／&quot;, &#36;_POST['kosu']);<br />?&gt;<br /><br /><br />説明不足ですみません。<br />上記でも分かりづらかったら仰って下さい。<br />よろしくお願い致します。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post632.html#post632" name="post632" rel="nofollow">#4</a> 2010 年 7 月 21 日(水) 17:53</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">それでしたらすでに用件は満たしているような気がします。<br />私が提示したソースを実際に試してみてください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-318.html">meo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post633.html#post633" name="post633" rel="nofollow">#5</a> 2010 年 7 月 21 日(水) 18:08</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2010</div>
+				<div class="field">返信数: 6</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">早速の返信ありがとうございます！<br /><br />実際に試させて頂こうと、サーバーにあげ、実行したのですが、<br />Fatal error: Call to undefined function: striplashes() in /home/sites/chicappa.jp/users/chicappa.jp-climbone/web/test/rsv.php  on line 30　と表示されました。<br /><br />私のコードで　on line 30　は　&#36;var = striplashes(&#36;var); 　が該当するのですが<br /><br />もしくは私の方に不手際がありますでしょうか？<br /><br />お手数おかけしまして本当にすみません。<br />よろしくお願いしますm(_ _)m</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post634.html#post634" name="post634" rel="nofollow">#6</a> 2010 年 7 月 22 日(木) 8:26</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">おはようございます。<br />誤植でした。<br />striplashes → stripslashes</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-318.html">meo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post635.html#post635" name="post635" rel="nofollow">#7</a> 2010 年 7 月 22 日(木) 18:23</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2010</div>
+				<div class="field">返信数: 6</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">nulla様　返信ありがとうございます。<br /><br />無事思い通りの仕様ができました！m(_ _)m<br /><br />提示して頂いたソースを何度も拝見し、<br />一部を作成中のphpに組み込ませて頂きました。<br /><br />作成中のものは、if elseでエラーを指定してあり<br />確認→送信と1つのphpでしたが、<br />それだとうまく配列がメール送信されない為、<br />確認と送信のphpと2つのphpに分けて、組み込みました。<br /><br />まだ勉強不足の為、正しく記述できてるかはわかりませんが、<br />何とか希望通りの仕様となりました。<br /><br />本当に困っていたので、助かりました。<br />ありがとうございます！</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; 配列を使うメールフォーム
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

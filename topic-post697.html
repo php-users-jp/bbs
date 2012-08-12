@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ドメインごとにphp.iniをつくれない？？大元のphp.iniで記述しなければならないならどうやってドメインの選別を？</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ドメインごとにphp.iniをつくれない？？大元のphp.iniで記述しなければならないならどうやってドメインの選別を？
+	</p>
+
+	<h3 id="forumname"><a href="topic-245.html">ドメインごとにphp.iniをつくれない？？大元のphp.iniで記述しなければならないならどうやってドメインの選別を？</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-347.html">whatsthestory</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post697.html#post697" name="post697" rel="nofollow">#1</a> 2010 年 10 月 18 日(月) 22:16</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2010</div>
+				<div class="field">返信数: 17</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">サーバを変える必要が出てきて、現在ラピッドサイトのVPSを利用しだしたのですが、<br />include_pathが稼働していないのか、サイドバー等の外部共通ファイルが表示してくれません。<br /><br />これまでは、Webページを.phpでつくって、ページの一番先頭に<br />&lt;?php include_once(&quot;last-mod.php&quot;); ?&gt;<br />と書いたり、サイドバーの箇所は<br />&lt;?php include_once(&quot;sidebar.php&quot;); ?&gt;<br /><br />と書いたりしていました。<br />これらの外部ファイルはincというフォルダをつくって全てそこに収めております。<br /><br />そして、マルチドメインのサーバなのですが、ドメインごとにphp.iniファイルを勝手につくって<br />アップすれば、php.iniに記述したinclue_path通りにパスが通ってくれます。<br />以下のようにphp.iniには書いています。<br /><br />include_path = &quot;.:/usr/local/bin:/usr/bin:/bin; .:/export/eieiei/www/jp/rentalserver/myaccount/mysite.com/inc&quot;<br /><br />これだけ記述したphp.iniファイルを複数のドメインフォルダがある中で、該当ドメインを開いたドメイン直下にアップロードしました。<br />こうしておけば、外部ファイルへのインクルードパスが見事につながり、ちゃんと機能していました。<br /><br /><br />しかし、ラピッドサイトのVPSへ移動すると、パスが通ってくれないのか、どうにも外部ファイルのインクルードパスが機能してくれません、。<br /><br />問い合わせると、プログラミングはサポートしない、と書かれてありつつ、<br />「php.iniのパスは/usr/local/php5/lib/php.iniですが、お間違いございませんでしょうか。」<br />とありました。<br />見つけて開いてみましたが、ものすごくたくさん何か記述がされていました。<br />ここで、これまでやってきた記述をどこでもいいので書こうかとも思ったのですが、<br />よく考えると、ここに書いてしまうと、「どのドメインに対してのインクルードパスなのか？」ということがわからない、つまり、ドメインごとの記述になっていないので、きっとサーバは「どのドメインのパスのことなの？」とわからないはずだと思いました。<br />このサーバの場合、php.iniへの書き方は以下だと思うのですが、<br /><br />include_path = &quot;.:/usr/bin:/bin; .:/home/member/www/mysite.com/inc&quot;<br /><br />これを、ドメインごとにアップするphp.iniじゃなく、大元のphp.iniファイルに書いてもドメインがわからないと思います。<br /><br />このようなサーバの場合、どうやって解決すれば良いのでしょうか？<br />ドメインごとにphp.iniファイルをドメイン直下にアップしても機能しなかったので、各ドメイン名のフォルダ直下にphp.iniをアップしてもダメだったとわかっています。<br /><br />「 /usr/local/php5/lib/」にある大元のphp.iniファイルで記述するのなら、いったいどのように記述すればドメインごとの違いを記述できるのでしょうか？<br /><br />また、旧サーバのように、ドメインフォルダ直下に、ドメインごとにphp.iniをアップして機能させることはできないのでしょうか？<br /><br />宜しくお願い致します。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post699.html#post699" name="post699" rel="nofollow">#2</a> 2010 年 10 月 19 日(火) 9:22</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">おはようございます。<br />vpsは自分で環境を構築する必要があります。<br />以前のサーバーではすでにそのような設定がされていたのでドメイン毎にphp.iniを読み込んでくれたのです。<br /><br />vpsは仮想専用サーバーで安くて自由度が高いのが売りのようですがサーバー構築のスキルがないと扱えないものと思ってください。<br />（初心者でも簡単とうたってる業者がいますが、代行設置など使って環境さえ構築してしまえば、普通のホスティングサービスと変わらず簡単なんでしょう）<br /><br />上記をふまえ<br />&gt; また、旧サーバのように、ドメインフォルダ直下に、ドメインごとにphp.iniをアップして機能させることはできないのでしょうか？<br />の質問に答えるなら<br />サーバーに設定すればドメイン毎にphp.iniを設置することは可能です。<br />になります。<br /><br />具体的な設定は記述しません。<br />phpの動作モードにより設定内容は異なるし、それとサーバー構築の話に及ぶからです。<br /><br /><br />もしphpがapacheモジュールとして動作しているのなら<br />.htaccessに<br />php_value include_path &quot;パス&quot;<br />を追加するといいでしょう。<br />この場合もapacheコンフィグに<br />AllowOverride Options（もしくはAllowOverride All）<br />がなければ動作しません。（通常のホスティングサービスでは設定されています）<br />というようにhttpサーバ構築に及びます。<br />http://www.php.net/manual/ja/configuration.changes.php<br /><br />phpが5.3.0以降であれば<br />http://www.php.net/manual/ja/configuration.file.per-user.php<br />の方法が使えるかもしれません。<br />（CGI/FastCGI SAPI の場合）</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post700.html#post700" name="post700" rel="nofollow">#3</a> 2010 年 10 月 19 日(火) 10:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">標準のphp.iniについて書いておりませんでした。<br /><br />&gt; これを、ドメインごとにアップするphp.iniじゃなく、大元のphp.iniファイルに書いてもドメインがわからないと思います。<br />わからないわけではありません。<br />すべてのドメインから読み込まれることになります。<br />last-mod.phpやsidebar.phpが他のドメインからも使用可能になるということです。<br />アクセス権をしっかり設定しておけば大丈夫ですけど。<br />ゆるいと他のドメイン使用者からソースとかパスワード等抜かれる危険性があります。<br />（vpsなので他のドメイン使用者はご自身か身内か社内の誰かさんでしょうけど）</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post701.html#post701" name="post701" rel="nofollow">#4</a> 2010 年 10 月 19 日(火) 10:11</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">連投失礼。<br />上記のアクセス権の話はphpがcgi-modeでsuexecが有効の場合にしか適用できません。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-347.html">whatsthestory</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post702.html#post702" name="post702" rel="nofollow">#5</a> 2010 年 10 月 19 日(火) 23:21</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2010</div>
+				<div class="field">返信数: 17</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ありがとうございます！<br /><br />&gt; もしphpがapacheモジュールとして動作しているのなら.htaccessに<br />&gt; php_value include_path &quot;パス&quot;<br />&gt; を追加するといいでしょう。<br /><br />モジュールモードだと書いたつもりが読み返すと書いてませんでした。。。<br />そして、上記実践にてズバリincludeのパスが見事に通りました！！<br />す、すばらしすぎる・・・・・<br /><br />ただ、なんででしょうか、パスが通った外部ファイルの中に、last-mod.phpもあるのですが、<br />これがなぜか機能していないようです。<br />sitemap.xml自動生成ツールでは相変わらず1970/1/1<br />のタイムスタンプになっています。<br />旧サーバならばちゃんと最終更新日時が出るようになってたんですが・・・<br />ちょっとここがわからないですがまた急ぎ業務の対応がでｔ</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post703.html#post703" name="post703" rel="nofollow">#6</a> 2010 年 10 月 19 日(火) 23:33</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんばんは。<br />last-mod.phpが以前のlast-modified.phpと仮定して。<br /><br />http://bbs.php.gr.jp/topic-post659.html<br />ご自身の最初の投稿をお忘れでしょうか？<br />モジュールモードの場合必要ありません。<br /><br />とても忙しいようですね。ご自愛ください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-347.html">whatsthestory</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post705.html#post705" name="post705" rel="nofollow">#7</a> 2010 年 10 月 20 日(水) 8:10</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2010</div>
+				<div class="field">返信数: 17</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">うへぇ～～！ソフト開発者さんからモジュールモードの場合は.htaccess一行記述で良いと返答あったことをワタシ自身が書いてますね。。<br />オハズカシイ。。。<br /><br />で、やってみました。するとできました！！！<br />.htaccessには<br />php_flag last_modified on<br />と一行記述し、<br />まずは外部ファイルであるlast-mod.phpはコメントアウトして適用しないようにしました。<br />以下のようにしました。<br /><br />------------------------------------------------------------------------------------------------------------<br />&lt;!-- 本ソースはPHPがモジュールモードの場合は不要 (.htaccessに一行追加手法でOK )<br />&lt;?php<br /><br />&#36;mtime = filemtime(&#36;_SERVER[&quot;HOME&quot;]);<br /># header(&quot;Last-Modified: &quot; . gmdate(&quot;D, d M Y H:i:s&quot;, &#36;mtime) . &quot; GMT&quot;);<br />header(&quot;Last-Modified: &quot; . gmdate(&quot;D, d M Y H:i:s&quot;, &#36;time_newest) . &quot; GMT&quot;);<br /><br />?&gt;<br />--&gt;<br />------------------------------------------------------------------------------------------------------------<br /><br />すると、これではできませんでした。<br />ウン？？PHPのコメントアウトって、HTMLとはまた違うのかな？？<br />ホントはコメントアウトだけで終わらせて、他のサイト、サーバの場合でも使いまわししやすくしたいのになぁ・・・<br />と思いながらも、しかたないのでとりあえず呼び出している元の各ページから<br />以下のlast-modifiedの記述自体を削除してみることにしました。<br />削除したソース↓<br />&lt;?php include_once(&quot;last-mod.php&quot;); ?&gt;<br /><br />すると、取得できました！！ヤッター！！<br />今日の現在の日時が取得できてます！！<br /><br />nullaさまは巨人です、そして広く深い目を持っておられます。感謝感謝です！！！取り急ぎ報告まで</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-347.html">whatsthestory</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post706.html#post706" name="post706" rel="nofollow">#8</a> 2010 年 10 月 20 日(水) 8:21</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2010</div>
+				<div class="field">返信数: 17</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">phpのコメントアウトもわかりまして、コメントアウトでの処置でもできました！！</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ドメインごとにphp.iniをつくれない？？大元のphp.iniで記述しなければならないならどうやってドメインの選別を？
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

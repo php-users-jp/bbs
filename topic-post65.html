@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; php初心者です。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php初心者です。
+	</p>
+
+	<h3 id="forumname"><a href="topic-30.html">php初心者です。</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-50.html">takeshi</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post62.html#post62" name="post62" rel="nofollow">#1</a> 2008 年 1 月 7 日(月) 11:30</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2008</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">php(ver.5.2.5)で画像を作成したいのですが、本に載っている書き方をすると、Warning: Cannot modify header information・・・というエラーコードと文字化けした文字のみが表示されて、画像が表示されません。ver5.0.5でも試してみましたが同様です。php.iniファイルのextension=php_gb2.dllは有効にしてあります。いったい何が足りないのでしょうか？聞く人がいなくて困っています。どうかよろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-45.html" class="administrator">ogi</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post64.html#post64" name="post64" rel="nofollow">#2</a> 2008 年 1 月 8 日(火) 2:06</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">何が問題なのか、不足しているかは、コードを見てみないと分からないのですが<br />「Warning: Cannot modify header information」<br />のエラーが出るのは、画像のヘッダーを出力する前に、何らかの出力(空白文字やエラーの場合もあります)が出ているからです。もし、これより前に何かの文字が表示されていたら、それが原因です。<br /><br /><a href="http://q.hatena.ne.jp/1168608777#a663863" title="http://q.hatena.ne.jp/1168608777#a663863" rel="external">http://q.hatena.ne.jp/1168608777#a663863</a><br />に書かれているように、このエラーの後に、エラーの起きた行と、問題となっている行が示されていると思います。そちらを見直してみてください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-50.html">takeshi</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post65.html#post65" name="post65" rel="nofollow">#3</a> 2008 年 1 月 8 日(火) 7:26</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2008</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ありがとうございました。半角スペースが一つ余計だったことがわかりました。PHPってデリケートなんですね。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-45.html" class="administrator">ogi</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post66.html#post66" name="post66" rel="nofollow">#4</a> 2008 年 1 月 9 日(水) 1:06</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">なるほど半角スペースでしたか。解決できてよかったです。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php初心者です。
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

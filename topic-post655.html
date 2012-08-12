@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; SOAP のエラーについて</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; SOAP のエラーについて
+	</p>
+
+	<h3 id="forumname"><a href="topic-232.html">SOAP のエラーについて</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post644.html#post644" name="post644" rel="nofollow">#1</a> 2010 年 8 月 5 日(木) 15:52</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">PHP5にて既に稼働しているSSL Apache Webサイトに、SOAPで外部サーバーへの接続を試みていますがエラーの原因が不明で、困っています。<br /><br />new SoapClientは上手くいっている？ようなのですが、<br />実際に関数を呼び出すとエラーになってしまいます。<br /><br />Fatal error: Uncaught SoapFault exception: [HTTP] SSL support not available in this build in /var/www/html/test.php:35 <br /><br />new SoapClientのあとに、関数を実行しているのが35行目です。<br /><br />SOAPサーバーはWin2008 IIS7で自己証明書がインストールされています。<br />PHP5が動いているWEBサーバーは、phpinfo()でSoap Client enabled となっており、<br />問題ないように思います。<br />プログラムの記述方法が間違っているのか、もしくは<br />サーバーの設定が間違っているのでしょうか。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post645.html#post645" name="post645" rel="nofollow">#2</a> 2010 年 8 月 5 日(木) 16:32</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br /><br />SSL support not availableといっているので<br />Soapだけでなくsslも有効かどうか確認してみては？</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post646.html#post646" name="post646" rel="nofollow">#3</a> 2010 年 8 月 5 日(木) 18:25</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">返信ありがとうございます。<br />既に、サーバー証明書（自己証明書）でhttpsで動いているサイトです。<br />phpinfo()でopensslなど、関連するところはenabledとなっているので、検討がつきません。<br />SOAP固有で確認する設定がありますでしょうか。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post647.html#post647" name="post647" rel="nofollow">#4</a> 2010 年 8 月 6 日(金) 12:10</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br />こちらの環境ではhttpsでも動くようです。<br /><br />soap_client.php<br />&lt;?php<br /><br />&#36;location = '<a href="https://example.net/soap_server.php" title="https://example.net/soap_server.php" rel="external">https://example.net/soap_server.php</a>';<br />&#36;uri = '<a href="https://example.net/" title="https://example.net/" rel="external">https://example.net/</a>';<br /><br />&#36;client = new SoapClient(null, array('location' =&gt; &#36;location, 'uri' =&gt; &#36;uri, 'trace' =&gt; 1));<br />&#36;result = &#36;client-&gt;showDate('date');<br /><br />echo &#36;result;<br /><br />?&gt;<br /><br /><br /><br />soap_server.php<br />&lt;?php<br /><br />function showDate(&#36;str) &#123;<br />	&#36;result = &#36;str . &quot;=&quot; . date(&quot;Y-m-d&quot;);<br />	return &#36;result;<br />&#125;<br /><br />&#36;server = new SoapServer(null, array('uri' =&gt; &quot;https://example.net/&quot;));<br />&#36;server-&gt;addFunction('showDate');<br />&#36;server-&gt;handle();<br /><br />?&gt;<br /><br /><br /><br /><br /><a href="http://www.phppro.jp/qa/2834" title="http://www.phppro.jp/qa/2834" rel="external">http://www.phppro.jp/qa/2834</a><br /><span style="color:#efefef">マルチポストのうえに環境もろくに書かれてない質問に回答を要求するのは無理があるんじゃない？</span></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post648.html#post648" name="post648" rel="nofollow">#5</a> 2010 年 8 月 9 日(月) 15:03</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">SSL support not available in this build がどうしても消えません。<br />SSL通信はできているはずなのですが、他にどこを確認したらいいでしょうか。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post649.html#post649" name="post649" rel="nofollow">#6</a> 2010 年 8 月 9 日(月) 15:13</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br /><br />提示したサンプルソースも動作しないということでしょうか？<br />もしそうならサーバ、クライアント両方の環境をお知らせください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post650.html#post650" name="post650" rel="nofollow">#7</a> 2010 年 8 月 9 日(月) 15:23</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">サーバー側については、パッケージのため、関連関数の一覧を情報としてもらっています。<br />サーバー上で、WEBサービスが動いていることは確認済みです。<br />クライアントですが、newをした後に、関数を実行するところでSSL support not available in this build エラーになります。<br />環境は、以下の通り<br /><br />Miracle Linux v4.0<br />Apache/2.0.52<br />PHP 5.0.5 (ただし、zend.ze1_compatibility_mode=Onとなっています）<br /><br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post651.html#post651" name="post651" rel="nofollow">#8</a> 2010 年 8 月 9 日(月) 16:13</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">追記です。<br />error_logにApache起動の際のnoticeが出ていました。関係あるのでしょうか。<br />[notice] LDAP: Built with OpenLDAP LDAP SDK<br />[notice] LDAP: SSL support unavailable</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post652.html#post652" name="post652" rel="nofollow">#9</a> 2010 年 8 月 9 日(月) 16:49</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こちらの環境は下記の通りです。<br /><br />サーバ側<br />CentOS5.5<br />apache-2.2.3<br />php-5.2.13 CGI-mode<br />remi版 cli mysql pdo mcrypt pgsql gd soap common mbstring<br /><br /><br /><br />クライアント側<br />windows vista sp1<br />apache-2.2.14<br />php-5.2.11 CGI-mode<br /><br />extension=php_gd2.dll<br />extension=php_mbstring.dll<br />extension=php_mcrypt.dll<br />extension=php_mysql.dll<br />extension=php_mysqli.dll<br />extension=php_openssl.dll<br />extension=php_pdo.dll<br />extension=php_pdo_mysql.dll<br />extension=php_pdo_pgsql.dll<br />extension=php_pdo_sqlite.dll<br />extension=php_pgsql.dll<br />extension=php_soap.dll<br />extension=php_sockets.dll<br /><br /><br />サーバとクライアントはopensslとsoapどちらも有効です。<br /><br /><br /><br />soapの前にクライアントで<br />file_get_contents(&quot;https://example.net/example.txt&quot;);<br />が正常に実行できるかどうかの確認が先のようですね。<br /><br /><br />&gt; サーバー側については、パッケージのため<br />サーバでphpinfo()できないのでしょうか？<br /><br />あと、error_logに関してはどちら（サーバ、クライアント）ですか。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post653.html#post653" name="post653" rel="nofollow">#10</a> 2010 年 8 月 9 日(月) 17:04</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&gt;サーバでphpinfo()できないのでしょうか？<br />サーバーへは、Win2008へSQLServerを用意して、あとはインストーラを実行し、IISを設定したのみです。<br />よって、プログラムがなにでできているかは不明ですが、PHPではなく、.NETで動いているようです。（.asmxへのアクセスのため）<br /><br />error_logですが、クライアントのものとなります。（サーバー側のものはみれませんので）<br /><br /><br />&gt;soapの前にクライアントで<br />&gt;file_get_contents(&quot;https://example.net/example.txt&quot;);<br />&gt;が正常に実行できるかどうかの確認が先のようですね。<br />サーバーのHome URLを実行すると、IISのページが表示されますので、そのURLで試しました。<br /><br />&#36;buf = file_get_contents(&quot;https://test.fc.co.jp/&quot;);<br />echo &#36;buf;<br /><br />以下のメッセージが出ました。<br />Warning: file_get_contents() [function.file-get-contents]: URL file-access is disabled in the server configuration in /var/www/html/test.php on line 75<br /><br />Warning: file_get_contents(https://test.fc.co.jp/) [function.file-get-contents]: failed to open stream: no suitable wrapper could be found<br /><br />因果関係がよくわかっておりません。<br />なにとぞよろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post654.html#post654" name="post654" rel="nofollow">#11</a> 2010 年 8 月 9 日(月) 17:37</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">追記です。<br />基本的なことですが、opensslとsoapが有効なことをクライアントで確認するには、phpinfo()で<br />OpenSSL support  enabled  <br />OpenSSL Version  OpenSSL 0.9.7a Feb 19 2003  <br />となっていて、soapも<br />Soap Client  enabled  <br />Soap Server  enabled  <br />となっていれば、有効になっているということで問題ないでしょうか。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post655.html#post655" name="post655" rel="nofollow">#12</a> 2010 年 8 月 9 日(月) 18:17</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">サーバー側のIISの設定で、Windows認証を有効→無効にし、匿名認証を無効→有効にし、かつ<br />SSL設定のSSLが必要のチェックをはずし、IIS再起動することで、動作することを確認しました。<br /><br />Windows認証については、new SoapClientの引数にloginとpasswordを指定していましたが、だめだったようです。<br />SSLと認証については、対応必須なのですが、何かわかることありましたらよろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post656.html#post656" name="post656" rel="nofollow">#13</a> 2010 年 8 月 9 日(月) 18:37</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&gt; &#36;buf = file_get_contents(&quot;https://test.fc.co.jp/&quot;);<br />&gt; echo &#36;buf;<br /><br />ファイルを指定しないと読めませんよ。<br />読めたらクライアント側のphpに関するsslはOKですね。<br /><br /><br /><br />&gt; PHP5にて既に稼働しているSSL Apache Webサイトに<br />php5で稼動してたんじゃなかったの？<br /><br />soapサーバーがphpでなく.netという情報出すの遅すぎますよ。<br />こういう重要な情報は最初の書き込みに書くものです。<br />提示したサーバ側のソースまったく意味ないし。（検証できなかったということだよね）<br /><br />ところで.netのsoapサーバは正常に動作していると100%言えるのでしょうか？<br /><br /><br /><br />と書いたところで掲示板更新されてますね。<br />&gt; 基本的なことですが、opensslとsoapが有効なことをクライアントで確認するには<br />有効で問題ないと思います。<br /><br />&gt; IIS再起動することで、動作することを確認しました。<br />何の動作を確認したのやら…。<br /><br />&gt; Windows認証については、new SoapClientの引数にloginとpasswordを指定していましたが、だめだったようです。<br />SoapClientに指定できるのはWindows認証ではなくhttp認証だと思いますが私はWindows認証に関しては素人です。<br />ここから先はphpとwindowsに博識な人でないと無理なようです。<br /><br /><span style="color:#efefef"># 最初から省略事項が多すぎて私はもう限界。疲れた…。</span></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-343.html">fca</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post657.html#post657" name="post657" rel="nofollow">#14</a> 2010 年 8 月 9 日(月) 19:00</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2010</div>
+				<div class="field">返信数: 9</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&gt; &gt; &#36;buf = file_get_contents(&quot;https://test.fc.co.jp/&quot;);<br />&gt; &gt; echo &#36;buf;<br />&gt; ファイルを指定しないと読めませんよ。<br />&gt; 読めたらクライアント側のphpに関するsslはOKですね。<br />sslのアクセスはいまだできていないので、認証の件確認してから試してみます。<br /><br />&gt; &gt; PHP5にて既に稼働しているSSL Apache Webサイトに<br />&gt; php5で稼動してたんじゃなかったの？<br />SOAPクライアントがPHP5のSSL Apache Webサーバーとなっています。<br />SOAPサーバーは今回新規構築のWindows2008 .NET(たぶん）となります。<br /><br />&gt; ところで.netのsoapサーバは正常に動作していると100%言えるのでしょうか？<br />パッケージの業者に確認し、SOAPサーバー上で付属の管理用アプリケーションから実行して値が取得できているので、<br />サーバーでは動いているという確認を取っています。<br /><br />&gt; &gt; IIS再起動することで、動作することを確認しました。<br />&gt; 何の動作を確認したのやら…。<br />SOAPサーバーへ接続、関数を実行し、SOAPサーバーから値を取得できたことで、「動作」としています。<br /><br />&gt; SoapClientに指定できるのはWindows認証ではなくhttp認証だと思いますが私は<br />&gt; Windows認証に関しては素人です。<br />&gt; ここから先はphpとwindowsに博識な人でないと無理なようです。<br />ありがとうございました。ヒントをたくさんいただきとても助かりました。<br />サーバー側の設定が重要であることがわからず、WEBサービスが動いていると<br />業者に確認をとっていたこともあり、Windows側を考えなかったのがよくありませんでした。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; SOAP のエラーについて
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

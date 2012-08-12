@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: 会員一覧</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; 会員一覧
+	</p>
+
+	<p id="pagelinksothertop">ページ: <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=1">&laquo;</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=7">&lt;</a> ... <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=4">4</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=5">5</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=6">6</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=7">7</a> <strong>8</strong> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=9">9</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=10">10</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=11">11</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=12">12</a> ... <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=9">&gt;</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=16">&raquo;</a></p>
+	<table class="maintable">
+		<tr>
+			<th>ユーザー名 / 本名</th>
+			<th>レベル / ランク</th>
+			<th>登録者</th>
+			<th>返信数</th>
+		</tr>
+
+		<tr>
+			<td><a href="profile-197.html">naco</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 3 月 26 日(木) 1:10</td>
+			<td class="count">1</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-198.html">Siya</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 4 月 10 日(金) 15:45</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-199.html">japple</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 4 月 11 日(土) 1:01</td>
+			<td class="count">2</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-200.html">Stama</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 4 月 23 日(木) 0:14</td>
+			<td class="count">5</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-202.html">ながはら</a><div class="jump-in-data">ながはら＠PHP初心者勉強会</div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 4 月 28 日(火) 14:43</td>
+			<td class="count">4</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-204.html">ryo61</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 3 日(日) 21:43</td>
+			<td class="count">3</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-205.html">ddddyyyyy</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 5 日(火) 14:12</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-206.html">pastonchi</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 6 日(水) 15:00</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-207.html">tetu_eita</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 7 日(木) 16:52</td>
+			<td class="count">4</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-208.html">kzm2000</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 13 日(水) 13:19</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-209.html">Notty</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 13 日(水) 18:19</td>
+			<td class="count">2</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-210.html">regnas</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 14 日(木) 10:05</td>
+			<td class="count">1</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-211.html">jan-ken</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 17 日(日) 14:53</td>
+			<td class="count">2</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-212.html">komura</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 17 日(日) 22:54</td>
+			<td class="count">1</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-213.html">bolotane</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 18 日(月) 12:08</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-214.html">kinka</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 24 日(日) 11:12</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-215.html">keyKey</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 25 日(月) 16:30</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-216.html">Kmasato</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 28 日(木) 15:41</td>
+			<td class="count">2</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-217.html">ACE</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 29 日(金) 3:19</td>
+			<td class="count">1</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-218.html">cuongvt</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 29 日(金) 11:53</td>
+			<td class="count">1</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-219.html">Akaneko</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 5 月 31 日(日) 13:07</td>
+			<td class="count">4</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-222.html">moneo</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 6 月 14 日(日) 13:17</td>
+			<td class="count">2</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-223.html">Joyce</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 6 月 23 日(火) 12:02</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-224.html">chample</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 6 月 25 日(木) 19:38</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td><a href="profile-225.html">vtlpro</a><div class="jump-in-data"></div></td>
+			<td>会員<div class="jump-in-data"></div></td>
+			<td>2009 年 6 月 29 日(月) 10:57</td>
+			<td class="count">0</td>
+		</tr>
+
+		<tr>
+			<td colspan="4" class="formcontrols"><form action="members.php" method="get">検索: <input type="text" name="search" value="" size="10" maxlength="255" /> ソート基準: <select name="sort_by"><option value="displayed_name">ユーザー名</option><option value="real_name">本名</option><option value="level">レベル</option><option value="rank">ランク</option><option value="regdate" selected="selected">Registered</option><option value="posts">Posts</option></select> <select name="order"><option value="asc" selected="selected">昇順</option><option value="desc">降順</option></select> <input type="submit" value="ソート" /></form></td>
+		</tr>
+	</table>
+	<p id="pagelinksotherbottom">ページ: <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=1">&laquo;</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=7">&lt;</a> ... <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=4">4</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=5">5</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=6">6</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=7">7</a> <strong>8</strong> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=9">9</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=10">10</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=11">11</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=12">12</a> ... <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=9">&gt;</a> <a href="members.php?search=&amp;sort_by=regdate&amp;order=asc&amp;page=16">&raquo;</a></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; 会員一覧
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

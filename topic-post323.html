@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; MySQLを操作できない？</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; MySQLを操作できない？
+	</p>
+
+	<h3 id="forumname"><a href="topic-118.html">MySQLを操作できない？</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-186.html">cudo29</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post323.html#post323" name="post323" rel="nofollow">#1</a> 2009 年 2 月 20 日(金) 18:06</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">PHPからMySQLを操作するコマンド群が正常に動作しなくなりました。<br />どうかご教示いただけましたら幸いです。<br /><br />異常の詳細は以下の通りです。<br />（１）ターミナル（bash）からphpスクリプトを実行<br />　→「セグメンテーション違反です」と表示されて実行できない。<br />【スクリプトコード】<br /><pre class="code"><br />#!/usr/local/bin/php<br />&lt;?php<br />&#36;link = mysql_connect('localhost','user','password');<br />?&gt;<br /></pre><br />※ターミナルから直接MySQLへのアクセスには問題なし。<br />※処理内容にMySQLが絡まないPHPスクリプト（ファイルのコピー、テキスト処理）の実行には問題なし。<br /><br />（２）MySQLのデータを読み込んでhtmlを出力するphpページにアクセス<br />Apacheエラーログに前項同様のエラー（child pid ***** exit signal Segmentation fault (11)」（*****は毎回異なる数値））。<br /><br />※やっていることは１つ目のhtmlソースを読み込み、特定の文字列があれば２つ目のhtmlソースとMySQLから読み込んだ内容を挿入するものです。<br />※２つ目のhtmlソースの途中までで表示が止まり、以降が表示されません。<br />※MySQLから読み込む部分をコメントアウトすると、それ以外部分は正常に最後まで表示されます。<br /><br />【ソースコードの概略】<br /><pre class="code"><br />&lt;?php<br />&#36;insertstart = &quot;&lt;div id=¥&quot;main¥&quot;&gt;&quot;; #ファイル挿入箇所検知文字列<br />#１つ目ファイルのファイルハンドラ<br />&#36;handle_comm = fopen(&quot;/usr/local/apache2/htdocs/common.html&quot;,&quot;r&quot;);<br />#２つ目ファイルのファイルハンドラ<br />&#36;handle_main = fopen(&quot;/usr/local/apache2/htdocs/main1.html&quot;,&quot;r&quot;);<br /><br />while (!feof(&#36;handle_comm)) &#123; <br />  &#36;buffer_comm = fgets(&#36;handle_comm);<br />  echo &#36;buffer_comm; #１つ目のファイルを１行ずつ出力<br />  if ((strpos (&#36;buffer_comm, &#36;insertstart)) !== false) &#123; #挿入開始<br />    #====２つ目のファイル挿入<br />    while (!feof(&#36;handle_main)) &#123;<br />      &#36;buffer_main = fgets(&#36;handle_main);<br />      echo &#36;buffer_main;<br />      &#125;<br />    fclose(&#36;handle_main);<br />    #====２つ目のファイル挿入おわり<br /><br />    #====MySQLデータ挿入<br />    &#36;link = mysql_connect('localhost','user','password');<br />    &#36;db_selected = mysql_select_db('userdb',&#36;link);<br />    &#36;result_resource = mysql_query('SELECT id,`year`,month,`name` FROM `index2` ORDER BY id DESC');<br />    &#36;result = mysql_fetch_array(&#36;result_resource);<br />    while (&#36;result !==false) &#123;<br />      printf (&quot;%03s&quot;,&#36;result[&quot;id&quot;]);<br />      printf (&quot;:%4s&quot;,&#36;result[&quot;year&quot;]);<br />      printf (&quot;/%02s&quot;,&#36;result[&quot;month&quot;]);<br />      printf (&quot;:%s&lt;¥/li&gt;¥n&quot;,&#36;result[&quot;name&quot;]);<br />      &#36;result = mysql_fetch_array(&#36;result_resource);<br />    &#125;<br />    echo &quot;&lt;¥/ul&gt;¥n&quot;;<br />    mysql_close(&#36;link);<br />    #====MySQLデータ挿入おわり<br />  &#125; #挿入おわり<br />&#125; #１つ目出力おわり<br />fclose(&#36;handle_comm);<br />?&gt;<br /></pre><br /><br />元々は問題なく表示できていましたが、下記経緯にて問題が発生するようになりました。<br />１．MySQLのアップグレード（5.0.49→5.1.30）を実施。<br />　→Apacheの停止再起動ができなくなった。<br />　エラーメッセージは<br />「modules/libphp5.so が libmysqlclient.so.15 を呼び出そうとしたが見つからない」<br />　という内容。<br />２．確認するとこのファイルの名前がlibmysqlclient.so.16に変わったことが判明。<br />　→php（5.2.8）を上書き再インストール。<br />　→Apacheは問題なく再起動できるようになった。<br />　　PHPも引き続き正常動作（MySQLの絡まないものについては）<br /><br />環境は以下の通りです。<br />OS:CentOS 5.2<br />Service:Apache 2.2.9、PHP 5.2.8、mysql 5.1.30</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-2.html" class="administrator">ELF</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post324.html#post324" name="post324" rel="nofollow">#2</a> 2009 年 2 月 20 日(金) 22:39</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 38</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">察するにapache，MySQL，PHPそれぞれRPMでインストールをしていませんね<br />RPMはCentOS付属という意味ではなく，たとえばmysql.comのRPMを使ったり，自分でRPMを作成して使ったりということです．<br />#RPMをちゃんと作成してインストールしていれば通常依存関係がこういう問題の発生を阻止してくれます<br /><br />っで，前置きはさておき結論からいうとABIがおかしい問題が完全に解決していないと推測します．<br /><br />libphp5.soと，もし共有ライブラリー形式にしている場合，mysql.soがどこにあるかわかりますか?<br />それぞれのファイルにlddコマンドをかけてみてください．<br />lddは共有ライブラリーの依存関係を表示します．<br /><br />たとえば下記はとある環境での実行例です．<br /><br /><pre class="code">&#36; ldd `php -r 'echo PHP_EXTENSION_DIR . &quot;/mysql.so&quot;;'`<br />        linux-gate.so.1 =&gt;  (0x00110000)<br />        libmysqlclient.so.15 =&gt; /usr/lib/libmysqlclient15/lib/mysql/libmysqlclient.so.15 (0x0011d000)<br />        libc.so.6 =&gt; /lib/libc.so.6 (0x00281000)<br />        libcrypt.so.1 =&gt; /lib/libcrypt.so.1 (0x003ea000)<br />        libnsl.so.1 =&gt; /lib/libnsl.so.1 (0x0041c000)<br />        libm.so.6 =&gt; /lib/libm.so.6 (0x00436000)<br />        libssl.so.7 =&gt; /lib/libssl.so.7 (0x0045f000)<br />        libcrypto.so.7 =&gt; /lib/libcrypto.so.7 (0x004aa000)<br />        libz.so.1 =&gt; /lib/libz.so.1 (0x005f8000)<br />        /lib/ld-linux.so.2 (0x00b46000)<br />        libgssapi_krb5.so.2 =&gt; /usr/lib/libgssapi_krb5.so.2 (0x0060c000)<br />        libkrb5.so.3 =&gt; /usr/lib/libkrb5.so.3 (0x0063b000)<br />        libcom_err.so.2 =&gt; /lib/libcom_err.so.2 (0x006da000)<br />        libk5crypto.so.3 =&gt; /usr/lib/libk5crypto.so.3 (0x006dd000)<br />        libresolv.so.2 =&gt; /lib/libresolv.so.2 (0x00702000)<br />        libdl.so.2 =&gt; /lib/libdl.so.2 (0x00717000)<br />        libkrb5support.so.0 =&gt; /usr/lib/libkrb5support.so.0 (0x0071c000)<br />        libkeyutils.so.1 =&gt; /lib/libkeyutils.so.1 (0x00726000)<br />        libpthread.so.0 =&gt; /lib/libpthread.so.0 (0x00729000)<br />        libselinux.so.1 =&gt; /lib/libselinux.so.1 (0x00742000)</pre><br /><br />この例でいう「libmysqlclient.so.15」が見つけられなくなっているんだと思います．<br /><br /><blockquote class="quote"><div class="title">引用</div><div class="content">２．確認するとこのファイルの名前がlibmysqlclient.so.16に変わったことが判明。</div></blockquote><br /><br />細かいことを抜きにすると単にファイル名が変わったわけではないです．<br />やるべきことで言うと，ちゃんとlibmysqlclient.so.16をリンクするようにPHPに関連するバイナリーを作り直してください．<br />リンクできるようになっているかどうかは上記のようにlddコマンドで確認できます．<br /><br />lddの共有ライブラリーの検索は/etc/ld.so.conf，/etc/ld.so.conf.dあたりが参照されます．<br />この辺りのキーワードも込みで必要な調査をしてみてください．<div class="signature">_______________<div>-- <br />Tadashi &quot;ELF&quot; Jokagi<br /><a href="http://blog.poyo.jp/" title="http://blog.poyo.jp/" rel="external">http://blog.poyo.jp/</a><br /><a href="http://wiki.poyo.jp/PHP/" title="http://wiki.poyo.jp/PHP/" rel="external">http://wiki.poyo.jp/PHP/</a><br /><a href="http://news.hotphpper.net/" title="http://news.hotphpper.net/" rel="external">http://news.hotphpper.net/</a></div></div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-186.html">cudo29</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post328.html#post328" name="post328" rel="nofollow">#3</a> 2009 年 2 月 23 日(月) 11:44</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ELFさん<br /><br />早速のコメントありがとうございます。<br /><br />RPMのことはよく分からず、RPMなしでインストールしてしまいましたが、<br />追々RPMのことも勉強します。<br /><br />さて、ご指摘いただきましたlibphp5.so（/usr/local/apache2/modules/の下にありました）に対するlddコマンドの結果を見ると、<br />出力結果にあるいずれのファイルも存在していて問題ないようでした。<br /><br />結局、PHPを再度インストールしてみたら正常に動作するようになりました。<br /><br />その際、<br />・./configure と make の前に make clean の手順を入れました。<br /><br />あと、もしかしたら先日の再インストール時は<br />・make と make test の間に行ったchcon コマンド<br />（SELinuxによるlibmysqlclient.so.16ファイルへのアクセス拒否を回避するのに必要のこと）において、パスが間違っていて効いてなかった、かも知れません。<br />（make test, make install 時のメッセージによると、そんなことはなかったと思いますが…）<br /><br />以上、お騒がせしました。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; MySQLを操作できない？
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

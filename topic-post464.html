@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; GDで画像を操作したときに幅広のファイルのサイズが減ってしまう</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; GDで画像を操作したときに幅広のファイルのサイズが減ってしまう
+	</p>
+
+	<h3 id="forumname"><a href="topic-171.html">GDで画像を操作したときに幅広のファイルのサイズが減ってしまう</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-268.html">chiku</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post464.html#post464" name="post464" rel="nofollow">#1</a> 2009 年 10 月 31 日(土) 18:22</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2009</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">はじめまして、<br />現在WEBシステムで<br />画像登録をする際に回転させてサーバに保存するプログラムを<br />作成しています。<br /><br />さてそこで問題なのが、<br />回転をかける前とかけた後でファイルサイズが変化しています。<br /><br />memoly_limit も１２８Mとかにも上げてみましたが、<br />現象が回復できません、どなたか同じような現象で解決方法をご存じないでしょうか<br /><br />環境<br />PHP 5<br />CentOS 5.2</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post465.html#post465" name="post465" rel="nofollow">#2</a> 2009 年 11 月 1 日(日) 10:49</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは、解決方法はありません。<br />環境は詳しく書きましょう。<br />それとソースを提示してくれると検証しやすいです。<br /><br />Windows Vista sp2 + php5.2.11 + gd2.0.34<br />example.php<br />&lt;?php<br /><br />	&#36;imgname = &quot;sample.png&quot;;<br />	&#36;before = &quot;before.png&quot;;<br />	&#36;after = &quot;after.png&quot;;<br /><br />	&#36;img = imagecreatefrompng(&#36;imgname);<br />	&#36;imgbefore = &#36;img;<br />	&#36;imgafter = imagerotate(&#36;img, 90, 0);<br /><br />	imagepng(&#36;imgbefore, &#36;before);<br />	imagepng(&#36;imgafter, &#36;after);<br /><br />	imagedestroy(&#36;imgbefore);<br />	imagedestroy(&#36;imgafter);<br /><br />?&gt;<br /><br />元画像<br />sample.png 1920x1200 818,014<br /><br />回転前<br />before.png 1920x1200 852,119<br /><br />回転後<br />after.png 1200x1920 856,247<br /><br /><br />確かにファイルサイズは回転前と後では変わりますね。<br />縦と横の解像度が変わるわけですから圧縮アルゴリズムが関係しているのでは？<br /><strong>データの並びが変わるので同じ圧縮アルゴリズムでもサイズに違いがでる</strong>でしょう。<br />なので現象を回避する方法はないと思います。<br /><br />私は元画像を加工せずデータベースに格納して、取り出す時に<br />合成とかクオリティを指定して書き出しています。<br />特にjpgは非可逆圧縮なので書き出しは最小限にしています。<br /><br /><br /><br />上記ソースをjpg用に書き換えて検証してみましたがpngより差が2倍位大きいですね。<br /><br />元画像<br />sample.jpg 1600x1200 510,785<br /><br />回転前<br />before.jpg 1600x1200 229,724<br /><br />回転後<br />after.jpg 1200x1600 238,810<br /><br /><br />ちなみに手持ちのbmpは回転後もファイルサイズは変わらなかったです。<br />非圧縮だからでしょうね。<br /><br /><br /><br />ここまで書いて題名を見たらサイズが減るんですね。<br />単にクオリティの指定をせずに書き出しているだけではないですか？<br />jpgの場合指定しないと75%のクオリティで書き出されます。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; GDで画像を操作したときに幅広のファイルのサイズが減ってしまう
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

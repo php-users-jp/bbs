@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; MySQLの文字コードをｐｈｐソース上で表現する方法について</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; MySQLの文字コードをｐｈｐソース上で表現する方法について
+	</p>
+
+	<h3 id="forumname"><a href="topic-151.html">MySQLの文字コードをｐｈｐソース上で表現する方法について</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-232.html">haya8251</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post420.html#post420" name="post420" rel="nofollow">#1</a> 2009 年 7 月 30 日(木) 17:17</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 7 2009</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">初めて質問させていただきます。<br />MySQLやPHPの学習を初めてまだ３ケ月の初心者ですがよろしくお願いします。<br /><br />会社で今回PHPを利用したWebシステムを構築しているのですが<br />ローカルＰＣ上で、Xamppを利用した Windowsシステムでテストして正常に動作していた test.php を<br />利用しているレンタルサーバーにアップしたところ日本語が表示されません。<br />原因が何処にあるのか判断できず、サーバー担当者に問い合わせしても<br />サポート対象外との事で具体的なアドバイスが受けれなくて困っております。<br /><br />＜環境＞<br />レンタルサーバー会社：GMOインターネット株式会社<br /><a href="http://www.kantan-server.jp/" title="http://www.kantan-server.jp/" rel="external">http://www.kantan-server.jp/</a><br />MySQL　version：5.0.37<br />MySQL の文字セット: UTF-8 Unicode<br />PHP　version：5.2.1<br />詳細は <a href="http://www.heroine.co.jp/member/phpinfo.php" title="http://www.heroine.co.jp/member/phpinfo.php" rel="external">http://www.heroine.co.jp/member/phpinfo.php</a> で確認できます。<br /><br />＜MySQL にてすとテーブル作成＞<br />テーブル名　：tbl_TEST<br />テーブル内容：項目０１　fild01 varchar(10) &quot;Heroine&quot; <br />　　　　　　　項目０２　fild02 varchar(10) &quot;株式会社　ヒロイン&quot;<br />　　　　　　　項目０３　fild03 varchar(20) &quot;これはphpテストです。&quot; <br />を作成しました。<br /><br />＜てすとPHPソース作成＞<br />PHPソース名：test.php<br />&lt;?php<br /><br />  header(&quot;Content-Type: text/plain; charset=EUC-JP&quot;);<br />require_once(&quot;data/config.php&quot;); // 設定をインポート<br />&#36;con = mysql_connect(&#36;DB_HOST,&#36;DB_USER,&#36;DB_PASS) or die(&quot;[Error:MySQL_Connect] システムエラーです&quot;);<br />&#36;sdb = mysql_select_db(&#36;DB_NAME,&#36;con) or die(&quot;[Error:MySQL_Select_db]  システムエラーです&quot;);<br />&#36;rec = mysql_query(&quot;SELECT * FROM tbl_TEST ORDER BY fild01&quot;,&#36;con);<br />&#36;row = mysql_num_rows(&#36;rec);<br />&#36;cnt = 1;<br />while(&#36;Farray = mysql_fetch_array(&#36;rec)) &#123;<br />&#36;tmp_fild01 = &#36;Farray[0];<br />&#36;tmp_fild02 = &#36;Farray[1];<br />&#36;tmp_fild03 = &#36;Farray[2];<br />&#36;cnt++;<br />&#125;<br />mysql_close(&#36;con);<br /><br />echo &quot;=== てすとテーブル =====================================================\n&quot;;<br />echo &quot;項目０１：&quot; . &#36;tmp_fild01 . &quot;\n&quot;;<br />echo &quot;項目０２：&quot; . &#36;tmp_fild02 . &quot;\n&quot;;<br />echo &quot;項目０３：&quot; . &#36;tmp_fild03 . &quot;\n&quot;;<br />echo &quot;========================================================================\n&quot;;<br /><br />?&gt;<br /><br />実行URL：　http://www.heroine.co.jp/member/test.php<br />※PHPのソースはEUC-JPで保存し、ブラウザへEUC-JPで出力する様に記述しています<br /><br />＜実行結果＞<br />=== てすとテーブル =====================================================<br />項目０１：Heroine<br />項目０２：?????????<br />項目０３：???php??????<br />========================================================================<br />となってしまいます？<br /><br />＜問題点＞<br />テーブルより参照した項目の半角英数字は正常に表示されるのですが、日本語の部分のみ ? で表示されてしまいます。<br />原因が判断できません。何方かアドバイスいただければありがたいのですが・・・<br /><br />このレンタルサーバーには独自の php.ini を設置できるとありますので<br />これを設置すると解決出来るのかもしれませんが、サポート対象外との事で<br />詳しい内容は担当者からアドバスいただけませんでした。<br />php.ini の記述箇所等もアドバイスいただければ、ありがたいのですが・・・<br />よろしくお願いします。 <img src="./templates/phpgrjp0.3/smilies/sad.gif" alt=":(" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-3.html" class="administrator">halt</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post422.html#post422" name="post422" rel="nofollow">#2</a> 2009 年 7 月 31 日(金) 11:40</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post"><pre class="code"><br />&#36;rec = mysql_query(&quot;SELECT * FROM tbl_TEST ORDER BY fild01&quot;,&#36;con);<br /></pre><br /><br />の前に<br /><br /><pre class="code"><br />&#36;rec = mysql_query(&quot;SET NAMES ujis&quot;,&#36;con);<br /></pre><br /><br />という行を追加するとどうでしょう？<br />おそらくmysql内での文字コード指定がうまくいってないか、<br />mysql内部で文字コードの自動変換がおこなわれています。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-232.html">haya8251</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post423.html#post423" name="post423" rel="nofollow">#3</a> 2009 年 7 月 31 日(金) 13:55</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 7 2009</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">アドバイスありがとうございます。<br /><br />&#36;rec = mysql_query(&quot;SET NAMES ujis&quot;,&#36;con);<br />を追加したところ正常に表示されました。<br />本当にありがとうございました。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; MySQLの文字コードをｐｈｐソース上で表現する方法について
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

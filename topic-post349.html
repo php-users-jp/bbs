@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; クッキーの発行ができません。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; クッキーの発行ができません。
+	</p>
+
+	<h3 id="forumname"><a href="topic-125.html">クッキーの発行ができません。</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post346.html#post346" name="post346" rel="nofollow">#1</a> 2009 年 3 月 14 日(土) 21:52</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">お世話になります。<br />最近、ｐｈｐの勉強をし始めたのですが、<br />Warning: Cannot modify header information - headers already sent by (output started at C:\Program Files\xampp\htdocs\test\cookie1.php:1) in C:\Program Files\xampp\htdocs\test\cookie1.php on line 1<br />とIE７ブラウザに表示され、正常に動作ができません。  <img src="./templates/phpgrjp0.3/smilies/sad.gif" alt=":(" />  <br />書籍の通りに入力して実行したのですが、何が間違っているのかわかりません。<br />どうかよろしくお願いします。 <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /> <br /><br />以下が、cookie1.phpの内容です。<br />&lt;?php setcookie('val', 100); ?&gt;<br />&lt;HTML&gt;&lt;BODY&gt;<br />	&lt;?php<br />		&#36;getval=&#36;_cookie['val'];<br />		print &quot;ページ１の値は　&#36;getval です。&lt;BR&gt;&quot;;<br />	?&gt;<br />	&lt;A HREF='cookie2.php'&gt;ページ２へ&lt;/A&gt;<br />&lt;/BODY&gt;&lt;/HTML&gt;</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-3.html" class="administrator">halt</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post347.html#post347" name="post347" rel="nofollow">#2</a> 2009 年 3 月 15 日(日) 12:53</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&#36;_cookieではなく，&#36;_COOKIEです．<br />基本的に&#36;_ではじまるスーパーグローバル変数の変数名はすべて大文字です．</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post348.html#post348" name="post348" rel="nofollow">#3</a> 2009 年 3 月 15 日(日) 13:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">書籍の発行している出版社のホームページからサンプルデータがあり、こちらからダウンロードして使用してみましたら、正常に表示されました。このサンプルデータのファイルの中をコピーして、テキストエディタに貼り付けて実行すると、同様のWarningメッセージが表示されてしまいます。試しに、サンプルデータのファイルと同じエンコードSJISに変更してsaveし実行しましたら、正常に表示されました。<br />それまでは、UTF-8を使用して問題なく出来ていたのですが、cookieのところでは正常に表示がされません。なぜなのでしょうか?</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post349.html#post349" name="post349" rel="nofollow">#4</a> 2009 年 3 月 15 日(日) 13:23</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">haltさま、返信ありがとうございます。<br />スーパーグローバル変数の変数名はすべて大文字ですね。わかりました。<br />今まで、大文字／小文字をあまり区別することなく使用していました。<br />ところで、先ほどの質問ですが、SJISに変更しましたら正常に表示がされましたが、<br />なぜUTF-8ではWarningが表示され正常に実行されないのでしょうか?<br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-3.html" class="administrator">halt</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post350.html#post350" name="post350" rel="nofollow">#5</a> 2009 年 3 月 15 日(日) 14:38</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">おそらくですが，BOM付きUTF-8で保存していませんか？<br />以下のサイトが参考になります．<br /><br /><a href="http://oubakiou.blog8.fc2.com/blog-entry-69.html" title="http://oubakiou.blog8.fc2.com/blog-entry-69.html" rel="external">http://oubakiou.blog8.fc2.com/blog-entry-69.html</a></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post352.html#post352" name="post352" rel="nofollow">#6</a> 2009 年 3 月 15 日(日) 15:23</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">確かにBOM付きUTF-8で保存してありました。<br />今、BOMなしUTF-8に変更して実行し、IE7で表示ができました。<br />ただし、IE７のエンコードをUTF-8に変更しないとだめです。<br />IE７の日本語（自動選択）の状態で、正常に表示させるにはどのようにしたらよろしいのでしょうか?<br />HTMLで何かを追加する必要があるのでしょうか？あれこれ質問で申し訳ございません。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post353.html#post353" name="post353" rel="nofollow">#7</a> 2009 年 3 月 15 日(日) 20:12</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">わかりました。&lt;METAでcharset指定しましたら、自動的に選択できるようになりました。<br />haltさま、疑問にお答えいただきありがとうございました。<br />色々と勉強になりました。また、こちらに伺うときもあると思いますので、よろしくお願いします。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; クッキーの発行ができません。
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

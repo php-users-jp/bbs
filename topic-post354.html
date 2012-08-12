@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ページ内の検索の結果の一覧で表示するには</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ページ内の検索の結果の一覧で表示するには
+	</p>
+
+	<h3 id="forumname"><a href="topic-126.html">ページ内の検索の結果の一覧で表示するには</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-187.html">poko</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post354.html#post354" name="post354" rel="nofollow">#1</a> 2009 年 3 月 18 日(水) 9:14</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2009</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post"><img src="./templates/phpgrjp0.3/smilies/rolleyes.gif" alt=":roll:" /> 最近勉強をはじめたのですが、つまづきました・・。<br /><br />取得したページ内の特定の文字～文字に挟まれた語句を一覧で表示したい（重複は外して）のですが、どうもうまくいきません・・。　<br /><br />preg_match(&quot;/○○○(.*?)×××/i&quot;, &#36;data, &#36;match);　で<br />どんどん検索して、ページの最後までいくにはどうしたらいいのでしょうか・・？<br />preg_match_allだと、全て検索はできるのですが、重複を外して表示したりができないみたいなので、preg_matchで、条件？ループ？と想いながら、サンプルみながら、いろいろやってみたのですがうまくいきません・・。 <img src="./templates/phpgrjp0.3/smilies/rolleyes.gif" alt=":roll:" /> 　<br /><br />どういう組み合わせでやれば、よいのでしょうか・・？教えてください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post355.html#post355" name="post355" rel="nofollow">#2</a> 2009 年 3 月 18 日(水) 22:01</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post"><a href="http://jp.php.net/manual/ja/function.array-unique.php" title="http://jp.php.net/manual/ja/function.array-unique.php" rel="external">array_unique()</a>は重複しない要素のみの配列を返します。<br />今回の件ですと、preg_match_all()で取得した&#36;matchのうち1番目の要素、&#36;match[1]をこの関数を通すという方法もあります。<br /><pre class="code">preg_match(&quot;/○○○(.*?)×××/i&quot;, &#36;data, &#36;match);<br />&#36;uniq_match = array_unique(&#36;match[1]);</pre><br />まだ試していないので期待通りになるかどうかわからないのですが、いかがでしょうか？。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-187.html">poko</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post356.html#post356" name="post356" rel="nofollow">#3</a> 2009 年 3 月 19 日(木) 1:16</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2009</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさんありがとうございます。下記で削除して一覧で、出力できました。<br /><br />preg_match_all(&quot;/○○○(.*?)×××/i&quot;, &#36;data, &#36;match);<br />&#36;uniq_match = array_unique(&#36;match[1]);<br />print_r (&#36;uniq_match);<br /><br />でも、preg_match_allででてきた文字列をさらに操作したりしようと<br />想うと、どうもうまくできません・・。preg_matchで、一つづつ検索して、その都度、文字列を操作して出力×繰り返しの方が良いのかと想いやってみてるのですが、取得した&#36;dataの最初から最後まで、止まらずに、preg_matchで、どんどん検索していくには、上や下にループ？？条件？？を足していくのですかね・・・？　いろんな組み合わせでやってるんですが、うまくいきません・・。　どの関数で組み合わせてやれば、良いのでしょうか・・？　　<div class="editinfo">&laquo; 最終編集者 <a href="profile-187.html">poko</a> 日時 2009 年 3 月 19 日(木) 1:19. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post357.html#post357" name="post357" rel="nofollow">#4</a> 2009 年 3 月 20 日(金) 22:26</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">検索した文字列を操作して出力するということですと、先ほどの&#36;uniq_match<em>（配列）</em>を<a href="http://jp2.php.net/manual/ja/control-structures.foreach.php" title="http://jp2.php.net/manual/ja/control-structures.foreach.php" rel="external">foreach</a>か<a href="http://jp2.php.net/manual/ja/function.array-map.php" title="http://jp2.php.net/manual/ja/function.array-map.php" rel="external">array_map()</a>か<a href="http://jp2.php.net/manual/ja/function.array-walk.php" title="http://jp2.php.net/manual/ja/function.array-walk.php" rel="external">array_walk（）</a>を使う方法しか思いつきませんでした。検索された文字列をまとめて配列で取得して、その配列を操作していく、という考え方です。期待されている答えになっているかどうか分かりませんがいかがでしょうか？。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-187.html">poko</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post358.html#post358" name="post358" rel="nofollow">#5</a> 2009 年 3 月 21 日(土) 3:50</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2009</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさんありがとうございます。<br />先に、array_unique　で重複をカットして、結果は、foreachで全て出力すれば、良いのですね。一個づつ出力できるので、文字も操作できます。また少し進めることができました。本当にありがとうございます。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ページ内の検索の結果の一覧で表示するには
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

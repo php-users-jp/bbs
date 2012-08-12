@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; mb_convert_encoding使用時のエラー</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; mb_convert_encoding使用時のエラー
+	</p>
+
+	<h3 id="forumname"><a href="topic-175.html">mb_convert_encoding使用時のエラー</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-273.html">kishihara</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post470.html#post470" name="post470" rel="nofollow">#1</a> 2009 年 11 月 18 日(水) 15:08</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 11 2009</div>
+				<div class="field">返信数: 8</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">始めましてkishiharaと申します。<br />最近ＰＨＰの勉強を始めました。<br />今後こちらで色々とお世話になると思いますがよろしくお願いいたします。<br /><br />今回、フォームからＰＯＳＴで受け取ったテキストの文字コードを<br />Shift-JISからEUC-JPに変更したいと思い下記の様なロジックを書きました。<br /><br />&#36;str = mb_convert_encoding(&#36;str, &quot;EUC-JP&quot;, &quot;Shift-JIS&quot;);<br /><br />そして実行した所<br /><br />Fatal error: Call to undefined function mb_convert_encoding() in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\view.php on line 10<br /><br />と言ったエラーが発生いたしました。<br />エラーの内容を調べると定義がされてない為と言った感じらしいのですが<br />何処の定義が足りないのか判りません。<br />大変お手数ですが、定義の足りない部分を教えていただけますようお願いいたします。<br /><br />～環境～<br />Windows XP<br />PHP 5.2.11<br />Apache HTTP Server 2.2<br /><br />C:\windows\php.iniの<br />[mbstring]<br />mbstring.internal_encoding = EUC-JP<br />mbstring.http_input = auto<br />mbstring.http_output = SJIS<br />mbstring.detect_order = auto<br />mbstring.substitute_character = none;<br />のコメントは全てはずしております。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post471.html#post471" name="post471" rel="nofollow">#2</a> 2009 年 11 月 19 日(木) 13:00</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは、<br />mbstringが有効になっていないようですね。<br /><br />php.iniの<br />extension_dir = &quot;dllのパス&quot;<br />extension=php_mbstring.dll<br />の設定を確認してみてください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-273.html">kishihara</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post473.html#post473" name="post473" rel="nofollow">#3</a> 2009 年 11 月 19 日(木) 15:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 11 2009</div>
+				<div class="field">返信数: 8</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ご返信有難う御座います。<br />早速設定を確認した所下記の通りになっていました。<br /><br />extension_dir = &quot;C:/PHP/ext&quot;<br />上のパス内にphp_mbstring.dllは存在していました。<br />extension=php_mbstring.dllの；は外れていました<br /><br />ちなみにphpinfo()で設定を見た所<br />Loaded Configuration Fileが(none)になっているのですが大丈夫でしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post474.html#post474" name="post474" rel="nofollow">#4</a> 2009 年 11 月 19 日(木) 17:47</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんばんは。<br /><br />php.iniをC:\windows\php.ini<br />からphpのインストールフォルダに移動してみてください。<br />それからLoaded Configuration Fileが設定されるか確認してみてください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-273.html">kishihara</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post475.html#post475" name="post475" rel="nofollow">#5</a> 2009 年 11 月 19 日(木) 18:49</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 11 2009</div>
+				<div class="field">返信数: 8</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">有難う御座います。<br />C:\windows\php.iniのphp.iniをc:\PHPへ移動しphpinfo()で<br />確認しましたが特に変化はありませんでした。<br /><br />Configuration File (php.ini) Path  C:\WINDOWS  <br />Loaded Configuration File  (none)</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post476.html#post476" name="post476" rel="nofollow">#6</a> 2009 年 11 月 20 日(金) 10:52</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">phpをどのようにインストールしたのでしょうか？<br />こちらはphpをcgiとして動作するようにインストールしています。<br />変則的なので参考にならないかもしれませんが…。<br />バーチャルホストの設定は、はしょってます。<br /><br /><br />インストール手順<br />環境: Windows Vista sp1<br />・php-5.2.11-nts-Win32.zipをダウンロード<br />・伸張展開する<br />・中身を c:\usr\bin に移動<br />・ext フォルダの中身を c:\usr\lib\php\modules に移動<br />・php.ini-dist のファイル名を php.ini に変更<br />・php.ini の下部に以下を追記<br /><br />[php]<br />magic_quotes_gpc = Off<br />short_open_tag = Off<br />output_buffering = Off<br />register_globals = Off<br />cgi.fix_pathinfo = 1<br />post_max_size = 10M<br />upload_max_filesize = 10M<br />extension_dir = &quot;/usr/lib/php/modules&quot;<br />extension=php_gd2.dll<br />extension=php_mbstring.dll<br />extension=php_mcrypt.dll<br />;使用するdllをここに追記<br /><br />[Session]<br />session.save_path = &quot;/tmp&quot;<br />session.use_cookies = 1<br />session.auto_start = 0<br />;session.cookie_secure = 1<br />session.entropy_length = 32<br />;session.entropy_file = /dev/urandom<br />session.use_trans_sid = 0<br />session.hash_function = 1<br /><br />[mbstring]<br />mbstring.language = Japanese<br />mbstring.internal_encoding = utf-8<br />mbstring.http_input = pass<br />mbstring.http_output = pass<br />mbstring.encoding_translation = Off<br />mbstring.detect_order = utf-8,sjis,euc-jp,jis,ascii<br /><br /><br />・バーチャルホストの設定<br />&lt;VirtualHost *:80&gt;<br /># hosts の編集が必要<br />	ServerName domain.local<br />#	ServerAlias <a href="http://www.domain.local" title="http://www.domain.local" rel="external">www.domain.local</a><br />#	SuexecUserGroup user user<br />	UseCanonicalName Off<br />	DocumentRoot /home/user/public_html<br /># ここに追加のバーチャルホスト設定<br /><br />	# CGIとphpの設定<br />	ScriptAlias /cgi-bin/ /home/user/public_html/cgi-bin/<br />	&lt;Directory &quot;/home/user/public_html/cgi-bin&quot;&gt;<br />		Options SymLinksIfOwnerMatch<br />		AllowOverride None<br />		Order allow,deny<br />		Allow from all<br />	&lt;/Directory&gt;<br /><br />	AddHandler application/x-httpd-php-cgi .php<br />	Action application/x-httpd-php-cgi /cgi-bin/php-cgi<br /><br />&lt;/VirtualHost&gt;<br /><br /><br />・php-cgiの設定<br />c:\home\user\public_html\cgi-bin\php-cgi<br />#!/usr/bin/php-cgi.exe<br /><br /><br /><br />これでphpのインストールは終了です。<br /><br />c:\home\user\public_html\info.php<br />&lt;?php<br />	phpinfo();<br />?&gt;<br /><br />ブラウザからアクセスすると<br />Loaded Configuration File C:\usr\bin\php.ini<br />となります。<br /><br />php.iniをphp-cgiと同じフォルダに置くと<br />Loaded Configuration File C:\home\user\public_html\cgi-bin\php.ini<br />となりバーチャルホスト毎にphp.iniの設定を変更できます。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-273.html">kishihara</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post477.html#post477" name="post477" rel="nofollow">#7</a> 2009 年 11 月 20 日(金) 12:20</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 11 2009</div>
+				<div class="field">返信数: 8</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">nulla様ご返信有難う御座います。<br /><br />早速確認しcgi.fix_pathinfo = 1のコメントを外した所、正常に処理を行う事が出来ました。<br />本当に有難う御座います。<br /><br />別件になりますが、当方はインストールの際ext フォルダの中身を別のフォルダに<br />コピーをしておりません。<br />上記のc:\usr\lib\php\modulesは何のフォルダなのでしょうか？<br />追記：php-5.2.11-nts-Win32.zipを展開したファイルをPHPと言うフォルダ名に変更し<br />Cドライブ直下に移動、その後PHP直下のphp5ts.dllをC:\WINDOWS\system32にコピーしております。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post478.html#post478" name="post478" rel="nofollow">#8</a> 2009 年 11 月 20 日(金) 17:19</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんばんは、<br />無事に動作したみたいでよかったです。<br /><br />&gt; 上記のc:\usr\lib\php\modulesは何のフォルダなのでしょうか？<br />Linux系の運営管理をしておりますのでwindowsの設定は、ある程度互換があるようにしています。<br />ですので深い意味はありません。<br />CentOSのremi版ですと /usr/lib/php/modules ディレクトリだったのでwindowsもそれにならったのです。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-290.html">lotofgimon3</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post492.html#post492" name="post492" rel="nofollow">#9</a> 2010 年 1 月 7 日(木) 4:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2010</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post"><img src="./templates/phpgrjp0.3/smilies/surprised.gif" alt=":o" /> もう解決してしまったようですが、<br />同じくmb_系の関数がundefinedになってつまずいてしまった者です。<br /><br />偶然この掲示板を見つけて助かりました！！<br /><br />ありがとうございます！<br />お礼と報告まで。<br /><br /><br />こちらの環境：<br />Windows XP SP3<br />PHP 5.2.12<br />Apache HTTP Server 2.2<br /><br />同じように、C:\windows\php.iniのphp.iniをc:\PHPへ移動して、<br />php.iniのcgi.fix_pathinfoをコメントアウトしてcgi.fix_pathinfo = 1に設定したら使えるようになりました。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; mb_convert_encoding使用時のエラー
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

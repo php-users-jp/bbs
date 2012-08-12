@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; PHPとSQLiteを使った掲示板</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; PHPとSQLiteを使った掲示板
+	</p>
+
+	<h3 id="forumname"><a href="topic-140.html">PHPとSQLiteを使った掲示板</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-211.html">jan-ken</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post394.html#post394" name="post394" rel="nofollow">#1</a> 2009 年 5 月 17 日(日) 15:05</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちわ。PHP初学者で、PHP5とSQLiteを使った掲示板を作成したいと思っています。<br />以下のように作成したのですが、削除が機能しません。<br />以下のスクリプトを修正する場合、どうすればよいかどなたかお知恵を拝借いただけませんでしょうか？　よろしくお願いいたします。<br /><br /><pre class="code"><br />&lt;?php<br />&#36;db = sqlite_open('sqbbs.sqlite');<br />sqlite_query(&#36;db, 'create table sqbbs(<br />id integer primary key, <br />t timestamp, <br />msg text, <br />del boolean default 0);');<br />?&gt;<br /><br />&lt;form action=&quot;sqbbs.php&quot; method=&quot;post&quot;&gt;<br />&lt;p&gt;メッセージ：&lt;br /&gt;<br />&lt;textarea name=&quot;msg&quot; rows=&quot;2&quot; cols=&quot;30&quot;&gt;&lt;/textarea&gt;&lt;br /&gt;<br />&lt;input type=&quot;submit&quot; value=&quot;送る&quot; /&gt;<br />&lt;input type=&quot;reset&quot; value=&quot;クリア&quot; /&gt;&lt;/p&gt;<br /><br />&lt;/form&gt;<br /><br />&lt;?php<br />&#36;db = sqlite_open('sqbbs.sqlite')<br />or die(&quot;&lt;p&gt;データベースに接続できませんでした&lt;/p&gt;&quot;);<br />if (&#36;_POST['msg'] != '') &#123;<br />&#36;t = date(&quot;Y-m-d H:i:s&quot;);<br />&#36;msg = sqlite_escape_string(&#36;_POST['msg']);<br />&#36;sql = &quot;insert into sqbbs values(NULL, '&#36;t', '&#36;msg',  0)&quot;;<br />&#36;result = sqlite_query(&#36;db, &#36;sql)<br />or die(&quot;&lt;p&gt;書き込みに失敗しました&lt;/p&gt;&quot;);<br />&#125;<br />&#36;sql = &quot;select * from sqbbs where Del = 0 order by id desc limit 20&quot;;<br />&#36;result = sqlite_unbuffered_query(&#36;db, &#36;sql)<br />or die(&quot;&lt;p&gt;読み出しに失敗しました&lt;/p&gt;&quot;);<br />echo &quot;&lt;table border=\&quot;1\&quot;&gt;\n&quot;;<br />echo &quot;&lt;tr&gt;<br />&lt;th&gt;番号&lt;/th&gt;<br />&lt;th&gt;日時&lt;/th&gt;<br />&lt;th&gt;メッセージ&lt;/th&gt;<br />&lt;th&gt;削除&lt;/th&gt;<br />&lt;/tr&gt;\n&quot;;<br />while (&#36;a = sqlite_fetch_array(&#36;result, SQLITE_ASSOC)) &#123;<br />echo &quot;&lt;tr&gt;<br />&lt;td&gt;&quot;, &#36;a['id'], &quot;&lt;/td&gt;<br />&lt;td&gt;&quot;, &#36;a['t'], &quot;&lt;/td&gt;<br />&lt;td&gt;&quot;, htmlspecialchars(&#36;a['msg']), &quot;&lt;/td&gt;<br />&lt;td&gt;&lt;form&gt;&lt;input type='submit' name='Del' value='削除'&gt;&lt;/td&gt;<br />&lt;input type='hidden' name='Del' value='1'&gt;&lt;/form&gt;<br />&lt;/tr&gt;\n&quot;;<br />&#125;<br />echo &quot;&lt;/table&gt;\n&quot;;<br />header('Location: ./sqbbs.php');<br /><br /><br />//削除処理#1<br />if (isset(&#36;_POST['Del'])) &#123;<br />&#36;result = sqlite_query(&#36;db, &#36;sql);<br />&#36;sql = &quot;delete from sqbbs where Del = 1&quot;;<br />&#36;result = sqlite_query(&#36;db, &#36;sql)<br />or die(&quot;&lt;p&gt;削除できませんでした&lt;/p&gt;&quot;);<br />&#125;else&#123;<br />print (sqlite_changes(&#36;db).'件のレコードを削除しました&lt;br/&gt;');<br />&#125;<br />header('Location: ./sqbbs.php');<br />exit;<br /><br /><br />sqlite_close(&#36;db);<br />?&gt;<br /></pre><div class="editinfo">&laquo; 最終編集者 <a href="profile-211.html">jan-ken</a> 日時 2009 年 5 月 17 日(日) 15:19. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-212.html">komura</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post396.html#post396" name="post396" rel="nofollow">#2</a> 2009 年 5 月 17 日(日) 23:08</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ダイレクトメールでこの方から同じ質問を受けて回答しました。<br />他の方の二度手間にならないよう、以下に回答内容を書いておきます。<br /><br /><blockquote class="quote"><div class="title">引用</div><div class="content">スクリプトを見たところでは、削除するような書き方になっていません。<br />以下の部分ですが、SQL の delete 文で Del フィールドが 1 の場合に<br />削除することになっています。しかし、Del フィールドを 1 にする SQL を<br />実行する部分がスクリプトには見当たりません。<br /><br /><blockquote class="quote"><div class="title">引用</div><div class="content">//削除処理#1<br />if (isset(&#36;_POST['Del'])) &#123;<br />&#36;result = sqlite_query(&#36;db, &#36;sql);<br />&#36;sql = &quot;delete from sqbbs where Del = 1&quot;;<br />&#36;result = sqlite_query(&#36;db, &#36;sql)<br />or die(&quot;&lt;p&gt;削除できませんでした&lt;/p&gt;&quot;);<br />&#125;else&#123;<br />print (sqlite_changes(&#36;db).'件のレコードを削除しました&lt;br/&gt;');<br />&#125;<br />header('Location: ./sqbbs.php');<br />exit;</div></blockquote><br /><br />対策ですが、以下の 2 通り考えられます。<br /><br />1. POST 時にメッセージの id を渡し、削除処理でメッセージを削除<br />   &#36;sql = &quot;delete from sqbbs where id = &quot; . (int)&#36;id;<br /><br />2. POST 時にメッセージの id を渡し、削除処理で Del フラグを設定<br />   &#36;sql = &quot;update sqbbs set Del = 1 where id = &quot; . (int)&#36;id;<br /><br />データベースからメッセージを削除するのが 1. の方法で、<br />データベースにメッセージを残しておいて、見られないようにする<br />のが 2. の方法です。都合の良い方を選択してください。</div></blockquote></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-211.html">jan-ken</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post397.html#post397" name="post397" rel="nofollow">#3</a> 2009 年 5 月 20 日(水) 20:39</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ご返信ありがとうございました。<br /><br />◉削除ボタンを以下のように書き直してみました。<br /><pre class="code"><br />&lt;td&gt;&lt;form&gt;&lt;input type='submit' name='Del_Rec' value='削除'&gt;&lt;/td&gt;<br />&lt;input type='hidden' name='id' value='&#36;id'&gt;<br /><br /></pre><br /><br />◉削除処理を以下のように書き直してみました。<br /><pre class="code"><br />//削除処理#1<br />if (isset(&#36;_POST['Del_Rec'])) &#123;<br />&#36;result = sqlite_query(&#36;db, &#36;sql);<br />&#36;sql = &quot;delete from sqbbs where id = &quot; . intval (&#36;id);  // 物理削除<br />//&#36;sql = &quot;update sqbbs set Del = 1 where id = &quot; . intval (&#36;id);   // 論理削除<br />&#36;result = sqlite_query(&#36;db, &#36;sql)<br />or die(&quot;&lt;p&gt;削除できませんでした&lt;/p&gt;&quot;);<br />&#125;else&#123;<br />print (sqlite_changes(&#36;db).'件のレコードを削除しました&lt;br/&gt;');<br />&#125;<br />header('Location: ./sqbbs.php');<br />exit;<br /><br /></pre><br /><br />しかしながら、動きません。どこがいけないのでしょうか？<br />お知恵を拝借いただきたく、よろしくお願いいたします。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; PHPとSQLiteを使った掲示板
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

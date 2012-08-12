@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; エラーの原因がわからない。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; エラーの原因がわからない。
+	</p>
+
+	<h3 id="forumname"><a href="topic-166.html">エラーの原因がわからない。</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-259.html">KKG</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post453.html#post453" name="post453" rel="nofollow">#1</a> 2009 年 9 月 28 日(月) 19:08</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 9 2009</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">はじめまして。<br /><br />今回、過去に学校の課題で制作したプログラムを改めて動かそうと<br />したのですが、動かなくなっており対処の方法がわからず投稿します。<br /><br />そのプログラムはユーザーにアンケートを作成してもらうという内容のもので<br />流れとしては<br />アンケートのタイトル入力→アンケート項目入力→入力確認→個別のhtmlを生成<br />となっています。<br /><br />エラーが出るのは入力確認の部分なのですが、コメントアウトした部分が<br />一部表示されてフォームの入力内容が受け取れないというものでどこを対処すればよいのか判らず困っております。<br />コードはほぼ初めて参考書などを参考にしながらで、いろいろと見苦しいかと思いますが<br />なにか対処の手がかりなどいただけたらうれしいです。<br /><br />環境:XP<br />      XAMPPver2.5?<br /><br />タイトル入力<br /><pre class="code">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br />&lt;head&gt;<br />&lt;link media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;./css/default.css&quot; rel=&quot;stylesheet&quot;/&gt;<br />&lt;/link&gt;<br />&lt;link media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;./css/top_base.css&quot; rel=&quot;stylesheet&quot;/&gt;<br />&lt;/link&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;<br />&lt;title&gt;アンケートにタイトルをつけてください&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;div id=&quot;wrapper&quot;&gt;<br />&lt;div id=&quot;content&quot;&gt;<br />&lt;h1&gt;アンケートに名前を付けてください&lt;/h1&gt;<br />&lt;form method=&quot;post&quot; action=&quot;simplemode.php&quot;&gt;<br />&lt;input type=&quot;text&quot; name=&quot;name&quot; &gt;<br />&lt;input type=&quot;submit&quot; value=&quot;タイトルを決定&quot;&gt;<br />&lt;/form&gt;<br />&lt;p&gt;ヒント:～のアンケートなど&lt;/p&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre><br /><br />アンケート項目入力<br /><pre class="code"><br />&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br />&lt;head&gt;<br />&lt;link media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;./css/default.css&quot; rel=&quot;stylesheet&quot;/&gt;<br />&lt;/link&gt;<br />&lt;link media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;./css/top_base.css&quot; rel=&quot;stylesheet&quot;/&gt;<br />&lt;/link&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;<br />&lt;title&gt;無題ドキュメント&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;?php<br />&#36;name = &#36;_POST[&quot;name&quot;];<br />?&gt;<br />&lt;div id=&quot;wrapper&quot;&gt;<br />&lt;div id=&quot;content&quot;&gt;<br />&lt;?php echo &#36;name ?&gt;<br />&lt;h1&gt;質問したい内容を決めてください&lt;/h1&gt;<br />&lt;form method=&quot;post&quot; action=&quot;kakunin.php&quot;&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&lt;?php echo &#36;name ?&gt;&quot;&gt;<br />&lt;input type=&quot;text&quot; name=&quot;enq1&quot; &gt;<br />&lt;input type=&quot;text&quot; name=&quot;enq2&quot; &gt;<br />&lt;input type=&quot;text&quot; name=&quot;enq3&quot; &gt;<br />&lt;input type=&quot;submit&quot; value=&quot;送信&quot;&gt;<br />&lt;/form&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /></pre><br /><br /><span style="color:red"><br />入力確認</span><br /><br /><pre class="code"><br />&lt;link media=&quot;all&quot; type=&quot;text/css&quot; href=&quot;./css/top_base.css&quot; rel=&quot;stylesheet&quot;/&gt;<br />&lt;/link&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;<br />&lt;title&gt;タイトルを決めてください&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br /><br />&lt;?PHP<br /><br /><br />if(&#36;_SERVER['REQUEST_METHOD'] == &quot;POST&quot;)<br />&#123;foreach(&#36;_POST as &#36;k =&gt; &#36;v)&#123;<br />//magic_quotes_gpcって？<br />if(get_magic_quotes_gpc())&#123;<br />&#36;v = stripslashes(&#36;v);<br />&#125;<br />&#36;v = htmlspecialchars(&#36;v);<br />	&#36;&#36;k = &#36;v;<br />	&#125;<br />&#125;<br />//そうじゃなければFALSEなら終わり？<br />else&#123;<br />exit();<br />&#125;<br />//値をチェックします<br />/*<br />&#36;ErrFlg = 0;<br />	if(&#36;name == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;展覧会の名前かアンケートの名称を入力してください&quot;;<br />&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq1 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;最初の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq2 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;目の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq3 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;みっつ目の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br />if(&#36;ErrFlg)&#123;<br />exit();<br />&#125;<br />*/<br />?&gt;<br />&lt;div id=&quot;wrapper&quot;&gt;<br />&lt;div id=&quot;content&quot;&gt;<br />&lt;p&gt;入力内容に間違いはないですか？<br />&lt;form method=&quot;POST&quot; action=&quot;&lt;?PHP echo &quot;seisei.php&quot; ?&gt;&quot;&gt;<br />&lt;table border=&quot;0&quot;&gt;<br />&lt;tr&gt;<br />&lt;td&gt;アンケート名&lt;/td&gt;<br />&lt;td&gt;&lt;?php echo &#36;name ?&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;tr&gt;<br />&lt;td&gt;アンケート内容1&lt;/td&gt;<br />&lt;td&gt;&lt;?php echo &#36;enq1 ?&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;tr&gt;<br />&lt;td&gt;アンケート内容2&lt;/td&gt;<br />&lt;td&gt;&lt;?php echo &#36;enq2 ?&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;td&gt;アンケート内容3&lt;/td&gt;<br />&lt;td&gt;&lt;?php echo &#36;enq3 ?&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;tr&gt;<br />&lt;!--colspanを入れるわけ --&gt;<br />&lt;td colspan=&quot;2&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;作成&quot;&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;/table&gt;<br />&lt;!--上にある変数のデータ送信用inputしか送る方法がないため --&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&lt;?php echo &#36;name ?&gt;&quot;&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;enq1&quot; value=&quot;&lt;?php echo &#36;enq1 ?&gt;&quot;&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;enq2&quot; value=&quot;&lt;?php echo &#36;enq2 ?&gt;&quot;&gt;<br />&lt;input type=&quot;hidden&quot; name=&quot;enq3&quot; value=&quot;&lt;?php echo &#36;enq3 ?&gt;&quot;&gt;<br />&lt;!--&lt;input type=&quot;hidden&quot; name=&quot;dir&quot; value=&quot;&lt;?php echo &#36;dir ?&gt;&quot;&gt;--&gt;<br />&lt;/form&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /></pre><br /><br />表示されてしまうのは以下の部分です。<br />なぜコメントアウトしても表示されてしまうのかが一番不可解困っております。<br /><span style="color:red"> &#36;v)&#123;<br />//magic_quotes_gpcって？<br />if(get_magic_quotes_gpc())&#123;<br />&#36;v = stripslashes(&#36;v);<br />&#125;<br />&#36;v = htmlspecialchars(&#36;v);<br />	&#36;&#36;k = &#36;v;<br />	&#125;<br />&#125;<br />//そうじゃなければFALSEなら終わり？<br />else&#123;<br />exit();<br />&#125;<br />//値をチェックします<br />/*<br />&#36;ErrFlg = 0;<br />	if(&#36;name == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;展覧会の名前かアンケートの名称を入力してください&quot;;<br />&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq1 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;最初の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq2 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;目の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br /><br />if(&#36;enq3 == &quot;&quot;)&#123;<br />	echo &quot;&lt;p&gt;みっつ目の質問を入力してください&quot;;<br />	&#36;ErrFlg = 1;<br />&#125;<br /></span><div class="editinfo">&laquo; 最終編集者 <a href="profile-259.html">KKG</a> 日時 2009 年 9 月 28 日(月) 19:33. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-291.html">yasu1988</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post496.html#post496" name="post496" rel="nofollow">#2</a> 2010 年 1 月 13 日(水) 14:15</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2010</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">いくつかの構文ミスを発見しました<br />おそらく致命的なエラーはKKGさん本人がご指摘のように、<br />kakunin.phpの12行目だと思われます。<br />コメントアウトは26行目からですので、それ以前に問題があればその部分は表示されてしまいます。<br />foreach(&#36;_POST as &#36;k =&gt; &#36;v<br />kakunin.phpの、&lt;?php以降を、下のように変えてみてください。<br /><br />&lt;?PHP<br />// リクエストメソッドがPOSTの場合、生成フォームへデータを渡す<br />if(&#36;_SERVER['REQUEST_METHOD'] == &quot;POST&quot;)&#123;<br />  // アーギュメントから必要なデータの取り出し<br />  /*<br />  ここは必要とする引数が予め分かっているため、<br />  &#36;_POST['****']で取得する方がセキュアなのでは？<br />  ここではあえてforeachのままで処理を行う。<br />  */<br />    foreach(&#36;_POST as &#36;k =&gt; &#36;v)&#123;<br />    &#36;v = htmlspecialchars(&#36;v);<br />	(&#36;k == &quot;name&quot;)?&#36;name = &#36;v:&#36;name=&#36;name;<br />	(&#36;k == &quot;enq1&quot;)?&#36;enq1 = &#36;v:&#36;enq1=&#36;enq1;<br />	(&#36;k == &quot;name&quot;)?&#36;enq2 = &#36;v:&#36;enq2=&#36;enq2;<br />	(&#36;k == &quot;name&quot;)?&#36;enq3 = &#36;v:&#36;enq3=&#36;enq3;<br />  &#125;<br />&#125;<br />else&#123;<br />// リクエストメソッドがPOSTではない(GET)の場合、終了する<br />print '予期しないアクセス方法でページが表示されました。&lt;A href=&quot;index.htm(l)&quot;&gt;トップページへ戻る&lt;/A&gt;';<br />exit();<br />&#125;<br /><br />// 値をチェックします<br />// エラーフラグの初期化<br />&#36;ErrFlg = 0;<br /><br />// nameがnullの場合エラーを出す<br />if(&#36;name == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;展覧会の名前かアンケートの名称を入力してください&quot;;<br />&#36;ErrFlg = 1;<br />&#125;<br /><br />// enq1がnullの場合エラーを出す<br />if(&#36;enq1 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;最初の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// enq2がnullの場合エラーを出す<br />if(&#36;enq2 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;ふたつ目の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// enq3がnullの場合エラーを出す<br />if(&#36;enq3 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;みっつ目の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// フラグが立っている場合、終了する<br />if(&#36;ErrFlg = 1)&#123;<br />  exit();<br />&#125;<br />//以下、生成フォーム<br />?&gt;<br />&lt;div id=&quot;wrapper&quot;&gt;<br />&lt;div id=&quot;content&quot;&gt;<br />  &lt;p&gt;入力内容に間違いはないですか？<br />  &lt;form method=&quot;POST&quot; action=&quot;seisei.php&quot;&gt;<br />    &lt;table border=&quot;0&quot;&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート名&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;name; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート内容1&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq1; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート内容2&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq2; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />        &lt;td&gt;アンケート内容3&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq3; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td colspan=&quot;2&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&lt;?php echo &#36;name ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq1&quot; value=&quot;&lt;?php echo &#36;enq1 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq2&quot; value=&quot;&lt;?php echo &#36;enq2 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq3&quot; value=&quot;&lt;?php echo &#36;enq3 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;submit&quot; value=&quot;作成&quot;&gt;<br />        &lt;/td&gt;<br />      &lt;/tr&gt;<br />    &lt;/table&gt;<br />  &lt;/form&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-291.html">yasu1988</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post497.html#post497" name="post497" rel="nofollow">#3</a> 2010 年 1 月 13 日(水) 14:54</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2010</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">投稿失敗しました。以下のコードでお願いします。<br /><br /><pre class="code">&lt;?PHP<br />// リクエストメソッドがPOSTの場合、生成フォームへデータを渡す<br />if(&#36;_SERVER['REQUEST_METHOD'] == &quot;POST&quot;)&#123;<br />  // アーギュメントから必要なデータの取り出し<br />  /*<br />  ここは必要とする引数が予め分かっているため、<br />  &#36;_POST['****']で取得する方がセキュアなのでは？<br />  ここではあえてforeachのままで処理を行う。<br />  */<br />    foreach(&#36;_POST as &#36;k =&gt; &#36;v)&#123;<br />    &#36;v = htmlspecialchars(&#36;v);<br />	(&#36;k == &quot;name&quot;)?&#36;name = &#36;v:&#36;name=&#36;name;<br />	(&#36;k == &quot;enq1&quot;)?&#36;enq1 = &#36;v:&#36;enq1=&#36;enq1;<br />	(&#36;k == &quot;name&quot;)?&#36;enq2 = &#36;v:&#36;enq2=&#36;enq2;<br />	(&#36;k == &quot;name&quot;)?&#36;enq3 = &#36;v:&#36;enq3=&#36;enq3;<br />  &#125;<br />&#125;<br />else&#123;<br />// リクエストメソッドがPOSTではない(GET)の場合、終了する<br />print '予期しないアクセス方法でページが表示されました。&lt;A href=&quot;index.htm(l)&quot;&gt;トップページへ戻る&lt;/A&gt;';<br />exit();<br />&#125;<br /><br />// 値をチェックします<br />// エラーフラグの初期化<br />&#36;ErrFlg = 0;<br /><br />// nameがnullの場合エラーを出す<br />if(&#36;name == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;展覧会の名前かアンケートの名称を入力してください&quot;;<br />&#36;ErrFlg = 1;<br />&#125;<br /><br />// enq1がnullの場合エラーを出す<br />if(&#36;enq1 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;最初の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// enq2がnullの場合エラーを出す<br />if(&#36;enq2 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;ふたつ目の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// enq3がnullの場合エラーを出す<br />if(&#36;enq3 == &quot;&quot;)&#123;<br />  echo &quot;&lt;p&gt;みっつ目の質問を入力してください&quot;;<br />  &#36;ErrFlg = 1;<br />&#125;<br /><br />// フラグが立っている場合、終了する<br />if(&#36;ErrFlg = 1)&#123;<br />  exit();<br />&#125;<br />//以下、生成フォーム<br />?&gt;<br />&lt;div id=&quot;wrapper&quot;&gt;<br />&lt;div id=&quot;content&quot;&gt;<br />  &lt;p&gt;入力内容に間違いはないですか？<br />  &lt;form method=&quot;POST&quot; action=&quot;seisei.php&quot;&gt;<br />    &lt;table border=&quot;0&quot;&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート名&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;name; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート内容1&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq1; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td&gt;アンケート内容2&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq2; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />        &lt;td&gt;アンケート内容3&lt;/td&gt;<br />        &lt;td&gt;&lt;?php echo &#36;enq3; ?&gt;&lt;/td&gt;<br />      &lt;/tr&gt;<br />      &lt;tr&gt;<br />        &lt;td colspan=&quot;2&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;name&quot; value=&quot;&lt;?php echo &#36;name ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq1&quot; value=&quot;&lt;?php echo &#36;enq1 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq2&quot; value=&quot;&lt;?php echo &#36;enq2 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;hidden&quot; name=&quot;enq3&quot; value=&quot;&lt;?php echo &#36;enq3 ?&gt;&quot;&gt;<br />          &lt;input type=&quot;submit&quot; value=&quot;作成&quot;&gt;<br />        &lt;/td&gt;<br />      &lt;/tr&gt;<br />    &lt;/table&gt;<br />  &lt;/form&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; エラーの原因がわからない。
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

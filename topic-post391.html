@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; &#36;_POSTのキー名での変数宣言</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; &#36;_POSTのキー名での変数宣言
+	</p>
+
+	<h3 id="forumname"><a href="topic-138.html">&#36;_POSTのキー名での変数宣言</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-209.html">Notty</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post388.html#post388" name="post388" rel="nofollow">#1</a> 2009 年 5 月 13 日(水) 18:32</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">初めて投稿させて頂きます。<br />どうぞよろしくお願いいたします。<br /><br />早速ですが、<br />現在メールフォームを作成しておりまして、<br />ハマってしまったのでご教受下さい。<br /><br />内容は、<br />&#36;_POSTに、&quot;name&quot;, &quot;from&quot;, &quot;title&quot;, &quot;message&quot;<br />という４つのキーが入っており、<br /><br />foreach (&#36;_POST as &#36;k =&gt; &#36;v) &#123;<br />    &#36;&#36;k = &#36;v;<br />&#125;<br /><br />というコードで、&#36;_POSTのキー名の変数を動的に宣言しようとしたのですが、<br />isset()で調べても変数は宣言されていなかったのです。<br /><br />これは何が原因だと考えられますか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post390.html#post390" name="post390" rel="nofollow">#2</a> 2009 年 5 月 13 日(水) 22:24</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">コピー&amp;ペーストして試してみたのですが・・・。<br /><br />・・・なんででしょうね？。こちら（PHP5.2.5 linux)ではisset()でtrueが返ってきました。<br />値が入っていないと無視されてisset()でfalseが返ってくることもあるようです。またPOSTとGETを間違えていた、なんてことは私もやったことがあります。<br /><br />少し話が変わりますが、name=kやname=vなど、phpの中で使われる変数と同じ名前を含むフォームから呼び出されるととんでもないことになりそうなので、<pre class="code">&#36;name = &#36;_POST['name'];<br />&#36;from = &#36;_POST['from'];<br />&#36;title = &#36;_POST['title'];<br />&#36;message = &#36;_POST['message'];</pre>か、<pre class="code">foreach ( array(&quot;name&quot;, &quot;from&quot;, &quot;title&quot;, &quot;message&quot;) as &#36;k ) &#123;<br />	if ( isset(&#36;_POST[&#36;k]) ) &#36;&#36;k = &#36;_POST[&#36;k];<br />&#125;</pre>のようにしたほうが安全かと考えてみましたが、いかがでしょうか？。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-209.html">Notty</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post391.html#post391" name="post391" rel="nofollow">#3</a> 2009 年 5 月 13 日(水) 23:11</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@m様<br /><br />早速のご回答有り難うございます。<br />つい先週PHPを始めたばかりで、このコードも勉強用の書籍の通りに記述していたので、<br />書籍のサンプルコードからコピーペーストしてもisset()でfalseが返ってきてしまいました。<br /><br />結局、フォームのhtmlと、内容確認用のphpファイル、<br />問題の起きた、実際にmb_send_mail()を実行するphpファイルをすべて書き直して見ると、<br />変数宣言が出来ていました。<br /><br />ただ、すべて書き直す前に、<br />foreach (&#36;_POST as &#36;k =&gt; &#36;v) &#123;<br />    &#36;&#36;k = &#36;v;<br />    echo &#36;k, &#36;v;<br />&#125;<br /><br />というコードで、そもそも&#36;_POSTに値が入っているのか検証したところ、<br />&#36;_POSTにはちゃんと値が入っていたので、<br />原因に関しては謎のままなのですが・・・。<br /><br />しかしそもそも論として、<br />フォームで情報を送信する際、<br />for分で動的に変数宣言する程大量の変数は必要にならないでしょうから（私の場合ですが）<br />kona@m様のご指摘の通り、<br /><blockquote class="quote"><div class="title">引用</div><div class="content">&#36;name = &#36;_POST['name'];<br />&#36;from = &#36;_POST['from'];<br />&#36;title = &#36;_POST['title'];<br />&#36;message = &#36;_POST['message'];</div></blockquote><br />と書いた方が安全かつ、間違いないですね。<br /><br /><br />ご回答下さり有り難う御座いました。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post392.html#post392" name="post392" rel="nofollow">#4</a> 2009 年 5 月 14 日(木) 8:52</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">実はもともとPHPにはフォームからのデータを自動的に変数にする機能があるのです。<br />私がPHPを知る前のことですが、デフォルトで有効になっていたのをセキュリティ上の理由で無効に変更されました。<br />少し回りくどい説明になってしまいました。ごめんなさい。<br /><br />文献：<a href="http://www.php.net/manual/ja/security.globals.php" title="http://www.php.net/manual/ja/security.globals.php" rel="external">グローバル変数の登録機能の使用法</a></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; &#36;_POSTのキー名での変数宣言
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

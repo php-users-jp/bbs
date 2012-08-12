@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ブラウザ上でPHPが見られない</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ブラウザ上でPHPが見られない
+	</p>
+
+	<h3 id="forumname"><a href="topic-103.html">ブラウザ上でPHPが見られない</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-160.html">ron</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post270.html#post270" name="post270" rel="nofollow">#1</a> 2008 年 12 月 8 日(月) 21:54</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2008</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">Vine Linux 4.2<br />Apache 2.2.3<br />php 5.2.6<br />です。<br /><br />初めてLinux環境でOSから再インストールするにあたり、<br /><a href="http://vine.1-max.net/" title="http://vine.1-max.net/" rel="external">http://vine.1-max.net/</a><br />を参考に、apt-getを用いて、インストールと環境変数の設定を行いました。<br /><br />結果的におそらくインストールは完了し、<br />WEBサーバとしての機能を果たし、perlも動いているのですが、<br /><br />&lt;?php<br />phpinfo();<br />?&gt;<br /><br />とだけ書かれた index.php をブラウザで見ることができず、500エラーになってしまいます。<br /><br />その他のhtmlファイルやperlのcgiは動作するので、<br />PHPそのものかApacheの設定にミスがあるのかもしれませんが、<br />恥ずかしながら原因を特定することができません。<br />（また何を参照すれば原因を特定できるのかもわかりません）<br />何かおわかりのことがありましたら、ご教授いただければ幸いです。<br /><br />辛うじてこちらでわかることとしては、<br />・権限は755に設定してあるので、おそらくそれが原因ではない。<br />・コンソール上で php5 /var/www/html/index.php を実行すると、<br />　phpinfo(); を実行すると表示されるべき情報のようなものが出力される。<br />　（つまりインストール自体は完了している？）<br />・/etc/apache2/logs/error_logを確認すると<br />　[error] [client xxx.xxx.xxx.xxx(当方IPアドレス)] (<img src="./templates/phpgrjp0.3/smilies/cool.gif" alt="8)" />Exec format error: exec of '/var/www/html/index.php' failed<br />　[error] [client xxx.xxx.xxx.xxx(当方IPアドレス)] Premature end of script headers: index.php<br />と記録されている。<br />以上３点です。<br /><br />また、mysql 5.0.27 もインストールしていて、こちらが原因になっている可能性はありますでしょうか。<br />mysqlはコンソール上で今のところ正しく実行されているようですが、<br />今後phpと絡めての使用を考えているので、何か危険があれば同時につぶせれば何よりです。<br /><br />以上何卒よろしくお願いいたします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post271.html#post271" name="post271" rel="nofollow">#2</a> 2008 年 12 月 11 日(木) 14:12</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">私のは同じ環境ではないので、気づいた点だけ書いておきますので、試してみて下さい。<br /><br />まずapacheのインストールディレクトリのmoduleディレクトリにlibphp5.soというファイルがあると思いますので探してみて下さい。もし別の場所だったらその場所もメモしておいて下さい。<br />どうしても無かったら・・・インストールのパッケージに問題があるかもしれません。（対応していないなど）<br /><br />そしてhttpd.confのどこかに<br />LoadModule php5_module        modules/libphp5.so<br />というように、先程のファイルをapacheで指定する行があるか確認して下さい。なければ記述して下さい。<br /><br />同じように、httpd.confのどこかに<br />AddType application/x-httpd-php .php<br />という行があるか確認して下さい。なければ記述して下さい。<br /><br />apacheを再起動して下さい。<br /><br />ブラウザからphpを確認してみて下さい。<br /><br />ちなみにこの一般的な方法だと、perlとは違う別の方法になりますので、phpファイルの属性は644でも大丈夫です。mysqlとも関係ありません。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ブラウザ上でPHPが見られない
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

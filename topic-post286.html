@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; assignが未定義エラーについて</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; assignが未定義エラーについて
+	</p>
+
+	<h3 id="forumname"><a href="topic-110.html">assignが未定義エラーについて</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-172.html">syanks</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post284.html#post284" name="post284" rel="nofollow">#1</a> 2009 年 1 月 6 日(火) 19:57</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">初めてこちらに書き込みさせていただきます。<br /><br />PHPを勉強して間もなく、Smartyを使用してPHPを勉強しようとしています。<br />サーバ環境は、LAMPサーバを構築しています。<br /><br />下記のソースからエラーが発生します。<br /><br />php<br />------------------------------------------------------<br />&lt;?php<br />	require_once(&quot;Smarty/Smarty.class.php&quot;);<br />	&#36;o_smarty-&gt;template_dir=&quot;../templates&quot;;<br />	&#36;o_smarty-&gt;compile_dir=&quot;../templates_c&quot;;<br />	&#36;o_smarty-&gt;assign(&quot;name&quot;,&quot;World&quot;);<br />	&#36;o_smarty-&gt;display(&quot;hello.tpl&quot;);<br />?&gt;<br />------------------------------------------------------<br /><br /><br />tpl<br />------------------------------------------------------<br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;Hell,World!&lt;/tilte&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />Hello,&#123;&#36;name&#125;!<br />&lt;/body&gt;<br />&lt;/html&gt;<br />------------------------------------------------------<br /><br />apache error<br />PHP Fatal error:  Call to undefined method stdClass::assign()<br /><br /><br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post285.html#post285" name="post285" rel="nofollow">#2</a> 2009 年 1 月 7 日(水) 9:46</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">実は私、Smartyを知らないので詳しいことはわかりませんが・・・ <img src="./templates/phpgrjp0.3/smilies/wink.gif" alt=";)" /> 。<br /><br />この掲示板の「PHP事始め」のスレッド「<a href="http://bbs.php.gr.jp/topic-102.html" title="http://bbs.php.gr.jp/topic-102.html" rel="external">smartyの使い方</a>」を参照してみました。<br />もしかしたらrequire_once()行の後に、このような行が必要ではありませんか？。<br /><pre class="code">&lt;?php<br />require_once(&quot;Smarty/Smarty.class.php&quot;);<br />&#36;o_smarty = new smarty();<br />&#36;o_smarty-&gt;template_dir=&quot;../templates&quot;;<br />（以下略）</pre><br />詳しいことはSmartyに慣れていらっしゃる方にお願いしたいです。<br />またphpマニュアルの「クラスとオブジェクト」の章を参考にしても良いかと思います。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-172.html">syanks</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post286.html#post286" name="post286" rel="nofollow">#3</a> 2009 年 1 月 7 日(水) 11:33</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん、ご返信いただきありがとうございます。<br />早速、ご指摘いただいた部分のソースを追加してみましたが、同様のエラーでうまく動いてくれませんでした。。。<br /><br />Smartyの部分のご質問なので、ここに書き込みすることがお門違いでした。。<br /><br />もう少し、自力でがんばってみます。ありがとうございます！</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-2.html" class="administrator">ELF</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post287.html#post287" name="post287" rel="nofollow">#4</a> 2009 年 1 月 8 日(木) 22:07</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 38</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ここで問題ないですよ<br />指摘を受けて修正したコードを見せてください<br />もともとのソースは個人的にはPHPは想定どおりのエラーを出していますが，kona@mさんのご指摘で<br />assignに関しては問題は出てこなくなるはずだと思います．<div class="signature">_______________<div>-- <br />Tadashi &quot;ELF&quot; Jokagi<br /><a href="http://blog.poyo.jp/" title="http://blog.poyo.jp/" rel="external">http://blog.poyo.jp/</a><br /><a href="http://wiki.poyo.jp/PHP/" title="http://wiki.poyo.jp/PHP/" rel="external">http://wiki.poyo.jp/PHP/</a><br /><a href="http://news.hotphpper.net/" title="http://news.hotphpper.net/" rel="external">http://news.hotphpper.net/</a></div></div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-172.html">syanks</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post290.html#post290" name="post290" rel="nofollow">#5</a> 2009 年 1 月 10 日(土) 21:16</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ご返信ありがとうございます。<br />こちらで、良かったのですね。<br /><br />早速kona@mさんにご指摘いただいたところを修正してやってみたました。<br />assignのエラーは出てこなくなったのですが、<br />別の不具合が、発生しました。<br /><br />内容としては、<br />IEで表示した際に、「Hello,&#123;&#36;name&#125;!」と変数がそのまま表示されるようになってしまいました。。<br /><br />おそらく文字コードの関係でリミタリが正常に認識できていないとおもったので、<br />リミタリを、これから&#123;→&#123;&#123;へ変更してみたのですが、同様に表示されてしまい。<br />現在、お手上げ状態です。。。<br /><br />ソースはすべて、UTF-8で書いており、UTF-8で勉強していこうと思っています。<br /><br />なにか助言など、いただけると幸いです。<br />宜しくお願いいたします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-2.html" class="administrator">ELF</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post291.html#post291" name="post291" rel="nofollow">#6</a> 2009 年 1 月 11 日(日) 11:07</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 38</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">疑ってしまってすみませんが，UTF-8のつもりでUCS-2とかでテンプレートを保存してしまっているとかないですか?<br /><br />#以前知人がやっちゃったミスです<div class="signature">_______________<div>-- <br />Tadashi &quot;ELF&quot; Jokagi<br /><a href="http://blog.poyo.jp/" title="http://blog.poyo.jp/" rel="external">http://blog.poyo.jp/</a><br /><a href="http://wiki.poyo.jp/PHP/" title="http://wiki.poyo.jp/PHP/" rel="external">http://wiki.poyo.jp/PHP/</a><br /><a href="http://news.hotphpper.net/" title="http://news.hotphpper.net/" rel="external">http://news.hotphpper.net/</a></div></div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-172.html">syanks</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post292.html#post292" name="post292" rel="nofollow">#7</a> 2009 年 1 月 11 日(日) 16:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ご返信ありがとうございます。<br /><br />いあいあ、全然疑ってくださいｗ<br /><br />確認したのですが、やはりUTF-8でソースは作っていますね。<br /><br />一応、作成するときの手順としましては、<br />EmEditorを使用していて、保存するときにUTF-8にして、保存しています。<br /><br />テンプレートファイルもPHPファイルもUTF-8で書いているのですが、<br />もしかして、テンプレートファイルとPHPファイルの文字コードって、違うコードで書くのが一般的なんでしょうか？<br /><br />すみません。結構、長いスレになってしまいましてｗ<br />よろしくお願いいたします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-172.html">syanks</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post305.html#post305" name="post305" rel="nofollow">#8</a> 2009 年 1 月 30 日(金) 11:05</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">問題解決しましたので、書き込みいたします。<br />原因は、やはり文字コードでした。PHP.iniファイルの設定が間違っていました。<br />mb_stringの値をいじったら、問題なく表示されました。<br /><br />ありがとうございました。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; assignが未定義エラーについて
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

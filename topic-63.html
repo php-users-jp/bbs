@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; php5.2.6インストーラ版、zip版（win）について</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php5.2.6インストーラ版、zip版（win）について
+	</p>
+
+	<h3 id="forumname"><a href="topic-63.html">php5.2.6インストーラ版、zip版（win）について</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-95.html">asysh0507</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post165.html#post165" name="post165" rel="nofollow">#1</a> 2008 年 5 月 7 日(水) 20:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちわ。はじめまして。<br /><br />どこに書き込めばよいのか分からなかったので、とりあえずこちらに。<br /><br />先日リリースされたphp5.2.6について、システムアップデートをテストするため<br />windowsバイナリ版でインストール（アップデート）したところ、内部サーバーエラー５００<br />が発生しました。<br /><br />いろいろ調べてみますと、postgreSQLとの連動が取れていないことに起因しているようで、<br />pg_sql.dllが適切な場所にインストールされているにも関わらず、pg_sql.dllが存在していない<br />ような振る舞いをしているために、エラーとなっているようでした。<br /><br />何度かアプリケーションの削除→再インストールを繰り返したのですが動作しなかったので、<br />pg_sql.dllのみをphp5.2.5版に含まれていたものへ差し替えると正常動作しました。<br />（ちなみに、php5.2.6zip版に含まれているpg_sql.dllでも正常動作しませんでした）<br /><br />これはひょっとしてインストーラのコンパイルエラーに起因するものでしょうか？<br />同様のシステムをご利用の方で、似たような症状が見られる方はいらっしゃいませんでしょうか？<br /><br />念のため、ダウンロードしたパッケージサイズと、<br />インストール後に生成されたpg_sql.dllのサイズ、ダウンロードしたサイトを記入しておきます。<br /><br />インストーラ： 19,837,440 bytes<br />pg_sql.dll： 98,368 bytes<br />pg_sql.dll(php5.2.5版)： 167,995 bytes<br />ダウンロードしたサイト：　jp.php.net(PacketBusiness, Inc.)、jp2.php.net(snotch)<br /><br />システム構成：<br />windows xp sp2<br />apache2.0.x<br />php5.2.6(pg_sql.dllのみ5.2.5版)<br />postgreSQL8.3.x<br /><br />エラーが発生している箇所：<br />postgreSQLへphpが接続を試みる部分。<br />具体的には、<br />	&#36;str_connection = &quot;host=&#123;&#36;hostname&#125; port=5432 dbname=&#123;&#36;dbname&#125; user=&#123;&#36;user&#125; password=&#123;&#36;password&#125;&quot;;<br />	&#36;db = pg_connect(&#36;str_connection);  ←エラー<br /><br />ご確認よろしくお願いいたします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-98.html">shun</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post169.html#post169" name="post169" rel="nofollow">#2</a> 2008 年 5 月 22 日(木) 16:01</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2008</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">初めまして。<br /><br />私も同様の症状で2日間ほど苦戦しました。<br />infoでもmyusqlは表示されるのですがpgsqlは表示されず、<br /><br />display_startup_errors = On<br /><br />で起動してみたところ<br />同様に「php_pgsql.dll」が存在しないとエラーが発生していました。<br /><br />php5.2.6の「php_pgsql.dll」にのみバグがあるようですね。<br />設定云々は散々試したあげく、asysh0507さんの書き込みに辿り着きました。<br />私はphp5.2.4を探し当て、「php_pgsql.dll」を差し替える事で正常動作しました。<br />もちろんpg_connectも正常に動作しています。<br /><br />asysh0507さん、本当にありがとうございました。<br /><br />あまりにハマったので同様の症状で困っている方の参考になればと。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-95.html">asysh0507</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post175.html#post175" name="post175" rel="nofollow">#3</a> 2008 年 6 月 14 日(土) 22:49</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&gt;shunさん<br /><br />私と同じ症状でお困りだったようで、私だけじゃなかったのだと安心しました。<br />とにかくお力になれて光栄です。ご丁寧に返答頂きありがとうございました。<br /><br />ただ、やはり上記対応はあくまで暫定的なものであることは否めないので<br />特にwin版をインターネット公開している場合、セキュリティ面が不安です。<br /># php5.2.6ではpdo_pgsql関数の動作改善がいくつかリストアップされています。<br /># 詳細→<a href="http://www.php.net/ChangeLog-5.php#5.2.6" title="http://www.php.net/ChangeLog-5.php#5.2.6" rel="external">Change Logs php5.2.6</a><br />私はイントラネットのみでの使用なので、このまま次期バージョンまで待つつもりです。<br /><br />linuxを使用されている方からは似たような書き込みは見られないので<br />win版特有の問題なのでしょうか？<br />やはりコンパイルミス・・・？だとしたら早く改善してほしいですね。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; php5.2.6インストーラ版、zip版（win）について
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>
