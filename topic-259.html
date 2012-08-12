@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; SPARC版Solaris10でmhashを利用してMD5が計算できない。</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; SPARC版Solaris10でmhashを利用してMD5が計算できない。
+	</p>
+
+	<h3 id="forumname"><a href="topic-259.html">SPARC版Solaris10でmhashを利用してMD5が計算できない。</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-375.html">koujiyam</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post740.html#post740" name="post740" rel="nofollow">#1</a> 2011 年 2 月 7 日(月) 21:56</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2011</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">SunOS 5.10 Generic_141444-09 sun4u sparc SUNW,Sun-Fire-V240<br />php-5.2.17、apache-2.2.17、mhash-0.9.9.9を使って下記スクリプトを実行しました。<br /><br /><pre class="code"><br />&lt;?php<br /><br />echo &quot;mhash:&lt;br&gt;&quot;;<br />&#36;input = &quot;what do ya want for nothing?&quot;;<br />&#36;hash = mhash(MHASH_MD5, &#36;input);<br />echo &quot;The hash(MD5) is &quot; . bin2hex(&#36;hash) . &quot;&lt;br /&gt;\n&quot;;<br />&#36;hash = mhash(MHASH_MD5, &#36;input, &quot;Jefe&quot;);<br />echo &quot;The hmac(MD5) is &quot; . bin2hex(&#36;hash) . &quot;&lt;br &gt;&quot;;<br /><br />&#36;hash = mhash(MHASH_SHA1, &#36;input);<br />echo &quot;The hash(SHA1) is &quot; . bin2hex(&#36;hash) . &quot;&lt;br /&gt;\n&quot;;<br />&#36;hash = mhash(MHASH_SHA1, &#36;input, &quot;Jefe&quot;);<br />echo &quot;The hmac(SHA1) is &quot; . bin2hex(&#36;hash) . &quot;&lt;br &gt;&quot;;<br /><br />?&gt;<br /></pre><br /><br />すると結果が次のようになってしまいます。<br /><br /><pre class="code"><br />mhash:<br />The hash(MD5) is 00000000000000000000000000000000<br />The hmac(MD5) is 00000000000000000000000000000000<br />The hash(SHA1) is 8f820394f95335182045da24f34de52bf8bc3432<br />The hmac(SHA1) is effcdf6ae5eb2fa2d27416d5f184df9c259a7c79<br /></pre><br /><br />同じスクリプトを同じバージョンのミドルウェア(mhash、php、apache)でx86版Solarisで実行すると問題無いのですがバグでしょうか？</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; SPARC版Solaris10でmhashを利用してMD5が計算できない。
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

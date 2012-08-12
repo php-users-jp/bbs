@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 4 &raquo; exec()でDOS窓が開かないようにしたい</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-3.html">PHP 4</a> &raquo; exec()でDOS窓が開かないようにしたい
+	</p>
+
+	<h3 id="forumname"><a href="topic-122.html">exec()でDOS窓が開かないようにしたい</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-190.html">phpcafe</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post337.html#post337" name="post337" rel="nofollow">#1</a> 2009 年 3 月 6 日(金) 11:12</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">コンソールプログラムをexec()でウェブ経由で実行すると一瞬DOS窓が開きます。<br />XP Pro/2003Serverでは表示されません。<br />なぜでしょうか？Policyなどの設定がまずいんでしょうか？<br />因みにPHP5ではこの現象は起こりませんでした。<br />PHP4をHomeで使ったときの改善方法（DOS窓を表示させないで実行）があればお願いします。<br /><br />動作条件<br />・OS<br /> Window XP Home<br /><br />・IIS6+PHP4.4.9<br />    or Apach2.2+PHP4.4.9<br /><br />・実行プログラムSrc<br /><pre class="code">&#36;rt =  exec(&quot;php -l xxxx.php&quot;);</pre><br /><br /> <img src="./templates/phpgrjp0.3/smilies/biggrin.gif" alt=":D" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-3.html" class="administrator">halt</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post341.html#post341" name="post341" rel="nofollow">#2</a> 2009 年 3 月 11 日(水) 1:44</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2005</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">以下のページをみると，PHP5のphp-win.exe以外はコンソールが開いてしまうようにみえます．<br /><br /><a href="http://www.php.net/manual/ja/migration5.cli-cgi.php" title="http://www.php.net/manual/ja/migration5.cli-cgi.php" rel="external">http://www.php.net/manual/ja/migration5.cli-cgi.php</a><br /><br />execの時だけphp-win.exeから叩くといいかしれません．</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-190.html">phpcafe</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post342.html#post342" name="post342" rel="nofollow">#3</a> 2009 年 3 月 11 日(水) 12:29</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">アドバイス有難うございました。<br /><br />PHP4とPHP5を併用し<br />php-win.exeでPHP4互換モードでチェックすればよいということですよね？<br />ただPHP4互換モードでSyntaxチェックって出来るんでしょうか？<br /> <img src="./templates/phpgrjp0.3/smilies/confused.gif" alt=":?" /></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-3.html">PHP 4</a> &raquo; exec()でDOS窓が開かないようにしたい
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

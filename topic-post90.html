@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 4 &raquo; ereg_replace計算</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-3.html">PHP 4</a> &raquo; ereg_replace計算
+	</p>
+
+	<h3 id="forumname"><a href="topic-41.html">ereg_replace計算</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-64.html">A-7</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post90.html#post90" name="post90" rel="nofollow">#1</a> 2008 年 2 月 11 日(月) 14:35</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">PHP 4.4.4 セーフモードです。<br /><br />文字列&#36;cmtsの中から、<br />正規表現<br />#([0-9]&#123;1,8&#125;)-([0-9])#　(#1234-4#など）<br />を探し、例の1234 * 4 に置き換えしたいのですが、<br />下のようにすると、返る結果は「」（└）になってしまいます。<br />どうすれば正しく1234 * 4ができるのでしょうか。<br />&#36;cmts = ereg_replace(&quot;#([0-9]&#123;1,8&#125;)-([0-9])#&quot;,&quot;\\1&quot; * &quot;\\2&quot;,&#36;cmts);</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post94.html#post94" name="post94" rel="nofollow">#2</a> 2008 年 2 月 12 日(火) 12:41</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">的外れかもしれませんが、preg_replace()を使ってみてはどうでしょう？</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-47.html">NewCrayon</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post98.html#post98" name="post98" rel="nofollow">#3</a> 2008 年 2 月 14 日(木) 18:40</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2007</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">そうですね。<br />&#36;cmts = &quot;1234-4&quot;;<br />&#36;cmts = preg_replace(&quot;#([0-9]&#123;1,8&#125;)-([0-9])#e&quot;, &quot;\\1 * \\2&quot;, &#36;cmts);<br />echo &quot;&#36;cmts\n&quot;;<br />でうまく行くのでは。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-64.html">A-7</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post100.html#post100" name="post100" rel="nofollow">#4</a> 2008 年 2 月 20 日(水) 17:10</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">なるほど。<br /><pre class="code">&#36;cmts = preg_replace(&quot;/#([0-9]&#123;1,8&#125;)-([0-9])#/e&quot;, &quot;\\1 * \\2&quot;, &#36;cmts);</pre>でできました。<br />eregでは計算などの特殊記号を使えないのですか。<br />では、ここでもう少し発展させてもらいますと、<br />\\1 や \\2 を受け取り、複雑な計算をすることは可能ですか？<br />可能ならば方法を教えてください。<br />例えば、\\1 * \\2 の結果を、16進数に変換し、その中の「E」を「X」に変換するなど。<br /><pre class="code">&#36;cmts = preg_replace(&quot;/#([0-9]&#123;1,8&#125;)-([0-9])#/e&quot;, dechex(&quot;\\1 * \\2&quot;), &#36;cmts);</pre>の時点で正しく表示されません。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post101.html#post101" name="post101" rel="nofollow">#5</a> 2008 年 2 月 20 日(水) 18:51</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">マニュアルのサンプルを見てみたら、2つ目の引数はダブルクォーテーションで囲ってありましたので<br /><pre class="code">&#36;cmts = preg_replace(&quot;/#([0-9]&#123;1,8&#125;)-([0-9])#/e&quot;, &quot;dechex(\\1 * \\2)&quot;, &#36;cmts);</pre><br />こんな感じでどうでしょう？（試してないので不安ですが）</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-3.html">PHP 4</a> &raquo; ereg_replace計算
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; phpでURLリダイレクトできない</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; phpでURLリダイレクトできない
+	</p>
+
+	<h3 id="forumname"><a href="topic-221.html">phpでURLリダイレクトできない</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post604.html#post604" name="post604" rel="nofollow">#1</a> 2010 年 5 月 5 日(水) 20:31</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">お世話になります。<br />認証画面aaa.htmlから認証確認画面bbb.phpへ移し、ユーザのidとパスワー<br />ドが正しければユーザ用の画面に、正しくない場合は不認証画面に移るように<br />したいのです。<br />ネットから調べて実行しましたが、画面のリダイレクトが実行されずにその<br />ままphpが終了してしまいます。<br />下記命令を&lt;html&gt;の前や&lt;body&gt;直後など色々と挿入しましたが駄目でした。<br />どのようにしたらよいのか、宜しくお願いします。<br />&lt;?php<br />header(&quot;HTTP/1.1 301 Moved Permanently&quot;);<br />header(&quot;Location: <a href="http://xxxxxx.html&quot" title="http://xxxxxx.html&quot" rel="external">http://xxxxxx.html&quot</a>;);<br />?&gt;</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post605.html#post605" name="post605" rel="nofollow">#2</a> 2010 年 5 月 6 日(木) 9:04</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">おはようございます。<br /><br />リダイレクトなのに<br />&gt; &lt;html&gt;の前や&lt;body&gt;直後など色々と挿入しましたが駄目でした。<br />どうしてhtmlを出力してるのでしょうか？<br /><br />それとマニュアルには目を通しましたか？<br /><a href="http://jp2.php.net/manual/ja/function.header.php" title="http://jp2.php.net/manual/ja/function.header.php" rel="external">http://jp2.php.net/manual/ja/function.header.php</a><br /><br />開発中はソースの冒頭に<br /><br />ini_set('display_errors', 1);<br />error_reporting(-1);<br /><br />を記述したほうがいいですよ。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post608.html#post608" name="post608" rel="nofollow">#3</a> 2010 年 5 月 8 日(土) 19:10</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">回答有難うございました。<br />初心者なので、よく理解できません。<br />&lt;html&gt;&lt;body&gt;を指定しては駄目なのでしょうか?<br />それから<br />ini_set('display_errors', 1);<br />error_reporting(-1);<br />を初めて知りました。今後使用していきます。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post609.html#post609" name="post609" rel="nofollow">#4</a> 2010 年 5 月 8 日(土) 22:32</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんばんは。<br />どこまで初心者なのかわかりませんが、プログラミング自体なのでしょうか？<br /><br />httpレスポンスは「ヘッダ、改行、データ」という構造です。<br />header()はhttpヘッダを送信するものなので&lt;html&gt;などのデータ送信後には送信できません。<br /><br />header(&quot;Location: ～&quot;)はリダイレクトなので、リダイレクトした後に&lt;html&gt;など送信しても無意味になります。<br /><br /><br /><br />&lt;?php<br />	header(&quot;Location: http://bbs.php.gr.jp/&quot;);<br />	header(&quot;Content-Type: text/plain; charset=utf-8&quot;); // 無効<br />	echo &quot;hello world!!&quot;; // 無効<br />?&gt;<br /><br /><br /># 関係ないですが、このBBS「BBCode を有効にする」にチェックすると勝手にソースに;（セミコロン）が挿入されますね。<br /># なので編集でチェック外しておきます。<div class="editinfo">&laquo; 最終編集者 <a href="profile-246.html">nulla</a> 日時 2010 年 5 月 8 日(土) 22:38. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post611.html#post611" name="post611" rel="nofollow">#5</a> 2010 年 5 月 10 日(月) 2:43</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ご回答有難うございました。<br />何度も失礼しますが、<br />先頭に<br />&lt;?php<br />header(&quot;Location: <a href="http://bbs.php.gr.jp/&quot" title="http://bbs.php.gr.jp/&quot" rel="external">http://bbs.php.gr.jp/&quot</a>;);<br />を入れましたら、それ以降は実行されずに、<a href="http://bbs.php.gr.jp/" title="http://bbs.php.gr.jp/" rel="external">http://bbs.php.gr.jp/</a><br />へリダイレクトされてしまうという事ですね。<br />条件で正なら<a href="http://bbs.aaa.html" title="http://bbs.aaa.html" rel="external">http://bbs.aaa.html</a>へ、<br />誤なら<a href="http://bbs.aaa.html" title="http://bbs.aaa.html" rel="external">http://bbs.aaa.html</a>へリダイレクトしたい場合には、使えない<br />のでしょうか？また、このような処理をしたい場合にはどのように指定<br />したらよろしいのでしょうか?宜しくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-193.html">BeBen</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post612.html#post612" name="post612" rel="nofollow">#6</a> 2010 年 5 月 10 日(月) 2:45</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 10</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">間違えがありました。<br />『誤ならhttp://bbs.aaa.htmlへ』→『誤ならhttp://bbs.bbb.htmlへ』<br />失礼しました。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post613.html#post613" name="post613" rel="nofollow">#7</a> 2010 年 5 月 10 日(月) 15:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br /><br />普通にif文で可能ですよ。<br /><br />auth.php<br />&lt;?php<br /><br />	if(&#36;_GET['passwd'] !== &quot;abcde&quot;) &#123;<br />		header(&quot;Location: http://bbs.bbb.html&quot;);<br />		exit();<br />	&#125;<br /><br />	header(&quot;Location: http://bbs.aaa.html&quot;);<br /><br />?&gt;<br /><br />auth.php?passwd=abcdeの場合のみhttp://bbs.aaa.htmlにページ移動します。<br />exit()に注視してください。<br /><br />ただこの方法ですと明示的にhttp://bbs.aaa.htmlにアクセスされる恐れがあります。<br /><br /><br /># 書き忘れましたが、header(&quot;Location: ～&quot;)のあとの命令も実行されます。<div class="editinfo">&laquo; 最終編集者 <a href="profile-246.html">nulla</a> 日時 2010 年 5 月 10 日(月) 15:13. &raquo;</div></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; phpでURLリダイレクトできない
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

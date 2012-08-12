@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; mb_convert_encodingについて</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; mb_convert_encodingについて
+	</p>
+
+	<h3 id="forumname"><a href="topic-357.html">mb_convert_encodingについて</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-437.html">tn1214</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post904.html#post904" name="post904" rel="nofollow">#1</a> 2011 年 10 月 24 日(月) 15:02</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2011</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">2台のUbuntu10.04ServerEdition上、共にApache+mySQL+php環境を入れております。<br />同じソースコードを実行した時、<br />一方のサーバーでは問題なくmb_convert_encoding(&#36;str,&quot;SJIS&quot;,&quot;UTF-8&quot;)が実行されますが、もう1台の方ではエラーが無しでコンバートされません。<br />お互いのphp.iniの設定は全く同じです。他に何か注意する点があれば教えて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post905.html#post905" name="post905" rel="nofollow">#2</a> 2011 年 10 月 24 日(月) 15:38</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">display_errors = On<br />error_reporting  =  E_ALL|E_STRICT<br /><br />であっても何もエラーが表示されないということでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-437.html">tn1214</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post906.html#post906" name="post906" rel="nofollow">#3</a> 2011 年 10 月 24 日(月) 17:14</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2011</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">早速の返信有難うございます。<br /><br />現環境で2台とも<br /><br />error_reporting = E_ALL &amp; ~E_DEPRECATED<br />display_errors = Off<br /><br />の設定になっておりましたが、<br /><br />display_errors = On<br /><br />に変更して実行させたところたっぷりのWarningが表示されました。<br />そして、その表示内容も2台とも全く同じでした。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post907.html#post907" name="post907" rel="nofollow">#4</a> 2011 年 10 月 24 日(月) 17:25</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">rpm系ならphpパッケージのインストールもれとか考えられますが<br />deb系はよくわかりません。<br /><br />お力になれずすみません。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-437.html">tn1214</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post908.html#post908" name="post908" rel="nofollow">#5</a> 2011 年 10 月 25 日(火) 11:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2011</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">補足説明をさせて頂きます。<br /><br />処理内容はmySQLからデータを取り出しCSV形式に吐き出そうとしています。<br />	&#36;fp = fopen(&quot;mtokui.csv&quot;, &quot;w&quot;);<br />と<br />	fwrite(&#36;fp, mb_convert_encoding(&#36;rec,'SJIS','UTF-8'));<br />この部分でWarningが発生します。<br />そして、Warningについてもmb_convert_encodingではなく<br />fopenとfwriteで起こっております。<br /><br />ファイル自体はSJISに変換されることなく<br />UTF-8で正常に書きこまれております。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post909.html#post909" name="post909" rel="nofollow">#6</a> 2011 年 10 月 25 日(火) 12:02</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&lt;?php<br />ini_set('display_errors', 1);<br />ini_set('error_reporting', 2147483647);<br /><br />&#36;rec = &lt;&lt;&lt;EOD<br />テスト,csv,文字コード変換<br /><br />EOD;<br /><br />&#36;fp = fopen(&quot;mtokui1.csv&quot;, &quot;wb&quot;);<br />fwrite(&#36;fp, mb_convert_encoding(&#36;rec, 'SJIS', 'UTF-8'));<br />fclose(&#36;fp);<br /><br />file_put_contents(&quot;mtokui2.csv&quot;, mb_convert_encoding(&#36;rec, 'SJIS-win', 'UTF-8'), LOCK_EX);<br /><br /><br />文字コードはUTF-8です。<br />上記のコードは正常に実行できますか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-437.html">tn1214</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post910.html#post910" name="post910" rel="nofollow">#7</a> 2011 年 10 月 25 日(火) 13:33</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2011</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">nullaさんへ：<br />返信有難うございます。<br />コードを実行したところ以下の警告が出ました。<br />正常に実行できていないようです。<br /><br />Warning: fopen(mtokui1.csv): failed to open stream: Permission denied in /var/www/mtokui.new/csvtest2.php on line 10 <br />Warning: fwrite() expects parameter 1 to be resource, boolean given in /var/www/mtokui.new/csvtest2.php on line 11 <br />Warning: fclose() expects parameter 1 to be resource, boolean given in /var/www/mtokui.new/csvtest2.php on line 12 <br />Warning: file_put_contents(mtokui2.csv): failed to open stream: Permission denied in /var/www/mtokui.new/csvtest2.php on line 14 <br /><br />Permission denied とあるのが気になります。<br />因みに実行しているディレクトリは<br />drwxr-xr-x 14 root root 4096 2011-10-25 13:31 mtokui<br />となっております。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post911.html#post911" name="post911" rel="nofollow">#8</a> 2011 年 10 月 25 日(火) 13:53</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">…以前の問題ですね。<br /><br />root権限で実行するか（非推奨）、適切なパーミッションを設定してから実行してください。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-437.html">tn1214</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post913.html#post913" name="post913" rel="nofollow">#9</a> 2011 年 10 月 25 日(火) 14:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2011</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">nullaさんへ：<br />ありがとうございました。<br />Permissionを変更して実行させたところ無事に出力出来ました。<br />お騒がせ致しました。<br /> <img src="./templates/phpgrjp0.3/smilies/neutral.gif" alt=":|" /></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; mb_convert_encodingについて
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

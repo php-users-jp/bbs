@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: 検索</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external();set_focus('keywords')">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; 検索
+	</p>
+
+	<form action="search.html" method="post">
+	<table class="maintable">
+		<tr>
+			<th colspan="2">検索</th>
+		</tr>
+		<tr>
+			<td class="fieldtitle">キーワード検索</td><td><input type="text" name="keywords" id="keywords" size="35" value="" /><div class="moreinfo">半角空白で区切られた少なくとも 3 文字のいくつかのキーワードです。</div></td>
+		</tr>
+		<tr>
+			<td class="fieldtitle">検索モード</td><td> <label><input type="radio" name="mode" value="and" checked="checked" /> すべてのキーワード (AND)</label> <label><input type="radio" name="mode" value="or" /> いずれかのキーワード (OR)</label></td>
+		</tr>
+		<tr>
+			<td class="fieldtitle">投稿者	検索</td><td><input type="text" name="author" size="20" value="" /> <label><input type="checkbox" name="exact_match" value="1" /> 完全一致</label> <label><input type="checkbox" name="include_guests" value="1" checked="checked" /> ゲストを含む</label></td>
+		</tr>
+		<tr>
+			<td class="fieldtitle">フォーラム検索</td><td><select name="forums[]" size="10" multiple="multiple"><option value="all" selected="selected">すべてのフォーラム</option><optgroup label="日本PHPユーザ会より"><option value="1">お知らせ</option></optgroup><optgroup label="PHP一般フォーラム"><option value="2">PHP事はじめ</option><option value="3">PHP 4</option><option value="4">PHP 5</option></optgroup><optgroup label="その他"><option value="5">雑談</option><option value="6">テスト</option></optgroup></select></td>
+		</tr>
+		<tr>
+			<td class="fieldtitle">ソート基準</td><td><select name="sort_by"><option value="latest_post" selected="selected">最新の投稿</option><option value="topic_title">トピックの題名</option><option value="forum">フォーラム</option><option value="author">投稿者</option><option value="replies">返信数</option><option value="views">閲覧数</option></select> <label><input type="radio" name="order" value="asc" /> 昇順</label> <label><input type="radio" name="order" value="desc" checked="checked" /> 降順</label></td>
+		</tr>
+		<tr>
+			<td class="fieldtitle">Show results as</td><td> <label><input type="radio" name="show_mode" value="topics" checked="checked" /> トピック数</label> <label><input type="radio" name="show_mode" value="posts" /> 返信数</label></td>
+		</tr>
+		<tr>
+			<td class="formcontrols" colspan="2"><input type="submit" value="検索" /> <input type="reset" value="リセット" /></td>
+		</tr>
+	</table>
+	</form>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; 検索
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

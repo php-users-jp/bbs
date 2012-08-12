@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; ページング処理について教えて下さい</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; ページング処理について教えて下さい
+	</p>
+
+	<h3 id="forumname"><a href="topic-131.html">ページング処理について教えて下さい</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-200.html">Stama</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post367.html#post367" name="post367" rel="nofollow">#1</a> 2009 年 4 月 23 日(木) 9:22</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 4 2009</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">初めまして。<br />ページング処理で１５件ずつで区切って表示したいと思っています。<br /><br />しかし、次頁を押下しても同じレコードが表示されてしまいます。<br /><br />&#36;i&lt;=&#36;endlineの部分では&#36;i=0、&#36;endline=15となり次のページにすると&#36;i=14、&#36;endline=29とちゃんとなります。<br /><br />初心者ながらに色々、試してみたのですが分からず困っています <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /> <br />長いソースで大変恐縮ですがアドバイスを頂きたいと存じます。<br /><br />よろしくお願い致します。<br />-----------------------------------------------------------<br />&#36;maxline = 20;<br /><br />&#36;page = &#36;HTTP_GET_VARS[&quot;page&quot;];<br /><br />if (&#36;page &lt; 1) &#123;<br />&#36;page = 1;<br />&#125;<br />&#36;startline = (&#36;page - 1) * &#36;maxline;<br /><br />&#36;endline = &#36;page * &#36;maxline -1;<br /><br /><br />&#36;sql = &quot;select * from db1 id DESC&quot;;<br />&#36;r = odbc_exec(&#36;con, &#36;sql);<br /><br />&#36;maxpage = ceil(odbc_num_rows(&#36;r) / &#36;maxline);<br /><br />&#36;i=&#36;startline;<br /><br />while(odbc_fetch_array(&#36;r) and &#36;i&lt;=&#36;endline)&#123;<br /><br />&#36;item1 = odbc_result(&#36;r, &quot;id&quot;);<br />&#36;item2 = odbc_result(&#36;r, &quot;clm1&quot;);<br /><br />?&gt;<br />&lt;form action=&quot;index.php&quot; method=&quot;post&quot;&gt;<br />&lt;TR class=&quot;old&quot;&gt;<br />&lt;TD align=&quot;center&quot;&gt;<br />&lt;TD&gt;&lt;?= &#36;item1 ?&gt;&lt;/TD&gt;<br />&lt;TD&gt;&lt;?= &#36;item2 ?&gt;&lt;/TD&gt;<br />&lt;/FORM&gt;<br />&lt;?<br />&#125;<br />//&#36;iに1を加算<br />&#36;i = &#36;i + 1;<br />&#125;<br />//現在の頁/最終頁を表示<br />print(&quot;&lt;caption valign='top' align='right'&gt;Page &quot;.&#36;page.&quot;/&quot;.&#36;maxpage.&quot;&lt;/caption&gt;&quot;);<br /><br />print(&quot;&lt;caption align='bottom'&gt;&quot;);<br /><br />if (&#36;page &gt; 1) &#123;<br />&#36;i = &#36;page - 1;<br /><br />print(&quot;&lt;a href='page.php?page=&quot;.&#36;i .&quot;'&gt;前頁&lt;/a&gt;&quot;);<br />&#125;<br /><br />if (&#36;page &lt;&gt; 1 and &#36;page &lt;&gt; &#36;maxpage) &#123;<br />print(&quot;・&quot;);<br />&#125;<br />if (&#36;page &lt; &#36;maxpage) &#123;<br />&#36;i = &#36;page + 1;<br /><br />print(&quot;&lt;a href='page.php?page=&quot;.&#36;i .&quot;'&gt;次頁&lt;/a&gt;&quot;);<br />&#125;<br />print(&quot;&lt;br&gt;&quot;);<br /><br />for (&#36;i=1;&#36;i&lt;=&#36;maxpage;&#36;i++) &#123;<br /><br />if (&#36;i==&#36;page)&#123;<br />print(&quot;[&quot;.&#36;i.&quot;]&quot;);<br />&#125; else &#123;<br />print(&quot;&lt;a href='page.php?page=&quot;.&#36;i.&quot;'&gt;&#36;i&lt;/a&gt;&quot;);<br />&#125;<br />if (&#36;i &lt;&gt; &#36;maxpage) &#123;<br />print(&quot;・&quot;);<br />&#125;<br />?&gt;</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post368.html#post368" name="post368" rel="nofollow">#2</a> 2009 年 4 月 23 日(木) 11:49</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ソースを見てみますと、<br />(1) &#36;iの値はちゃんと次のページの行を指している<br />(2) しかしそれとは関係なくデータは最初の行から読んでいる<br />といった感じになっているようです。<br /><br />方法その1：<br />表示する行よりも前の行を先に読み飛ばしてしまう方法があります。この場合は<br /><pre class="code">&#36;i=&#36;startline;</pre>の行の代わりに、次の行で置き換えてみます。<br /><pre class="code">for ( &#36;i = 0; &#36;i &lt; &#36;startline; &#36;i ++ ) &#123;<br />	odbc_fetch_array(&#36;r);<br />&#125;</pre><br />方法その2：<br />マニュアルを読んだだけで試したことがないのですが、odbc_fetch_array()関数は、2つ目の引数で「どの行番号を取得するのかを任意で指定する。 」とありますので、表示する行を指定してデータを取得できそうです。この場合は<br /><pre class="code">while(odbc_fetch_array(&#36;r) and &#36;i&lt;=&#36;endline) &#123;</pre>の行を、次のように訂正してみます。<br /><pre class="code">while(odbc_fetch_array(&#36;r, &#36;i) and &#36;i&lt;=&#36;endline) &#123;</pre><br />まずは方法その2のほうから試してみて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-200.html">Stama</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post369.html#post369" name="post369" rel="nofollow">#3</a> 2009 年 4 月 23 日(木) 12:16</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 4 2009</div>
+				<div class="field">返信数: 5</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん<br /><br />ありがとうございます <img src="./templates/phpgrjp0.3/smilies/smile.gif" alt=":)" /> <br />完璧です！<br /><br />「方法その2」でうまく表示できました。<br /><br />なるほど。<br /><br />odbc_fetch_array()関数は使用した事がなかったので勉強してみます。<br />また頂いた修正ソースを見て再度、自分なりに理解してみたいと思います。<br /><br />またご質問させて頂く機会がありましたらどうぞよろしくお願い致します。<br /><br />本当にありがとうございました！<div class="editinfo">&laquo; 最終編集者 <a href="profile-200.html">Stama</a> 日時 2009 年 4 月 23 日(木) 12:18. &raquo;</div></div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; ページング処理について教えて下さい
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

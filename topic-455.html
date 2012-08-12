@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？
+	</p>
+
+	<h3 id="forumname"><a href="topic-455.html">ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-470.html">morisan-imasu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post1013.html#post1013" name="post1013" rel="nofollow">#1</a> 2011 年 12 月 9 日(金) 9:10</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2011</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">MAYSQLコマンドをＰＨＰで行うにあたりまして、そのコマンドに使うパラメーターが、コマンドする度に変化する場合、ＳＱＬ文そのものが、ＰＨＰでリライトされる仕組みを作りたいと思っております。試しにやってみると、web上にそれらしいＳＱＬのテキストが生まれるところまでは出来るのですが、それが、ＰＨＰプログラムとして動くわけではなく、本当に「単なるテキスト」としてweb上に存在してしまいます。<br />ＰＨＰのプログラムそのものが動的に変わるＰＨＰプログラムって、あり得るのでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-65.html" class="administrator">koyhoge</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post1040.html#post1040" name="post1040" rel="nofollow">#2</a> 2011 年 12 月 13 日(火) 15:39</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				管理者
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">もちろん PHP プログラムから PHP のソースコードを生成することも可能です。そこで生成された PHP のソースコードをその場で実行するには eval() 関数を使えば良いです。<br /><br />&lt;?php<br />&#36;php_code = '&#36;hoge = &quot;hoge&quot;; echo &#36;hoge;';<br />eval(&#36;php_code);<br />?&gt;<br /><br />でも SQL 文を条件によって書き換える位であれば、eval() を使わなくても SQL 文を動的に生成すれば可能だと思います。<br /><br />&lt;?php<br />&#36;id = '777';<br />&#36;dname = 'ichijoureimei1';<br />&#36;shindata = 'joureimei2';<br /><br />&#36;sql = sprintf(&quot;UPDATE jorei SET %s='%s' WHERE ID='%s'&quot;, &#36;dname, &#36;shindata, &#36;id);<br />&lt;略&gt;<br />mysql_query(&#36;sql);</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-470.html">morisan-imasu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post1041.html#post1041" name="post1041" rel="nofollow">#3</a> 2011 年 12 月 14 日(水) 9:15</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2011</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">koyhoge様ありがとうございました。お蔭様で解決です。結局。お勧めのsprintfで処理しましたが、eval()も興味津々で、トライしてみたいと思います。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

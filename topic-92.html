@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; postgresqlの接続保持</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; postgresqlの接続保持
+	</p>
+
+	<h3 id="forumname"><a href="topic-92.html">postgresqlの接続保持</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-121.html">dekudeku</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post240.html#post240" name="post240" rel="nofollow">#1</a> 2008 年 9 月 26 日(金) 17:48</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2008</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">postgresqlを使用してＤＢ内のテーブルを表示するプログラムを勉強しています。<br />同じＤＢ内にテーブルが３つあります。画面上で実行ボタンを押すと１つめのテーブルがブラウザ上に表示されます。その表示された画面上にリンクを貼り、そのリンクを押すことによって他の２つのテーブルをそれぞれ表示するといったものをつくっています。<br />リンク単位でソースを作成して各テーブルを表示するsql処理を書いていますが、それぞれのソース毎でＤＢ接続をするのは無駄な処理のような気がするので、ソース間でＤＢ接続を保持したいのですが、どのような方法とるべきなのでしょうか？<br />どなたかアドバイスをお願いします。<div class="editinfo">&laquo; 最終編集者 <a href="profile-121.html">dekudeku</a> 日時 2008 年 9 月 26 日(金) 17:51. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-189.html">yogpstop</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post332.html#post332" name="post332" rel="nofollow">#2</a> 2009 年 3 月 5 日(木) 15:58</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2009</div>
+				<div class="field">返信数: 8</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">はっきり言って無理です <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /> 。<br />複数の回数での表示には複数の接続が必要です <img src="./templates/phpgrjp0.3/smilies/confused.gif" alt=":?" /> 。<br />それに無駄ではありません <img src="./templates/phpgrjp0.3/smilies/rolleyes.gif" alt=":roll:" /> 。<br />第一それは当然です <img src="./templates/phpgrjp0.3/smilies/surprised.gif" alt=":o" /> 。<br />ですが処理を変数に格納することでセッションとして扱えば処理の全文入力は1回ですみます。<br />詳しくはメールしてください。<br />ちなみにメールの方法は私のユーザー名をクリックした後で電子メールアドレスというところの横の文章をクリックすれば後は画面にしたがってできます。<div class="editinfo">&laquo; 最終編集者 <a href="profile-189.html">yogpstop</a> 日時 2009 年 3 月 5 日(木) 16:00. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-180.html">yuiti</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post333.html#post333" name="post333" rel="nofollow">#3</a> 2009 年 3 月 5 日(木) 16:07</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2009</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">接続負荷を軽減するための持続接続ということであれば<br /><a href="http://www.phppro.jp/phpmanual/php/function.pg-pconnect.html" title="http://www.phppro.jp/phpmanual/php/function.pg-pconnect.html" rel="external">http://www.phppro.jp/phpmanual/php/function.pg-pconnect.html</a><br />ではいかがでしょう。<br /><br />プログラム的にソースを毎回書くのが面倒ということであれば、接続部分だけ別のファイルにして<br />require ファイル名;<br />でそれぞれのソースの頭で読み込んであげてはいかがでしょう？</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; postgresqlの接続保持
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

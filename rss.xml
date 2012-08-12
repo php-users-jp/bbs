@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xml:lang="ja">
+	<channel>
+		<title>日本PHPユーザ会 掲示板</title>
+		<link>http://bbs.php.gr.jp/</link>
+		<description>日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</description>
+		<language>ja</language>
+		<pubDate>Sun, 12 Aug 2012 06:48:25 GMT</pubDate>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<generator>UseBB</generator>
+
+		<item>
+			<title><![CDATA[掲示板を閉鎖することになりました]]></title>
+			<description><![CDATA[このたびPHPユーザ会内で協議した結果，この掲示板を閉鎖することになりました．&lt;br /&gt;当面読み込み専用として運営する予定ですが，ご了承ください．&lt;br /&gt;&lt;br /&gt;これまでのご利用ありがとうございました．]]></description>
+			<author><![CDATA[ELF]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1057.html#post1057</link>
+			<comments>http://bbs.php.gr.jp/post-topic476-quotepost1057.html</comments>
+			<category><![CDATA[お知らせ]]></category>
+			<pubDate>Sun, 08 Jan 2012 21:59:40 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1057.html#post1057</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: ｗｅｂ上からＰＨＰで行うＭＹＳＱＬコマンドにパラメータを入れる方法]]></title>
+			<description><![CDATA[「&amp;lt;?php&#36;s～」となっているのでPHPタグと認識されていない可能性があります．「php」「&#36;s」の間に改行なり半角空白なりが必要かと思います．]]></description>
+			<author><![CDATA[ELF]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1056.html#post1056</link>
+			<comments>http://bbs.php.gr.jp/post-topic467-quotepost1056.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Mon, 02 Jan 2012 21:30:24 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1056.html#post1056</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[下記のようにやってファイルの中身は表示されますか?&lt;br /&gt;あるいはログや画面にエラーがでてきますか?&lt;br /&gt;&lt;br /&gt;&lt;pre class=&quot;code&quot;&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;header('Content-Type: text/plain; charset=UTF-8');&lt;br /&gt;&lt;br /&gt;//  パスを勘違いしていたら修正してください&lt;br /&gt;echo file_get_contents('/var/www/html/Classes/Shared/ZipStreamWrapper.php');&lt;/pre&gt;&lt;br /&gt;&lt;br /&gt;単に該当ファイルが表示できるかどうか．という処理です．&lt;br /&gt;もし表示できなければそもそもPHPで読めない状況になっていると思われます．&lt;br /&gt;たとえば御自身でLinuxをインストールしており，SELinuxが有効といった場合に起こしがちかもしれません．&lt;br /&gt;(ベタな再現手順は「/home/[USER]/」にファイルをアップロード⇒「/var/www/html/」配下にコピー)]]></description>
+			<author><![CDATA[ELF]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1055.html#post1055</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1055.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Mon, 02 Jan 2012 21:22:12 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1055.html#post1055</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: ｗｅｂ上からＰＨＰで行うＭＹＳＱＬコマンドにパラメータを入れる方法]]></title>
+			<description><![CDATA[１．の処理は画面上に出力する処理です。&lt;br /&gt;画面上に出力してもPHPは実行されません。それはただの文字列です。&lt;br /&gt;普通に１の処理をechoせずに実行すればよいのでは？]]></description>
+			<author><![CDATA[nasu]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1054.html#post1054</link>
+			<comments>http://bbs.php.gr.jp/post-topic467-quotepost1054.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Tue, 27 Dec 2011 01:13:23 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1054.html#post1054</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[その後どうでしょうか？&lt;br /&gt;私の環境で再現できない以上、もうわからないです。&lt;br /&gt;すみません。&lt;br /&gt;&lt;br /&gt;いちど別のLinuxにインストールして動くかどうか確認してみてください。&lt;br /&gt;もしくは初めから再インストールしてみるとか。]]></description>
+			<author><![CDATA[nulla]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1053.html#post1053</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1053.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Mon, 26 Dec 2011 08:08:11 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1053.html#post1053</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[mullaさん。&lt;br /&gt;&lt;br /&gt;ありがとうございます。&lt;br /&gt;改行コードはＬＦでした。&lt;br /&gt;&lt;br /&gt;＞Classes/PHPExcel/Shared/ZipStreamWrapper.php&lt;br /&gt;＞はありますよね？&lt;br /&gt;&lt;br /&gt;はい。あります。&lt;br /&gt;&lt;br /&gt;パーミッションはとりあえず、全てのユーザに実行権限を付けております。&lt;br /&gt;宜しくお願いします。]]></description>
+			<author><![CDATA[Tekken]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1052.html#post1052</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1052.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Tue, 20 Dec 2011 09:32:57 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1052.html#post1052</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[こんにちは。&lt;br /&gt;&lt;br /&gt;容量増えてますね。&lt;br /&gt;改行コードがCRLFになってたりします？&lt;br /&gt;（影響あるかはわかりませんけれど）&lt;br /&gt;&lt;br /&gt;Classes/PHPExcel/Shared/ZipStreamWrapper.php&lt;br /&gt;はありますよね？&lt;br /&gt;&lt;br /&gt;それとパーミッションはどうなってますか？&lt;br /&gt;ファイルの所有者権限と実際の実行ユーザーの権限を確認してみてください。]]></description>
+			<author><![CDATA[nulla]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1049.html#post1049</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1049.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Fri, 16 Dec 2011 04:04:27 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1049.html#post1049</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[nulla　さん。&lt;br /&gt;&lt;br /&gt;ありがとうございます。&lt;br /&gt;&lt;br /&gt;＞最初の投稿で&lt;br /&gt;＞&amp;gt; extension=php_zip.dll&lt;br /&gt;＞とありますけれどそれはWindows用では？&lt;br /&gt;&lt;br /&gt;そうでした。申し訳ありません。&lt;br /&gt;また、extension=zip.so　は有効になっておりました。&lt;br /&gt;&lt;br /&gt;&#36; du -s /var/www/html/Classes&lt;br /&gt;ですが、21888でした。]]></description>
+			<author><![CDATA[Tekken]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1048.html#post1048</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1048.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Thu, 15 Dec 2011 08:22:24 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1048.html#post1048</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[Vine Linux 5.2にインストールしてみました。&lt;br /&gt;php 5.3.7 CGI&lt;br /&gt;apache 2.2.14&lt;br /&gt;PHPExcel 1.7.6&lt;br /&gt;&lt;br /&gt;Fatal error: Class 'ZipArchive' not found in ～～/Excel2007.php on line 225 &lt;br /&gt;とおこられたので&lt;br /&gt;# pecl install zip&lt;br /&gt;# cd /etc/php5/php.d/&lt;br /&gt;# touch zip.ini&lt;br /&gt;# vi zip.ini&lt;br /&gt;extension=zip.so&lt;br /&gt;phpinfo()でZip enabled を確認&lt;br /&gt;&lt;br /&gt;これでちゃんと生成できました。&lt;br /&gt;生成用のソースは&lt;br /&gt;http://news.mynavi.jp/articles/2009/03/06/phpexcel/001.html&lt;br /&gt;を使いました。&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&#36; du -s /var/www/html/Classes&lt;br /&gt;の結果はどうですか？&lt;br /&gt;私のは21372です。&lt;br /&gt;&lt;br /&gt;最初の投稿で&lt;br /&gt;&amp;gt; extension=php_zip.dll&lt;br /&gt;とありますけれどそれはWindows用では？&lt;br /&gt;Linux系のライブラリは.soです。&lt;br /&gt;（それでWindowsかLinux系なのか、わからなかったです）]]></description>
+			<author><![CDATA[nulla]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1047.html#post1047</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1047.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Thu, 15 Dec 2011 05:12:13 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1047.html#post1047</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[nulla さん&lt;br /&gt;&lt;br /&gt;ありがとうございます。&lt;br /&gt;ＯＳは　Red Hat Enterprise Linux 4&lt;br /&gt;Apache 2.0.64&lt;br /&gt;です。&lt;br /&gt;Pathを /var/www/html/Classes　と指定しても同じでした。&lt;br /&gt;&lt;br /&gt;宜しくお願いいたします。]]></description>
+			<author><![CDATA[Tekken]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1046.html#post1046</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1046.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Thu, 15 Dec 2011 04:24:20 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1046.html#post1046</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[私はPHPExcelを展開後&lt;br /&gt;C:\PHPExcel\Classes&lt;br /&gt;に置きました。&lt;br /&gt;&lt;br /&gt;set_include_path(get_include_path() . PATH_SEPARATOR . '/PHPExcel/Classes/');&lt;br /&gt;と絶対パス指定してExcelファイルの生成ができました。&lt;br /&gt;&lt;br /&gt;ちなみにOSの環境はなんでしょう？&lt;br /&gt;&lt;br /&gt;私が試した環境はpleiades3.7付属のxamppです。&lt;br /&gt;Windows Vista sp2&lt;br /&gt;php 5.3.5&lt;br /&gt;PHPExcel 1.7.6]]></description>
+			<author><![CDATA[nulla]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1045.html#post1045</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1045.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Thu, 15 Dec 2011 03:56:00 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1045.html#post1045</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[nullaさん&lt;br /&gt;&lt;br /&gt;おはようございます。&lt;br /&gt;早速のご対応、誠にありがとうございます。&lt;br /&gt;&lt;br /&gt;PHPExcelは、圧縮されたファイルを解凍して、任意のフォルダに置くという方法で&lt;br /&gt;対応しました。&lt;br /&gt;ただ、htmlファイルのあるフォルダ下にClassesフォルダを置いただけです。&lt;br /&gt;何か設定が必要なのでしょうか。&lt;br /&gt;宜しくお願いします。]]></description>
+			<author><![CDATA[Tekken]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1044.html#post1044</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1044.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Thu, 15 Dec 2011 00:02:52 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1044.html#post1044</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: PHPExcelでのエラー]]></title>
+			<description><![CDATA[こんにちは。&lt;br /&gt;&lt;br /&gt;エラー内容を読むとクラスがみつからないといってるみたいなので&lt;br /&gt;PHPExcelのインストールがうまくいってないのでは？]]></description>
+			<author><![CDATA[nulla]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1043.html#post1043</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1043.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Wed, 14 Dec 2011 23:57:11 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1043.html#post1043</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[PHPExcelでのエラー]]></title>
+			<description><![CDATA[お世話になります。&lt;br /&gt;PHP Excelを利用しようとしておりますが、下記エラーが表示されます。&lt;br /&gt;&lt;br /&gt;■エラー表示&lt;br /&gt;Fatal error: Class 'PHPExcel_Shared_ZipStreamWrapper' not found in /var/www/html/Classes/PHPExcel/Autoloader.php on line 29&lt;br /&gt;&lt;br /&gt;php.iniに&lt;br /&gt;extension=php_zip.dll&lt;br /&gt;を追記しました。&lt;br /&gt;phpinfo()でzipを確認したらenableになっており&lt;br /&gt;php_zip.dll c ***　と書かれていたのでdllファイルは何もしていませんが、&lt;br /&gt;このファイルが見つからないということでしょうか。&lt;br /&gt;もし置く必要があればどこに置けばいいかがネットでも今一つわかりません。&lt;br /&gt;&lt;br /&gt;extension_dir = &amp;quot;/usr/local/php5/lib/php/extensions/current&amp;quot;&lt;br /&gt;ここに置けばいいのでしょうか。&lt;br /&gt;念のため置いておりますが、状況は変わりません。&lt;br /&gt;&lt;br /&gt;■php 5.2.17&lt;br /&gt;■php Excel 1.7.6&lt;br /&gt;■php Excelの設置場所  /var/www/html/Classes&lt;br /&gt;&lt;br /&gt;■ソース&lt;br /&gt;&amp;lt;?php&lt;br /&gt;set_include_path(get_include_path() . PATH_SEPARATOR . './Classes/');&lt;br /&gt;include 'PHPExcel.php';&lt;br /&gt;include 'PHPExcel/IOFactory.php';&lt;br /&gt;?&amp;gt;&lt;br /&gt;&lt;br /&gt;何卒、よろしくお願いします。]]></description>
+			<author><![CDATA[Tekken]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1042.html#post1042</link>
+			<comments>http://bbs.php.gr.jp/post-topic473-quotepost1042.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Wed, 14 Dec 2011 11:17:47 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1042.html#post1042</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？]]></title>
+			<description><![CDATA[koyhoge様ありがとうございました。お蔭様で解決です。結局。お勧めのsprintfで処理しましたが、eval()も興味津々で、トライしてみたいと思います。]]></description>
+			<author><![CDATA[morisan-imasu]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1041.html#post1041</link>
+			<comments>http://bbs.php.gr.jp/post-topic455-quotepost1041.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Wed, 14 Dec 2011 00:15:21 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1041.html#post1041</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？]]></title>
+			<description><![CDATA[もちろん PHP プログラムから PHP のソースコードを生成することも可能です。そこで生成された PHP のソースコードをその場で実行するには eval() 関数を使えば良いです。&lt;br /&gt;&lt;br /&gt;&amp;lt;?php&lt;br /&gt;&#36;php_code = '&#36;hoge = &amp;quot;hoge&amp;quot;; echo &#36;hoge;';&lt;br /&gt;eval(&#36;php_code);&lt;br /&gt;?&amp;gt;&lt;br /&gt;&lt;br /&gt;でも SQL 文を条件によって書き換える位であれば、eval() を使わなくても SQL 文を動的に生成すれば可能だと思います。&lt;br /&gt;&lt;br /&gt;&amp;lt;?php&lt;br /&gt;&#36;id = '777';&lt;br /&gt;&#36;dname = 'ichijoureimei1';&lt;br /&gt;&#36;shindata = 'joureimei2';&lt;br /&gt;&lt;br /&gt;&#36;sql = sprintf(&amp;quot;UPDATE jorei SET %s='%s' WHERE ID='%s'&amp;quot;, &#36;dname, &#36;shindata, &#36;id);&lt;br /&gt;&amp;lt;略&amp;gt;&lt;br /&gt;mysql_query(&#36;sql);]]></description>
+			<author><![CDATA[koyhoge]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1040.html#post1040</link>
+			<comments>http://bbs.php.gr.jp/post-topic455-quotepost1040.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Tue, 13 Dec 2011 06:39:54 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1040.html#post1040</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[ｗｅｂ上からＰＨＰで行うＭＹＳＱＬコマンドにパラメータを入れる方法]]></title>
+			<description><![CDATA[下記①のようなＰＨＰをネット上にアップさせて、&lt;br /&gt;ID（777777）とdname（ichijoureimei1）とshindata（新条例名）を読み込ませて、&lt;br /&gt;その結果を反映させたＭＹＳＱＬのコマンド文（データ修正のset文）として&lt;br /&gt;下記②のような結果を出させてみたのですが、&lt;br /&gt;この②は、ＰＨＰとして全く作動してくれないようです。&lt;br /&gt;&lt;br /&gt;②をweb上で作動させてＭＹＳＱＬを動かす方法はないものでしょうか？&lt;br /&gt;&lt;br /&gt;①&lt;br /&gt;&amp;lt;?php&lt;br /&gt;&#36;ID=&#36;_GET[ID];&lt;br /&gt;&#36;dname=&#36;_GET[dname];&lt;br /&gt;&#36;shindata=&#36;_POST[shindata];	&lt;br /&gt;&lt;br /&gt;echo '&amp;lt;?php';&lt;br /&gt;echo '&#36;s=mysql_connect(&amp;quot;127.0.0.1&amp;quot;,&amp;quot;ab001163&amp;quot;,&amp;quot;biwa2139&amp;quot;)  or die(&amp;quot;fail&amp;quot;);';&lt;br /&gt;echo 'print &amp;quot;修正開始&amp;lt;br&amp;gt;&amp;quot;;';&lt;br /&gt;echo 'mysql_select_db(&amp;quot;ab001163&amp;quot;,&#36;s);';&lt;br /&gt;&lt;br /&gt;echo 'mysql_query(\'UPDATE jorei SET ', &#36;dname, '=&amp;quot;', &#36;shindata,'&amp;quot; WHERE ID=&amp;quot;',&#36;ID,'&amp;quot;\');';&lt;br /&gt;&lt;br /&gt;echo 'print &amp;quot;修正終了&amp;quot;;';&lt;br /&gt;echo 'mysql_close(&#36;s);';&lt;br /&gt;echo '?&amp;gt;';&lt;br /&gt; ?&amp;gt;&lt;br /&gt;&lt;br /&gt;②&lt;br /&gt;&amp;lt;?php&#36;s=mysql_connect(&amp;quot;127.0.0.1&amp;quot;,&amp;quot;ab001163&amp;quot;,&amp;quot;biwa2139&amp;quot;)  or die(&amp;quot;fail&amp;quot;);print &amp;quot;修正開始&amp;lt;br&amp;gt;&amp;quot;;mysql_select_db(&amp;quot;ab001163&amp;quot;,&#36;s);mysql_query('UPDATE jorei SET ichijoureimei1=&amp;quot;新条例名&amp;quot; WHERE ID=&amp;quot;777777&amp;quot;');print &amp;quot;修正終了&amp;quot;;mysql_close(&#36;s);?&amp;gt;]]></description>
+			<author><![CDATA[morisan-imasu]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1034.html#post1034</link>
+			<comments>http://bbs.php.gr.jp/post-topic467-quotepost1034.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Mon, 12 Dec 2011 01:17:36 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1034.html#post1034</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[ＰＨＰでさらにＰＨＰを生成させることは可能でしょうか？]]></title>
+			<description><![CDATA[MAYSQLコマンドをＰＨＰで行うにあたりまして、そのコマンドに使うパラメーターが、コマンドする度に変化する場合、ＳＱＬ文そのものが、ＰＨＰでリライトされる仕組みを作りたいと思っております。試しにやってみると、web上にそれらしいＳＱＬのテキストが生まれるところまでは出来るのですが、それが、ＰＨＰプログラムとして動くわけではなく、本当に「単なるテキスト」としてweb上に存在してしまいます。&lt;br /&gt;ＰＨＰのプログラムそのものが動的に変わるＰＨＰプログラムって、あり得るのでしょうか？]]></description>
+			<author><![CDATA[morisan-imasu]]></author>
+			<link>http://bbs.php.gr.jp/topic-post1013.html#post1013</link>
+			<comments>http://bbs.php.gr.jp/post-topic455-quotepost1013.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Fri, 09 Dec 2011 00:10:23 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post1013.html#post1013</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[PHPの正規表現による置き換え]]></title>
+			<description><![CDATA[&#36;a=&amp;quot;/dir1/&amp;quot;;&lt;br /&gt;&#36;f=preg_replace('#^/*|/(/)|/&#36;#','\1',&#36;a);&lt;br /&gt;以上の置き換えを行なうと&#36;fにdir1が代入されました。&lt;br /&gt;このreg_replaceにおいて#は何を表すのでしょうか。&lt;br /&gt;また、(/)は何を表すのでしょうか。&lt;br /&gt;また、'\1'は何を表すのでしょうか。教えてください。]]></description>
+			<author><![CDATA[jin]]></author>
+			<link>http://bbs.php.gr.jp/topic-post987.html#post987</link>
+			<comments>http://bbs.php.gr.jp/post-topic429-quotepost987.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Mon, 05 Dec 2011 08:06:22 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post987.html#post987</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: 環境依存文字が「？」で表示される。]]></title>
+			<description><![CDATA[Apacheの起動スクリプトに&lt;br /&gt;NLS_LANGの設定が記述してあり、JA16SJISTILDEではなくJA16EUCで記述してありました。]]></description>
+			<author><![CDATA[satoh-tm]]></author>
+			<link>http://bbs.php.gr.jp/topic-post981.html#post981</link>
+			<comments>http://bbs.php.gr.jp/post-topic412-quotepost981.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Wed, 30 Nov 2011 08:25:09 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post981.html#post981</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Php Based Crawler]]></title>
+			<description><![CDATA[Need automatic bidding script for scriptlance,elance and freelancer like outsourcing site.Any one have knowledge how to integrate it.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://saraoutlet.com/iphone-4-cases-iphone4case.html&quot; title=&quot;http://saraoutlet.com/iphone-4-cases-iphone4case.html&quot; rel=&quot;external&quot;&gt;iphone 4s cases&lt;/a&gt;]]></description>
+			<author><![CDATA[AnumKhan]]></author>
+			<link>http://bbs.php.gr.jp/topic-post970.html#post970</link>
+			<comments>http://bbs.php.gr.jp/post-topic413-quotepost970.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Sun, 20 Nov 2011 11:09:53 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post970.html#post970</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[環境依存文字が「？」で表示される。]]></title>
+			<description><![CDATA[PHP 5.2.6&lt;br /&gt;Apache 2.2.3&lt;br /&gt;を使用しております。&lt;br /&gt;&lt;br /&gt;「﨑」「㈱」等の環境依存文字が「？」で表示されます。&lt;br /&gt;設定ファイルやプログラムを一部変更して試しましたが結果は変わりませんでした。&lt;br /&gt;&lt;br /&gt;【変更前php.ini】&lt;br /&gt;output_buffering = Off&lt;br /&gt;default_charset = &amp;quot;Shift_JIS&amp;quot;&lt;br /&gt;mbstring.internal_encoding = EUC-JP&lt;br /&gt;mbstring.http_input = SJIS&lt;br /&gt;mbstring.http_output = SJIS&lt;br /&gt;mbstring.encoding_translation = On&lt;br /&gt;mbstring.detect_order = auto&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;【変更後php.ini】&lt;br /&gt;output_buffering = On&lt;br /&gt;default_charset = &amp;quot;SJIS-win&amp;quot;&lt;br /&gt;mbstring.internal_encoding = eucJP-win&lt;br /&gt;mbstring.http_input = auto&lt;br /&gt;mbstring.http_output = SJIS-win&lt;br /&gt;mbstring.encoding_translation = On&lt;br /&gt;mbstring.detect_order = eucJP-win,UTF-8,SJIS-win,JIS&lt;br /&gt;&lt;br /&gt;;変更後変更後php.iniのmbstring.detect_orderを&lt;br /&gt;;ASCII, JIS, UTF-8, SJIS-win, eucJP-win&lt;br /&gt;;で指定したところ環境依存文字以外も文字化けしてしまいました。&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;【httpd.confに以下を追加しました】&lt;br /&gt;SetEnv NLS_LANG Japanese_Japan.JA16SJISTILDE&lt;br /&gt;SetEnv LD_LIBRARY_PATH &amp;quot;/usr/lib/httpd/modules:/usr/lib/oracle/11.2/client/lib&amp;quot;&lt;br /&gt;&lt;br /&gt;AddCharset us-ascii.ascii .us-ascii&lt;br /&gt;AddCharset ISO-8859-1  .iso8859-1  .latin1&lt;br /&gt;AddCharset ISO-8859-2  .iso8859-2  .latin2 .cen&lt;br /&gt;AddCharset ISO-8859-3  .iso8859-3  .latin3&lt;br /&gt;AddCharset ISO-8859-4  .iso8859-4  .latin4&lt;br /&gt;AddCharset ISO-8859-5  .iso8859-5  .cyr .iso-ru&lt;br /&gt;AddCharset ISO-8859-6  .iso8859-6  .arb .arabic&lt;br /&gt;AddCharset ISO-8859-7  .iso8859-7  .grk .greek&lt;br /&gt;AddCharset ISO-8859-8  .iso8859-8  .heb .hebrew&lt;br /&gt;AddCharset ISO-8859-9  .iso8859-9  .latin5 .trk&lt;br /&gt;AddCharset ISO-8859-10  .iso8859-10  .latin6&lt;br /&gt;AddCharset ISO-8859-13  .iso8859-13&lt;br /&gt;AddCharset ISO-8859-14  .iso8859-14  .latin8&lt;br /&gt;AddCharset ISO-8859-15  .iso8859-15  .latin9&lt;br /&gt;AddCharset ISO-8859-16  .iso8859-16  .latin10&lt;br /&gt;AddCharset ISO-2022-JP .iso2022-jp .jis&lt;br /&gt;AddCharset ISO-2022-KR .iso2022-kr .kis&lt;br /&gt;AddCharset ISO-2022-CN .iso2022-cn .cis&lt;br /&gt;AddCharset Big5.Big5   .big5 .b5&lt;br /&gt;AddCharset cn-Big5 .cn-big5&lt;br /&gt;AddCharset WINDOWS-1251 .cp-1251   .win-1251&lt;br /&gt;AddCharset CP866   .cp866&lt;br /&gt;AddCharset KOI8  .koi8&lt;br /&gt;AddCharset KOI8-E  .koi8-e&lt;br /&gt;AddCharset KOI8-r  .koi8-r .koi8-ru&lt;br /&gt;AddCharset KOI8-U  .koi8-u&lt;br /&gt;AddCharset KOI8-ru .koi8-uk .ua&lt;br /&gt;AddCharset ISO-10646-UCS-2 .ucs2&lt;br /&gt;AddCharset ISO-10646-UCS-4 .ucs4&lt;br /&gt;AddCharset UTF-7   .utf7&lt;br /&gt;AddCharset UTF-8   .utf8&lt;br /&gt;AddCharset UTF-16  .utf16&lt;br /&gt;AddCharset UTF-16BE .utf16be&lt;br /&gt;AddCharset UTF-16LE .utf16le&lt;br /&gt;AddCharset UTF-32  .utf32&lt;br /&gt;AddCharset UTF-32BE .utf32be&lt;br /&gt;AddCharset UTF-32LE .utf32le&lt;br /&gt;AddCharset euc-cn  .euc-cn&lt;br /&gt;AddCharset euc-gb  .euc-gb&lt;br /&gt;AddCharset euc-jp  .euc-jp&lt;br /&gt;AddCharset euc-kr  .euc-kr&lt;br /&gt;AddCharset EUC-TW  .euc-tw&lt;br /&gt;AddCharset gb2312  .gb2312 .gb&lt;br /&gt;AddCharset iso-10646-ucs-2 .ucs-2 .iso-10646-ucs-2&lt;br /&gt;AddCharset iso-10646-ucs-4 .ucs-4 .iso-10646-ucs-4&lt;br /&gt;AddCharset shift_jis   .shift_jis .sjis&lt;br /&gt;&lt;br /&gt;【PHP側での変更】&lt;br /&gt;データベースから取得後に&lt;br /&gt;&#36;_enc_to   = mb_internal_encoding();&lt;br /&gt;&#36;_enc_from = mb_detect_order();&lt;br /&gt;mb_convert_encoding(★DBから取得した文字列★, &#36;_enc_to, &#36;_enc_from);&lt;br /&gt;にて結果を出力しましたがダメでした。&lt;br /&gt;&lt;br /&gt;&#36;_enc_toや&#36;_enc_fromをいろいろなパターンで試すため&lt;br /&gt;明示的に&amp;quot;SJIS-win&amp;quot;等を埋め込んで試してみましたが&lt;br /&gt;「山﨑あああ」を表示させようとしても&lt;br /&gt;「山？あああ」や全て文字化けした状態で出力されてしまいます。&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;原因は何が考えられるでしょうか？&lt;br /&gt;また、他に何か試しておくべきことはあるでしょうか？&lt;br /&gt;&lt;br /&gt;よろしくお願いいたします。]]></description>
+			<author><![CDATA[satoh-tm]]></author>
+			<link>http://bbs.php.gr.jp/topic-post969.html#post969</link>
+			<comments>http://bbs.php.gr.jp/post-topic412-quotepost969.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Fri, 18 Nov 2011 10:20:33 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post969.html#post969</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[ファイルのアップロードが出来ません。]]></title>
+			<description><![CDATA[OpenPNEというオープンソースをWindows上に構築しようとしてます。&lt;br /&gt;環境は以下のとおり。&lt;br /&gt;・Windows Server 2003 R2 Standard Edition&lt;br /&gt;・OpenPNE2.14.8&lt;br /&gt;・IIS 6.0&lt;br /&gt;・PHP5.2.17&lt;br /&gt;・MySQL5.1.57&lt;br /&gt;&lt;br /&gt;環境構築してユーザー側の利用は問題ないのですが、管理画面でファイルのア&lt;br /&gt;ップロードが出来ません。（ユーザー画面ではファイルアップロードは可能。）&lt;br /&gt;&lt;br /&gt;ソースは以下のような感じなんですが、&#36;member_file が empty になって、「&lt;br /&gt;ファイルを指定してください。」というメッセージが返ってきます。&lt;br /&gt;----------------------------------------------------------------------&lt;br /&gt;&amp;lt;?php&lt;br /&gt;&lt;br /&gt;class admin_do_import_c_member extends OpenPNE_Action&lt;br /&gt;&#123;&lt;br /&gt;    function handleError(&#36;msg)&lt;br /&gt;    &#123;&lt;br /&gt;        admin_client_redirect('import_c_member', &#36;msg);&lt;br /&gt;    &#125;&lt;br /&gt;&lt;br /&gt;    function execute(&#36;requests)&lt;br /&gt;    &#123;&lt;br /&gt;        &#36;member_file = &#36;_FILES['member_file'];&lt;br /&gt;&lt;br /&gt;        &#36;limit = 1000;  // 行数制限&lt;br /&gt;&lt;br /&gt;        if (empty(&#36;member_file) || &#36;member_file['error'] === UPLOAD_ERR_NO_FILE) &#123;&lt;br /&gt;            &#36;this-&amp;gt;handleError('ファイルを指定してください');&lt;br /&gt;        &#125;&lt;br /&gt;&lt;br /&gt;        &#36;filename_parts = explode('.', &#36;member_file['name']);&lt;br /&gt;        if (array_pop(&#36;filename_parts) != 'csv') &#123;&lt;br /&gt;            &#36;this-&amp;gt;handleError('拡張子は.csvにしてください');&lt;br /&gt;        &#125;&lt;br /&gt;&lt;br /&gt;----------------------------------------------------------------------&lt;br /&gt;&lt;br /&gt;ユーザー画面では、結構大きな画像ファイルもアップロード出来ますし、PHPの&lt;br /&gt;設定が間違ってるっぽくは無いと思っており、管理画面側のプログラムに問題&lt;br /&gt;があるのではと思ってます。&lt;br /&gt;&lt;br /&gt;何か問題になりそうなところはありますでしょうか？&lt;br /&gt;どこか直したら動きそうでしょうか？]]></description>
+			<author><![CDATA[motsux2]]></author>
+			<link>http://bbs.php.gr.jp/topic-post964.html#post964</link>
+			<comments>http://bbs.php.gr.jp/post-topic407-quotepost964.html</comments>
+			<category><![CDATA[PHP事はじめ]]></category>
+			<pubDate>Thu, 17 Nov 2011 02:03:23 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post964.html#post964</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: mb_convert_encodingについて]]></title>
+			<description><![CDATA[nullaさんへ：&lt;br /&gt;ありがとうございました。&lt;br /&gt;Permissionを変更して実行させたところ無事に出力出来ました。&lt;br /&gt;お騒がせ致しました。&lt;br /&gt; &lt;img src=&quot;http://bbs.php.gr.jp/templates/phpgrjp0.3/smilies/neutral.gif&quot; alt=&quot;:|&quot; /&gt;]]></description>
+			<author><![CDATA[tn1214]]></author>
+			<link>http://bbs.php.gr.jp/topic-post913.html#post913</link>
+			<comments>http://bbs.php.gr.jp/post-topic357-quotepost913.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Tue, 25 Oct 2011 05:07:05 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post913.html#post913</guid>
+		</item>
+
+		<item>
+			<title><![CDATA[Re: 電子メールの長いファイル名の添付ファイルで、ファイル名が文字化けする]]></title>
+			<description><![CDATA[自己レスです。&lt;br /&gt;&lt;br /&gt;どうも、ライブラリのRFC2231に準拠が逆にあだになっているようです。&lt;br /&gt;PEARのmimiPart.phpに自分でパッチを当てて解決しました。&lt;br /&gt;以前の形式でヘッダを作成するようにしました。]]></description>
+			<author><![CDATA[yocco]]></author>
+			<link>http://bbs.php.gr.jp/topic-post912.html#post912</link>
+			<comments>http://bbs.php.gr.jp/post-topic356-quotepost912.html</comments>
+			<category><![CDATA[PHP 5]]></category>
+			<pubDate>Tue, 25 Oct 2011 05:02:22 GMT</pubDate>
+			<guid isPermaLink="true">http://bbs.php.gr.jp/topic-post912.html#post912</guid>
+		</item>
+
+	</channel>
+</rss>

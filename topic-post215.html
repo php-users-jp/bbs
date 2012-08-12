@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; php+MySQLの連携ができません</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; php+MySQLの連携ができません
+	</p>
+
+	<h3 id="forumname"><a href="topic-85.html">php+MySQLの連携ができません</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post205.html#post205" name="post205" rel="nofollow">#1</a> 2008 年 7 月 23 日(水) 10:42</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">前にSendmailでお世話になったhonyoです。<br />その節はありがとうございました。<br />その後やはり接続はできないのですが、localhostで練習して少し解ってきたら<br />レンタルサーバー等を検討しみるつもりです。<br /><br />今回は、php+MySQLの連携でつまりました。<br />詰まっている内容は、<br />【1】phpからMySQLが接続できない<br />【2】phpMyAdmin:2.11.7がログインできない<br />です。<br /><br />現在の環境は下記になります。<br />OS:Windows XP<br />PHP:5.2.5<br />Apache:2.0.63 (Win32)<br />MySQL:5.0<br />phpMyAdmin:2.11.7<br /><br />MySQLのモニター（黒いコマンドプロンプト画面）からはMySQLにアクセスできます。<br />rootで入門書サンプルのデータベースを作成しました。<br />root以外の権限をGRANT～の構文で新規ユーザーを追加し、OKと表示されたので、一度終了。<br />MySQLモニター（コマンド）からは、<br />mysql -u 新ユーザ名 -p<br />password:新パスワード<br />からログインでき、データベースも参照できる状態です。<br /><br />2.11.7は最新版なので、WEBで検索してconfig.inc.phpの設定方法をその通りにやってみました。phpMyAdminの画面で「新ユーザ名」「新パスワード」でアクセスしましたが、「#2003 - サーバが応答しません」と表示されてしまいます。<br />また、rootでやっても同じです。<br /><br />&lt;?<br />&#36;my_con = mysql_connect(&quot;localhost&quot;,&quot;新ユーザ名&quot;,&quot;新パスワード&quot;);<br />if (&#36;my_con == false)&#123;<br />	die(&quot;MySQLの接続に失敗しました&quot;);<br />&#125;else&#123;<br />	echo &quot;接続成功！&quot;;<br />&#125;<br />?&gt;<br /><br />上記サンプルを実行すると、下記メッセージが表示されます。<br /><br />Warning: mysql_connect() [function.mysql-connect]: Can't connect to MySQL server on 'localhost' (10061) in C:\Program Files\Apache Group\Apache2\htdocs\7-1-1.php on line 2<br />MySQLの接続に失敗しました<br /><br />phpinfo.phpではmysqlの項目が下記のようになっているので、それも原因かと思われますが、<br />ｐｈｐiniで手動でlocalhost、root で設定したところで、同じです。<br />mysql.default_host	no value	no value<br />mysql.default_password	no value	no value<br />mysql.default_port	no value	no value<br />mysql.default_socket	no value	no value<br />mysql.default_user	no value	no value<br /><br />どこの設定を変更すれば、よいのかわかりません。 <img src="./templates/phpgrjp0.3/smilies/neutral.gif" alt=":|" /> <br />申し訳ございませんが、教えてください。<br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post207.html#post207" name="post207" rel="nofollow">#2</a> 2008 年 7 月 23 日(水) 12:51</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">MySQLで「新ユーザ名」さんをGRANT～の構文で新規ユーザーを追加する時、<br />　GRANT ...中略...　　TO 新ユーザ名@localhost　　...略...<br />という指定でしたら、試しに<br />　GRANT ...中略...　　TO 新ユーザ名@'%'　　...略...<br />で置き換えて、ユーザ追加をやり直してみて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post208.html#post208" name="post208" rel="nofollow">#3</a> 2008 年 7 月 23 日(水) 13:56</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん<br />前回も丁寧に教えていただき、ありがとうございます。<br /><br />今回、いただいたアドバイスでやってみましたが、MySQLのモニターでは<br />「Query OK, 0 rows affected (0.02 sec)」とでまして、アクセスもできます。<br />ですが、結果は同じで<br />【1】phpからMySQLが接続できない<br />【2】phpMyAdmin:2.11.7がログインできない<br />のままです。。。 <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post209.html#post209" name="post209" rel="nofollow">#4</a> 2008 年 7 月 23 日(水) 18:22</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">ごめんなさい、エラーメッセージをチェックしてみたところ、私が状況を勘違いしていたようです。ユーザ指定で違った場合は「Access denied」とかいうエラーメッセージになってくるようで、このエラーメッセージだと「MySQLサーバに接続できなかった」ということです。<br />MySQLのマニュアルに書かれているのですが英語です・・・。なんとなく眺めてみると、<br /><blockquote class="quote"><div class="title">引用</div><div class="content">ネットワーク的に接続できていません。MySQLが動いていること、MySQLがネットワーク接続できること、MySQLが使用するポートがファイアウォールでブロックされていないことを確認して下さい。<br />localhostの代わりに127.0.0.1を指定してみて下さい。<br />MySQLが使用するポートが間違っていないか確認して下さい。mysqlクライアントで「show variables like 'port';」を実行すると使用されるポートが表示されます。<br />DOSプロンプトで「telnet &lt;MySQLサーバアドレス&gt; &lt;MySQLのポート&gt;」（例：telnet 127.0.0.1 3306）を実行してみて下さい。成功すれば「ホストとの接続が切断されました」と出ます。失敗ならば「ホストへ接続できませんでした」と出ます。</div></blockquote>・・・のようなことが書かれているような気がします。一部アレンジしてあります。<br /><br />今回の件とは関係ないと思いますが、PHP5.2.4～5.2.5の時に付属していたlibmysql.dllが相性が悪いらしく、PHP5.2.1に付属していたlibmysql.dllに差し替えてやるとうまくいった、という話もありました。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post210.html#post210" name="post210" rel="nofollow">#5</a> 2008 年 7 月 24 日(木) 11:05</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。kona@mさん、ありがとうございます。<br /><br />DOSプロンプトで「telnet &lt;MySQLサーバアドレス&gt; &lt;MySQLのポート&gt;」（例：telnet 127.0.0.1 3306）を実行<br />telnet 127.0.0.1 3306<br />→こちらを実行すると、「接続できませんでした」となります。<br />またtelnetで、open localhostとした場合、<br />「localhost...ホストへ接続できませんでした。ポート番号 23:接続に失敗しました」<br />となってしまいます。<br /><br />telnetを終了し、コマンドプロンプトから、<br />ping localhost<br />を実行すると、4回エコーが返ってくるので、接続自身はできるのだと思います。<br />しかし、<br />netstat -ｎ<br />を実行すると、localhost：3306の表示がありません。。。<br />別のポートを使用している、ということなのでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post211.html#post211" name="post211" rel="nofollow">#6</a> 2008 年 7 月 24 日(木) 13:44</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">すみません。お騒がせしましたーー。<br />接続できました <img src="./templates/phpgrjp0.3/smilies/razz.gif" alt=":P" /> <br /><br />な、なんとmy.iniの設定で「port=3306」になっていない箇所がありました！<br />（文字コードしか触っていないはずなのになぁ～）<br /><br />上記のサンプルスクリプトも「接続成功」しました。<br />phpMyAdmin 2.11.7も接続できます。<br /><br />が、しかし、新たな問題が。。。<br />phpMyAdmin 2.11.7の画面が文字化けします。<br />デフォルトで「Unicode  [UTF-8] 」になっています。<br />入門書では「EUC-JP」に統一しているので、それにならっています。<br />php.iniの設定かとも思いますが、文字コードは「EUC-JP」にしています。<br />他にどこか設定はありますでしょうか。<br /><br />度々、すみません。<br />よろしくお願いいたします。m(_ _)m</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post212.html#post212" name="post212" rel="nofollow">#7</a> 2008 年 7 月 24 日(木) 17:14</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">とりあえず、MySQLの接続が出来てよかったですね。<br /><br />で、phpMyAdminのほうですが・・・。昔、少しだけ触ってみただけですぐ使わなくなってしまったので、残念ながら私はあまりわかりません。<br />画面全体が文字化けするのでしょうか。それともデータベースの結果が文字化けするのでしょうか。たしかphpのマルチバイト設定のあたりで私も文字化けしたような記憶があります。apacheをお使いのようですから、.htaccessにマルチバイト関連の設定をいろいろ記述してphpMyAdminのディレクトリに置いてみるというのはどうでしょうか？<br /><br />.htaccessの例：<br /><pre class="code">php_value mbstring.internal_encoding UTF-8<br />php_value mbstring.http_output EUC-JP</pre></div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post215.html#post215" name="post215" rel="nofollow">#8</a> 2008 年 7 月 28 日(月) 10:34</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br />他に入門書には、my.iniの[mysqld]に「character-set-client-handshake」を記述することでサーバー側とクライアント側と文字の継承をする、、、みたいな内容でしたが、だめでした。<br /><br />kona@mの教えていただいた方法のように下記「.htaccess」を記述し、phpMyAdminのディレクトリに置いてみましたが、だめでした。<br />php_value mbstring.internal_encoding &quot;EUC-JP&quot;<br />php_value mbstring.http_output &quot;EUC-JP&quot;<br />php_value mbstring.script_encoding &quot;EUC-JP&quot;<br />php_value mbstring.http_input &quot;EUC-JP&quot;<br /><br />で、ぐぐって見たところ、というページでphpMyAdmin/libraries/database_interface.lib.phpを書き換えるという方法が載っていたので試してみたところ、文字化けが直りました。以下内容です。<br />----------------------------------------------------------------------------<br />function PMA_DBI_postConnect(&#36;link, &#36;is_controluser = false)<br />        :<br />    /*<br />    if (PMA_MYSQL_INT_VERSION &gt;= 40100) &#123;<br />        :<br />    &#125; else &#123;<br />        require_once('./libraries/charset_conversion.lib.php');<br />    &#125;<br />    */<br />    require_once('./libraries/charset_conversion.lib.php');<br />&#125;<br /><br />MySQL 4.1 の if 文をごっそりコメントアウトして、./libraries/charset_conversion.lib.php を強制的に読み込ませるようにする。<br />----------------------------------------------------------------------------<br />これで、すっかり文字化けが直りました。 <img src="./templates/phpgrjp0.3/smilies/razz.gif" alt=":P" /> <br /><br />ちなみに上記の方法を紹介しているサイトでは、もうひとつ、続編として「.htaccess」での設定についても載っていましたが、こちらはダメ（上記で試しているので...）でした。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; php+MySQLの連携ができません
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

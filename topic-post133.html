@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; sendmailがわかりません</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; sendmailがわかりません
+	</p>
+
+	<h3 id="forumname"><a href="topic-54.html">sendmailがわかりません</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post128.html#post128" name="post128" rel="nofollow">#1</a> 2008 年 3 月 31 日(月) 18:12</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは、はじめまして。<br />phpをインストールして勉強中です。<br />バージョンは「PHP Version 5.2.5」、ＯＳはｗｉｎｄｏｗｓXPです。<br />ソーテック社の「実践マスターＰＨＰ+ＭＹＳＱＬ」を見ながらやっていますが、メール操作でsendmailが設定できません。ソース的には大丈夫ですが、<br />SMTP = 127.0.0.1<br />sendmail_path =/user/sbin/sendmail -t -i<br />と設定したのですが、このパスにあたるファイルがない状態です。<br />インストールが失敗しているのでしょうか。<br />本には「ＰＨＰインストール時にsendmailが存在している必要があります」と書かれています。<br />教えてください！お願いします！</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post131.html#post131" name="post131" rel="nofollow">#2</a> 2008 年 4 月 1 日(火) 12:51</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">PHPでのメールの設定は、WindowsとUNIX系とでは少し違いますね。Windows用の設定はいくつかパターンがあります。<br /><br />1. PHPをメールソフトのようにしてしまう場合<br /><pre class="code">[mail function]<br />; For Win32 only.<br />SMTP = ローカルなメールサーバやプロバイダ等のSMTPサーバの場所<br />smtp_port = 25<br /><br />; For Win32 only.<br />sendmail_from = あなたの@メールアドレス等<br /><br />; For Unix only.  You may supply arguments as well (default: &quot;sendmail -t -i&quot;).<br />;sendmail_path = （コメントにして無効にします）</pre>PHPがメールソフトのようになりますので、セキュリティソフトに引っかかる場合や、メールサーバの仕様によってはうまくいかないかもしれません。ネットワーク的にPHPがメール送信できる状態ならば可能です。<br /><br />2. UNIX系と同じようにsendmailを使う方法<br />前もってsendmail互換のメールソフトをインストールしておいて下さい。もともとWindowsにはsendmailというプログラムは入っていません。当然そのパスにあたるファイルがない状態になってしまいますので、自分でsendmailを用意するのです。確か「sendmane」というフリーソフトを使ったことがありますので検索してみて下さい。<br /><pre class="code">[mail function]<br />; For Win32 only.<br />;SMTP = （コメントにして無効にします）<br />;smtp_port = 25（コメントにして無効にします）<br /><br />; For Win32 only.<br />;sendmail_from = あなたの@メールアドレス等<br /><br />; For Unix only.  You may supply arguments as well (default: &quot;sendmail -t -i&quot;).<br />sendmail_path = sendmail互換のメールソフトのパス<br /></pre>こちらも同じようにsendmail互換のメールソフトがメール送信できるようにする必要があります。<br /><br />間違いがあったらご指摘下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post132.html#post132" name="post132" rel="nofollow">#3</a> 2008 年 4 月 1 日(火) 14:44</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん、ありがとうございます。<br />本にはすぐ下に「ＰＨＰインストール時にsendmailが存在している~」となっていましたが、こちらはLinuxの場合だったのですね。（まぎらわしい・・・）<br />WindowsでPHPがメールソフトのように~で設定してみましたが、今度は別の問題がでました。<br />「Warning: mb_send_mail() [function.mb-send-mail]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\Program Files\Apache Group\Apache2\htdocs\test.php on line 48」<br />と、mb_send_mail関数がない・・・というメッセージがでてしまいました。<br />php.iniの設定ということになると思うのですが、昨日は実際にメールが送られないだけで、symtaxエラーはでていませんでした。<br /><br />こちらももしおわかりでしたら、教えていただけますでしょうか。<br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post133.html#post133" name="post133" rel="nofollow">#4</a> 2008 年 4 月 1 日(火) 18:25</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">あらら。<br />エラーメッセージを見ると、「mb_send_mail()実行の際にメール(SMTP)サーバ”localhost”、ポート25への接続に失敗しました。php.iniのメール(SMTP)サーバと通信ポートの設定を確認して下さい」のようです。<br /><br />まず、メール(SMTP)サーバを&quot;localhost&quot;に設定しているとしたら、localhost→apacheとPHPが動いているマシンはメール(SMTP)サーバとして動作しているのでしょうか？<br />それとも「とりあえずlocalhostにしてみたのですが」というのでしたら、php.iniのSMTP=をプロバイダのメールサーバ（SMTPのほう）とかに設定しなおす必要がありますね。ただ最近のメールサーバはPOP before SMTPだったりパスワードが必要だったりするので、「メールソフトのような」この方法は使えないかもしれませんね。 <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post136.html#post136" name="post136" rel="nofollow">#5</a> 2008 年 4 月 2 日(水) 16:23</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん、ありがとうございます。<br /><br />&gt;ocalhost→apacheとPHPが動いているマシンはメール(SMTP)サーバとして動作しているのでしょうか？<br />→メールサーバとして動かしていません。<br /><br />&gt;php.iniのSMTP=をプロバイダのメールサーバ（SMTPのほう）とかに設定<br />→こちらに設定してみたら、下記メッセージが。。。<br />Warning: mb_send_mail() [function.mb-send-mail]: SMTP server response: 554 &lt;xxxxx@xxx.xx.xx&gt;: Relay access denied in C:\Program Files\Apache Group\Apache2\htdocs\test.php on line 48<br /><br />腑に落ちないのは、以下のように先日設定していてメールが送られない。。。ことで悩んでいたので新たなメッセージは一体なんだろう？という感じです。<br />SMTP = localhost<br />smtp_port = 25<br />sendmail_from = ｙｙｙｙ@ｙｙｙ.ｙｙｙ<br />;sendmail_path =<br /><br />「sendまね～る」を使ったほうが良さそうな感じですかね？<br />「sendまね～る」を使うのは一般的に有効なのでしょうか？（変な質問だったらすみません、何しろ初心者なので。。。）</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post138.html#post138" name="post138" rel="nofollow">#6</a> 2008 年 4 月 2 日(水) 18:13</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">う～ん、ちょっと予想はしていたのですが、「メールサーバからメール転送拒否（Relay access denied）が通知された」というエラーメッセージですので、PHPからプロバイダのメールサーバに直接メール送信することができないようですね。<br /><br />どうもsendmail互換プログラム「sendまね～る」を使ってみる必要がありそうです。この方法を実際に使ったことが無いのですが、似たような環境がありますのでこちらでもちょっと試してみますね。<br /><br />このソフト、最初に使う前に1度だけコマンドプロンプトからメール送信の設定をするのですが、普通のメールソフトと同じような設定にできますので、同じ設定にします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post140.html#post140" name="post140" rel="nofollow">#7</a> 2008 年 4 月 2 日(水) 21:42</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こちらはうまくいきました <img src="./templates/phpgrjp0.3/smilies/smile.gif" alt=":)" /> 。php.iniは下記のとおりです。試してみてもらえますか？<br /><br />OS: Windows XP SP2<br />Webサーバ: Apache 2.0.63 Win32バイナリ<br />PHPバージョン: 5.2.5 Win32バイナリ（Apache2モジュール動作）<br />sendまね～る Ver. 0.93　（C:\bin\sendmane.exeとして置いてみました）<br /><br /><pre class="code">[mail function]<br />; For Win32 only.<br />;SMTP = localhost<br />;smtp_port = 25<br /><br />; For Win32 only.<br />;sendmail_from = me@example.com<br /><br />; For Unix only.  You may supply arguments as well (default: &quot;sendmail -t -i&quot;).<br />sendmail_path =&quot;C:\bin\sendmane.exe -t -i&quot;</pre><br />最後の「-t -i」を忘れると動かないので注意して下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post143.html#post143" name="post143" rel="nofollow">#8</a> 2008 年 4 月 3 日(木) 17:27</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん、ありがとうございます。<br /><br />C:\sendmane&gt;sendmane<br /><br />SMTPサーバのアドレス？(IPを奨励)<br />[]:127.0.0.1<br /><br />SMTPポート番号？(通常は25)<br />[]:25<br /><br />送信者のメールアドレス？<br />[]:<a href="mailto:user@example.com" title="user@example.com">user@example.com</a><br />※↑任意のアドレス<br /><br />SMTP認証の使用 Yes=1 No=0 ？<br />[]:0<br />SMTP認証のユーザー名？<br />[]:user<br /><br />SMTP認証のパスワード？<br />[]:password<br />-------------------------------------------------<br />上記のように設定し、同梱のテキストに下記コマンドラインをタイプするとメールが送信されるとあり、<br />C:\sendmane&gt;type sendtest.txt | sendmane [送信するメールアドレス]<br /><br />やってみたのですが、<br />-------------------------------------------<br />Sendmail.exeでエラーを検出しました。<br />Error:サーバへの接続失敗<br />-------------------------------------------<br />となってしまいます。<br /><br />無知なので、設定方法がよくわかっていないのだと思います。<br />こちらのローカル環境でsendmailを使ってテスト（勉強）でやってみているのですが、<br />「SMTP認証のユーザー名/パスワード」などはローカルで行う場合は、例の通り「user/password」では<br />だめなのでしょうか？</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post145.html#post145" name="post145" rel="nofollow">#9</a> 2008 年 4 月 3 日(木) 20:12</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">honyoさんが普段使っているメールソフトの設定と<strong>同じ内容</strong>で、sendmaneの設定を行ってみて下さい。プロバイダのメールをお使いならば、そのメール設定です。<br /><br />なぜ127.0.0.1を指定してもダメかというと、127.0.0.1はそのマシン自身を指すアドレスです。「apacheとPHPをインストールしてテストしているマシンはメールサーバの機能がない」ということでしたので、当然このアドレス127.0.0.1はメールサーバではありません。どう頑張っても接続は失敗してしまい、メール送信できないわけです。（もし私がそちらの状況を勘違いしていたらごめんなさい）<br /><br />というわけで、身近なメールサーバはというと、honyoさんがお使いのプロバイダのメールのサーバがあると思いますので、これを使えばとりあえず解決できると思ったわけです。<br />私はたまたまメールサーバ機能付きのレンタルサーバを借りていましたので、sendmaneの設定は次のような設定にしました。プロバイダのメールサーバの場合も（多少違いはあっても）同じように設定するはず。プロバイダのサーバが使えればわざわざレンタルする必要もありません。<br />――――<br />SMTPサーバのアドレス：レンタルサーバのメールサーバ<br />SMTPポート番号：通常は25ですがこのサーバでは別の番号でした<br />送信者：そのメールサーバで登録したメールアドレス<br />SMTP認証：無かったので設定しませんでした<br />POP before SMTP：送信前に受信するルールになっているので（次に続く）<br />POP3サーバの設定：そのメールサーバ（SMTPサーバと同じでした）と、IDとパスワード<br />――――<br />最近はSMTPポート番号が25でないプロバイダが増えています。<br /><br /><em>もしかしたらメールサーバを127.0.0.1で設定するというのは、UNIX系での説明ではありませんか？　UNIX系のマシンはメールサーバの機能が入っていることが多いので、そのような説明になっているかもしれません。Windows Server等ではメールサーバの機能があるはずですが、Windows XPではあまり聞いたことが無かったので現実的ではなさそうです。</em><br /><br />どうでしょうか。もうちょっとだと思いますので頑張ってみて下さい。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-82.html">honyo</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post151.html#post151" name="post151" rel="nofollow">#10</a> 2008 年 4 月 7 日(月) 17:26</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 3 2008</div>
+				<div class="field">返信数: 11</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">kona@mさん、ありがとうございます。<br /><br />私は、現在会社内で時間をもてあましている状況で、その間ｐｈｐを勉強をしてます。<br />先週来、会社のメールでやってみてだめだったので、yahooメールで設定してみたり、色々試行錯誤してやってみているのですが、<br />やっぱりどうやってもメール送信はできない状態です。<br />（ちなみに会社のメール、yahooメールともにIPはわかならないので、smtp.mail.yahoo.co.jp等の設定を入力しました。）<br /><br />もしかしたら会社なので、何らかのセキュリティーでできないのかも！？と思います。<br />とりあえず、この部分で詰まって途中になってしまうのであれば、勿体無いので先に進むことにします。<br /><br />無知な私に何度も丁寧に教えていただき、ありがとうございます。<br />また他の事でわからなくなったら、教えてください。<br />よろしくお願いいたします。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; sendmailがわかりません
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

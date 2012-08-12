@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ボタン押下による対象の表示・非表示</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ボタン押下による対象の表示・非表示
+	</p>
+
+	<h3 id="forumname"><a href="topic-157.html">ボタン押下による対象の表示・非表示</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-242.html">Tonio</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post433.html#post433" name="post433" rel="nofollow">#1</a> 2009 年 8 月 13 日(木) 22:00</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">はじめまして、Tonioといいます<br /><br />掲題について質問です。<br /><br />参考サイトのようにボタンを押すことで<br />対象の表示・非表示を切り替える処理を作成しようと思ったのですが<br />知識不足の為、こちらに書き込ませていただきました。<br />参考サイト<br />&lt;http://f32.aaa.livedoor.jp/~azusa/print.php?t=css&amp;p=visibility&amp;mode=print&gt;<br /><br />こちらで検索した結果、参考サイトのようにJS使用での切り替え制御しか見つかりません。<br />PHPではどのように処理を記述すればいいのでしょうか。<br />ご教授願います。<br /><br />開発環境<br />・PHP5+HTML<br />・Apache2.2<br />・WindowsVista</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-219.html">Akaneko</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post434.html#post434" name="post434" rel="nofollow">#2</a> 2009 年 8 月 18 日(火) 23:12</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 5 月 2009</div>
+				<div class="field">返信数: 4</div>
+				<div class="field">住居: Tokyo</div>
+			</td>
+			<td class="postcontent">
+				<div class="post">はじめまして。<br /><br />ボタンから表示の切り替えを行うだけの単純な物であれば下記の方法で可能です。<br /><br />例）GETパラメータにフラグを持たせた場合。（ファイル名：index.php）<br /><br /><pre class="code">&lt;?php<br /><br />if (isset(&#36;_GET['flag']) &amp;&amp; !empty(&#36;_GET['flag'])) &#123;<br />// GETパラメータに値が有る場合は「要素」を表示しない<br />	&#36;btn_v_value  = 'visibility:visible';<br />	&#36;elem_v_style = 'hidden';<br />	&#36;flag_value   = '0';<br />&#125; else &#123;<br />// GETパラメータに値が無い場合は「要素」を表示する<br />	&#36;btn_v_value  = 'visibility:hidden';<br />	&#36;elem_v_style = 'visible';<br />	&#36;flag_value   = '1';<br />&#125;<br /><br />// 表示するHTML<br />print &quot;&lt;form action=\&quot;index.php\&quot; method=\&quot;get\&quot;&gt;\n&quot;;<br />print &quot;&lt;input type=\&quot;submit\&quot; value=\&quot;&#123;&#36;btn_v_value&#125;\&quot; /&gt;\n&quot;;<br />print &quot;&lt;input type=\&quot;text\&quot; value=\&quot;要素\&quot; size=\&quot;8\&quot;<br /> style=\&quot;visibility:&#123;&#36;elem_v_style&#125;;\&quot; /&gt;←要素の描画領域は確保される&lt;br /&gt;\n&quot;;<br />print &quot;&lt;input type=\&quot;hidden\&quot; name=\&quot;flag\&quot; value=\&quot;&#123;&#36;flag_value&#125;\&quot; /&gt;\n&quot;;<br />print &quot;&lt;/form&gt;\n&quot;;<br /><br />?&gt;</pre><br /><br />また、上記以外にも同じ結果（表示）を出す方法はあります。<br />表示・非表示の切り替え対象によってはセキュリティの観点から別の方法が良い場合もあります。<br /><br />ひとまず例として参考になれば幸いです。<br />説明不足や不明な点があれば回答します。<div class="editinfo">&laquo; 最終編集者 <a href="profile-219.html">Akaneko</a> 日時 2009 年 8 月 18 日(火) 23:15. &raquo;</div></div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-242.html">Tonio</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post436.html#post436" name="post436" rel="nofollow">#3</a> 2009 年 8 月 20 日(木) 15:36</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 4</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">返信が遅れてしまい、申し訳ありません。<br /><br />こちらの希望した通りの処理ができました。<br />スクリプトわかりやすい物で助かりました。<br />どうも、ありがとうございます。<br /><br />下記についても、もし宜しければ、ご教授願います。<br /><br />&gt;また、上記以外にも同じ結果（表示）を出す方法はあります。<br />&gt;表示・非表示の切り替え対象によってはセキュリティの観点から別の方法が良い場合もあります。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ボタン押下による対象の表示・非表示
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

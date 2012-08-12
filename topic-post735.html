@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; メールフォームからのメールが届いていない</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; メールフォームからのメールが届いていない
+	</p>
+
+	<h3 id="forumname"><a href="topic-256.html">メールフォームからのメールが届いていない</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-373.html">houritusan</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post735.html#post735" name="post735" rel="nofollow">#1</a> 2011 年 1 月 19 日(水) 23:37</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 1 2011</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">&lt;html&gt;<br />&lt;head&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;<br />&lt;title&gt;お問い合わせフォーム&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;?php<br />//お問い合わせタイトル、詳細のセット<br />&#36;title = htmlspecialchars(&#36;_POST['title'], ENT_QUOTES);<br />&#36;message = htmlspecialchars(&#36;_POST['message'],<br />ENT_QUOTES);<br /><br />//日本語(UTF-<img src="./templates/phpgrjp0.3/smilies/cool.gif" alt="8)" />の指定<br />mb_language('ja');<br />mb_internal_encoding('UTF-8');<br /><br />// Fromアドレスの設定(自動送信&lt;@hb.tp1.jp&gt;)<br />&#36;name = '自動送信';<br />&#36;email = '&lt;@hb.tp1.jp&gt;';<br />&#36;header = 'From: '. mb_encode_mimeheader(&#36;name) . '&lt;' .<br />&#36;email .'&gt;';<br /><br />//  メール送信<br />&#36;result = mb_send_mail(&quot;@hb.tp1.jp&gt;&quot;, &#36;title,<br />&#36;message, &#36;header);<br /><br />//メール送信の確認<br />if (&#36;result)&#123;<br /><br />echo '■お問い合わせ内容を担当者に送信しました。';<br />&#125; else &#123;<br /><br />echo '■担当者への送信に失敗しました。';<br />&#125;<br />?&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br />何故でしょうか？？ちなみに迷惑メールにも届いていませ <img src="./templates/phpgrjp0.3/smilies/cry.gif" alt=":'(" /> ん</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-246.html">nulla</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post736.html#post736" name="post736" rel="nofollow">#2</a> 2011 年 1 月 20 日(木) 15:23</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 8 2009</div>
+				<div class="field">返信数: 103</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">こんにちは。<br /><br />http://okwave.jp/qa/q6460583.html<br />設定していても送信できない場合はOP25Bか認証が必要などの可能性があります。<br /><br />mb_send_mail()の返り値はメールが送信されたかどうかではなく<br />メールを受け付けたかどうかです。<br />メールサーバのログを確認すると原因がはっきりわかると思います。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; メールフォームからのメールが届いていない
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

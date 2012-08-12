@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP 5 &raquo; PHP5.2.6とApache2.2.9でうまくいかない</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; PHP5.2.6とApache2.2.9でうまくいかない
+	</p>
+
+	<h3 id="forumname"><a href="topic-95.html">PHP5.2.6とApache2.2.9でうまくいかない</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-142.html">hotman</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post251.html#post251" name="post251" rel="nofollow">#1</a> 2008 年 10 月 8 日(水) 11:29</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2008</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">WindowsXP SP2<br />PHP5.2.6<br />Apache2.2.9<br /><br />それぞれインストールし、httpd.conf、php.ini　を編集しました。<br /><br />テストページ（phpinfo()の表示）が見える場合と見えない場合が以下の条件でありました。<br />変な感じがしますが、これは見えるケースで問題ないのでしょうか？<br /><br />結局、extension_dirに指定したディレクトリが、<br />存在する→ＮＧ（エラーログにメッセージあり）<br />存在しない→ＯＫ（でもエラーログにメッセージあり）<br />のようです。<br /><br />テストページが表示されるのに、エラーログがありますし、でもその場合実在しないディレクトリ指定にしているので、これで本当に良いのか疑問です。<br /><br /><br /><br /><strong>●テストページが表示されるケース</strong><br />&lt;php.ini&gt;<br />extension_dir=&quot;C:\PHPAAAA\ext\&quot;<br /><span style="color:red">（実在しないディレクトリ）</span><br /><br />&lt;apacheのerror.log&gt;<br />PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PHPAAAA\ext\php_bz2.dll'<br />→dllのロードエラーが113個出ています。当然だと思います。ファイルが無いですから。<br /><br /><br /><strong>●テストページが表示されない</strong><br />&lt;php.ini&gt;<br />extension_dir=&quot;C:\PHP\ext\&quot;<br /><span style="color:red">（実在するディレクトリ）</span><br /><br />&lt;apacheのerror.log&gt;<br />PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\PHP\ext\php_mcrypt.dll'<br />→dllのロードエラーが19個でます。ファイル自体は存在しています。<br /><br />また、テストページのリクエスト時に以下のエラーが出ています。<br />[Wed Oct 08 11:06:22 2008] [error] [client 127.0.0.1] PHP Warning:  require_once(SAM/php_sam.php) [&lt;a href='function.require-once'&gt;function.require-once&lt;/a&gt;]: failed to open stream: No such file or directory in sam_factory on line 1<br />[Wed Oct 08 11:06:22 2008] [error] [client 127.0.0.1] PHP Fatal error:  require_once() [&lt;a href='function.require'&gt;function.require&lt;/a&gt;]: Failed opening required 'SAM/php_sam.php' (include_path='.;C:\\PHP\\pear;C:\\PHP\\includes;') in sam_factory on line 1<br /><br />以上、お分かりの方がいらっしゃいましたらよろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-155.html">min_wiz</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post267.html#post267" name="post267" rel="nofollow">#2</a> 2008 年 11 月 14 日(金) 13:46</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 11 2008</div>
+				<div class="field">返信数: 1</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">http://rutile.tk/sys./PHP5が動かない/<br /><br />存在しない拡張機能を読み込みに行こうとするのが原因みたいです。<br />php.iniの該当する記述をコメントアウトするか、パッケージを導入するのが解決方法みたいですね。<br /><br />詳しくは上記URLより。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-166.html">suzuki miyoshi</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post277.html#post277" name="post277" rel="nofollow">#3</a> 2008 年 12 月 17 日(水) 11:09</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 12 2008</div>
+				<div class="field">返信数: 2</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">php 5.2.6 は問題があると思います<br />php 5.2.8 で解決しました</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-4.html">PHP 5</a> &raquo; PHP5.2.6とApache2.2.9でうまくいかない
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>

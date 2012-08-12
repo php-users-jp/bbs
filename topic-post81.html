@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr">
+<head>
+	<title>日本PHPユーザ会 掲示板: PHP事はじめ &raquo; ApacheのエラーログのPHPのエラーメッセージが文字化け</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。" />
+	<meta name="keywords" content="php,web,php.gr.jp,community,usebb" />
+	<link rel="stylesheet" type="text/css" href="./templates/phpgrjp0.3/styles.css" />
+	<link rel="shortcut icon" href="./templates/phpgrjp0.3/gfx/usebb.ico" />
+	<link rel="alternate" type="application/rss+xml" title="日本PHPユーザ会 掲示板 RSS フィード" href="rss.xml" />
+	<script type="text/javascript" src="sources/javascript.js"></script>
+</head>
+<body onload="javascript:init_external()">
+	<div id="pagebox-bg">
+	<div id="shadow-left">
+	<div id="shadow-right">
+	
+	<p id="logo"><a href="index.html"><img src="./templates/phpgrjp0.3/gfx/usebb.png" alt="UseBB" title="ホーム" /></a></p>
+	<h1 id="boardname"><span id="line">日本PHPユーザ会 掲示板</span></h1>
+	<h2 id="boarddescr">日本PHPユーザ会運営の掲示板です。※ただいまテスト運用中です。</h2>
+	
+	<div id="topmenu"><ul>
+		<li><a href="index.html">ホーム</a></li><li><a href="panel-register.html">登録</a></li><li><a href="faq.html">FAQ</a></li><li><a href="search.html">検索</a></li><li><a href="active.html">活発なトピック</a></li><li><a href="panel-login.html">ログイン</a></li>
+	</ul></div>
+	<div id="topmenu-shadow"></div>
+	
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ApacheのエラーログのPHPのエラーメッセージが文字化け
+	</p>
+
+	<h3 id="forumname"><a href="topic-40.html">ApacheのエラーログのPHPのエラーメッセージが文字化け</a></h3>
+	<p id="forummods"></p>
+	<p id="toolbartop"> </p>
+	<p id="pagelinkstop">ページ: 1</p>
+	<table class="maintable">
+		<tr>
+			<th>投稿者</th>
+			<th>投稿</th>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post81.html#post81" name="post81" rel="nofollow">#1</a> 2008 年 2 月 5 日(火) 20:29</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">OS: Windows XP SP2<br />Webサーバ: Apache 2.0.63<br />PHPバージョン: 5.2.5<br /><br />php.ini の設定で拡張モジュールの php_sqlite.dll のロードエラーのエラーメッセージで文字化けします。<br />メッセージは以下のとおり。<br /><br />PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\\php\\ext\\php_sqlite.dll' - \x8ew\x92\xe8\x82\xb3\x82\xea\x82\xbd\x83\x82\x83W\x83\x85\x81[\x83\x8b\x82\xaa\x8c\xa9\x82\xc2\x82\xa9\x82\xe8\x82\xdc\x82\xb9\x82\xf1\x81B\r\n in Unknown on line 0<br /><br />エラーの原因は php_pdo.dll がロードされてないことだと判ってはいるんですが、上記のとおり日本語と思われる部分が文字化けしています。<br />ログファイルの文字コードを変更して読み替えてもダメでした。<br /><br />PHP のバージョンで、5.1.6 や 5.2.6 なども試してみたのですが、状況は変わりません。<br />配布されているバイナリでなく、ソースをコンパイルするしかないのかと考えていますが、何か設定の変更で日本語のエラーメッセージを表示させることができるのでしょうか？<br /><br />よろしくお願いします。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-63.html">alice</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post83.html#post83" name="post83" rel="nofollow">#2</a> 2008 年 2 月 6 日(水) 12:45</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">文字化けした箇所をデコードすると<br />「指定されたモジュールが見つかりません。」<br />となります。<br /><br />根本的な原因は不明...</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post84.html#post84" name="post84" rel="nofollow">#3</a> 2008 年 2 月 6 日(水) 13:01</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">デコードの文字コードはなんでしょうか？<br />私が使用しているテキストエディタで文字コードをいろいろと変えて読み込んでも、文字化けの箇所は変わりませんでした。文字コードを変えて読み込みなおせばデコードすることになると思ってたんですが、違ってるんでしょうか・・・<br /><br />話を元に戻しますが、PHP のマニュアルを調べると、 php_sqlite.dll は先に php_pdo.dll をロードしてないといけないようで、 php_pdo.dll を先にロードさせるようにするば、エラーメッセージは出力されなくなりました。<br /><br />エラーメッセージが文字化けしてると不具合が発生したときに解析が困難になるため、とても困ります。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-63.html">alice</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post85.html#post85" name="post85" rel="nofollow">#4</a> 2008 年 2 月 6 日(水) 13:53</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 3</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">文字コードはsjisですね。<br />テキストエディタ等で\xを%に置換してURLデコードすれば解読できます。<br /><br />スマートな方法ではありませんが、気休め程度には使えます＾＾；</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post86.html#post86" name="post86" rel="nofollow">#5</a> 2008 年 2 月 6 日(水) 20:23</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">URLエンコードされていたんですか・・・<br />てっきり文字コード違いで文字化けしてると思ってました。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post87.html#post87" name="post87" rel="nofollow">#6</a> 2008 年 2 月 6 日(水) 23:09</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">でもどうしてエンコードされた状態で出力されるのでしょう？<br />クエリ文字列でもないのに、エラーメッセージをエンコードする必要があるのか疑問です。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post88.html#post88" name="post88" rel="nofollow">#7</a> 2008 年 2 月 10 日(日) 14:56</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">あまり詳しくないのですが、ちょっと気になったので参考までに・・・。<br /><br />'C:\\php\\ext\\php_sqlite.dll' というDLLの読み込みに失敗しているようですが、\が2つ重なっているのが気になります。<br />php.ini で、 extension_dir=&quot;C:\\php\\ext\\&quot; となっているようでしたら、 extension_dir=&quot;C:\php\ext\&quot; としてみてはどうでしょうか？<br /><br /><blockquote class="quote"><div class="title">引用</div><div class="content">(phpマニュアルより)<br />; バックスラッシュは他の文字と同様に処理されます<br />include_path = &quot;.;c:\php\lib&quot;</div></blockquote><br />また私の勝手な推測ですが、「ログにはもともと日本語対応していないんだけど、DLLを呼び出そうとして日本語のエラーメッセージが返ってきたので、無視するのもなんなんで、とりあえずエンコードして記録しておきました」という感じに見えます。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post89.html#post89" name="post89" rel="nofollow">#8</a> 2008 年 2 月 10 日(日) 19:01</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">php.ini には \ は2つ連続で書いていません。\ はエスケープ文字だから2つ連続で書いているのではないでしょうか。<br /><br />エラーメッセージをエンコードするのが仕様ならしかたないのですが、それならマニュアルのどこかに書いていて欲しいところですね。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-36.html">kona@m</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post91.html#post91" name="post91" rel="nofollow">#9</a> 2008 年 2 月 11 日(月) 23:25</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 10 2007</div>
+				<div class="field">返信数: 71</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">OS: Windows XP SP2<br />Webサーバ: Apache 2.0.63 Win32バイナリ<br />PHPバージョン: 5.2.5 Win32バイナリ<br />Apache2モジュール動作<br /><br />すみません、自分もインストールしてみたのですが、\の数については気にしすぎだったようです。<br />extension_dir=&quot;C:\\php\\ext\\&quot;<br />extension_dir=&quot;C:\php\ext\&quot;<br />どちらもgdやmbstringが有効になっていました。<br /><br />ただ、ログファイル中のマルチバイトがURLエンコードされる現象は再現できませんでした。<br />URLエンコードされずにSHIFT-JIS / CRの出力でした。<br />AN-httpd 1.42nのCGI動作でも同様でした。<br />Apache2のCGI動作はまだ試していませんが・・・。（やったことないので）<br /><br />お役に立てませんでしたが、とりあえず報告まで。</div>
+			</td>
+		</tr>
+
+		<tr class="tr2">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post96.html#post96" name="post96" rel="nofollow">#10</a> 2008 年 2 月 12 日(火) 19:44</div>
+			</td>
+		</tr>
+		<tr class="tr2">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">わざわざインストールして試していただき、ありがとうございます。<br /><br />OSもWebサーバもPHPも同じバージョンみたいですが、再現しないのですか・・・<br />マルチバイトがきちんと日本語で表示されてたんでしょうか？<br /><br />んーますます不思議ですね。</div>
+			</td>
+		</tr>
+
+		<tr class="tr1">
+			<td class="postername">
+				<div class="posternamecontainer"><a href="profile-62.html">shinmatsu</a></div>
+			</td>
+			<td class="postinfo">
+				<div class="postlinks"></div>
+				<div class="postdate"><a href="topic-post97.html#post97" name="post97" rel="nofollow">#11</a> 2008 年 2 月 14 日(木) 17:10</div>
+			</td>
+		</tr>
+		<tr class="tr1">
+			<td class="posterinfo">
+				会員
+				<div class="avatar"></div>
+				<div class="field">登録者: 2 2008</div>
+				<div class="field">返信数: 7</div>
+				<div class="field"></div>
+			</td>
+			<td class="postcontent">
+				<div class="post">自己レスです。<br /><br />php.ini の error_log ディレクティブにログファイルのパス、または&quot;syslog&quot;を指定して Apache のエラーログにエラーメッセージを出力しないようにしたところ、ログファイルの内容、 Windows のイベントログ共に、エラーメッセージのマルチバイト部分が日本語で表示されました。<br /><br />単に Apache のエラーログがマルチバイトに対応してないだけなのかも知れない、もしくは Apache  の設定がおかしいのかもしれません。</div>
+			</td>
+		</tr>
+
+	</table>
+	<p id="toolbarbottom"> </p>
+	<p id="pagelinksbottom">ページ: 1</p>
+	<div id="bottomfix"></div>
+	<p id="actionlinks"></p>
+
+	<p class="locationbar">
+		&bull; <a href="index.html">日本PHPユーザ会 掲示板</a> &raquo; <a href="forum-2.html">PHP事はじめ</a> &raquo; ApacheのエラーログのPHPのエラーメッセージが文字化け
+	</p>
+	
+	<p id="linkbar">
+		<a href="members.html">会員一覧</a> &middot; <a href="members-staff.html">スタッフ一覧</a> &middot; <a href="rss.xml" id="rss-feed-icon"><img src="templates/phpgrjp0.3/gfx/rss.png" alt="RSS フィード" /></a><a href="rss.xml">RSS フィード</a>  &middot; <a href="mailto:webstaff@php.gr.jp">管理者へ連絡</a>
+	</p>
+	
+	
+	
+	
+	<p id="bottom">
+		日本PHPユーザ会 掲示板 は <a href="http://www.usebb.net">UseBB 1 フォーラムソフトウェア</a> を使用しています
+	</p>
+	<div id="bottom-shadow"></div>
+	
+	</div>
+	</div>
+	</div>
+</body>
+</html>
